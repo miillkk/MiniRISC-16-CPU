@@ -1,0 +1,3 @@
+本项目为一个小组项目，第一目标为设计一个可以在真实FPGA上运行的CPU，在完成目标后进行拓展（目标要求参考文件“Topic2026-1Introduction_ME”中P102的B level为第一目标，P103的A level为最终目标。
+该项目文件中包括课程的PPT。
+整个设计分为Design of Dataflow，Design of Datapath & Controller，Verification of Datapath & Controller，Integration & Verification of RISC CPU，及后续流程需要完善补充。
