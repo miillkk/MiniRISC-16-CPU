@@ -1,0 +1,9 @@
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\01_single_cycle_commit.svg
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\01_single_cycle_commit.png
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\02_cmp_jz_jump.svg
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\02_cmp_jz_jump.png
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\03_registers_alu.svg
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\03_registers_alu.png
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\04_gpio_io.svg
+Generated C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU-main\reports\waveforms\04_gpio_io.png
+

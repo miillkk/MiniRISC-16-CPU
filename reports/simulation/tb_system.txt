@@ -1,0 +1,99 @@
+MiniRISC-16 regression test: tb_system
+Timestamp: 2026-09-09 22:01:58 +08:00
+Vivado bin: F:\vivado\2026.1\Vivado\bin
+XILINXD_LICENSE_FILE: C:\Users\xieke\AppData\Roaming\XilinxLicense\Xilinx.lic
+
+--- xvlog ---
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/core/alu.v" into library work
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/core/controller.v" into library work
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/core/cpu_core.v" into library work
+INFO: [VRFC 10-311] analyzing module cpu_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/core/datapath.v" into library work
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/core/register_file.v" into library work
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/peripherals/gpio8.v" into library work
+INFO: [VRFC 10-311] analyzing module gpio8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/peripherals/instruction_memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instruction_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/peripherals/reset_conditioner.v" into library work
+INFO: [VRFC 10-311] analyzing module reset_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/rtl/top/system_top.v" into library work
+INFO: [VRFC 10-311] analyzing module system_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/sim/tb/tb_system.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_system
+
+
+--- xelab ---
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: F:/vivado/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe tb_system -debug typical -s tb_system_sim 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.reset_conditioner
+Compiling module work.instruction_memory(INIT_FILE="sy...
+Compiling module work.controller
+Compiling module work.register_file
+Compiling module work.alu
+Compiling module work.datapath
+Compiling module work.cpu_core
+Compiling module work.gpio8
+Compiling module work.system_top(INIT_FILE="system_dem...
+Compiling module work.tb_system
+Built simulation snapshot tb_system_sim
+
+
+--- xsim ---
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Sep  9 22:02:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_system_sim/xsim_script.tcl
+# xsim {tb_system_sim} -autoloadwcfg -tclbatch {C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/sim/scripts/xsim_run.tcl}
+Time resolution is 1 ps
+source C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/sim/scripts/xsim_run.tcl
+## set vcd_is_open 0
+## if {[info exists ::env(MINIRISC_VCD)] && $::env(MINIRISC_VCD) ne ""} {
+##     if {[catch {
+##         open_vcd $::env(MINIRISC_VCD)
+##         log_vcd [get_objects -r /tb_system/*]
+##         set vcd_is_open 1
+##     } message]} {
+##         puts "WAVEFORM ERROR: VCD setup failed: $message"
+##     }
+## }
+INFO: HDL object /tb_system/dut/u_instruction_memory/memory is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_system/dut/u_cpu/u_datapath/u_register_file/registers is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## if {[info exists ::env(MINIRISC_WCFG)] && $::env(MINIRISC_WCFG) ne ""} {
+##     if {[catch {
+##         create_wave_config minirisc16_system
+##         add_wave -r /tb_system/*
+##         save_wave_config $::env(MINIRISC_WCFG)
+##     } message]} {
+##         puts "WAVEFORM ERROR: WCFG setup failed: $message"
+##     }
+## }
+## run all
+tb_system: TEST PASS cycles=32 opcode_coverage=ffff JZ_taken=2 JZ_not_taken=1
+$finish called at time : 347 ns : File "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU-main/sim/tb/tb_system.v" Line 259
+## if {$vcd_is_open} {
+##     close_vcd
+## }
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Sep  9 22:02:03 2026...
+
+
+RESULT: PASS

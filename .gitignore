@@ -1,0 +1,42 @@
+# Vivado/XSim working products
+.Xil/
+xsim.dir/
+*.jou
+*.log
+*.wdb
+*.pb
+*.str
+*.xmsgs
+
+# Vivado projects, caches, generated IP and runs
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+.ipcache/
+
+# Local regression workspace and editor/OS files
+sim/build/
+build/
+tmp/
+.codex-finalizer/
+.codex-ppt-build/
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Reference material already stored at the repository root
+docs/courseware/
+docs/templates/
+
+# Presentation authoring intermediates; keep only the final v4 deck
+reports/presentation/preview_*/
+reports/presentation/MiniRISC16_CPU_中文答辩PPT_v[1-3].pptx
+
+# Selected reports/simulation/*.txt and reports/waveforms/* are intentional
+# deliverables and are not ignored.

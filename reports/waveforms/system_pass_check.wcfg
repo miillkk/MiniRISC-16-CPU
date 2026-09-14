@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wave_config>
+  <wave_state></wave_state>
+  <db_ref_list>
+    <db_ref path="tb_system_sim.wdb" id="1">
+      <top_modules>
+        <top_module name="tb_system" />
+      </top_modules>
+    </db_ref>
+  </db_ref_list>
+  <zoom_setting></zoom_setting>
+  <column_width_setting></column_width_setting>
+  <WVObjectSize size="16" />
+  <wvobject fp_name="/tb_system/errors" type="array">
+    <obj_property name="ElementShortName">errors[31:0]</obj_property>
+    <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/completed" type="logic">
+    <obj_property name="ElementShortName">completed</obj_property>
+    <obj_property name="ObjectShortName">completed</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/cycles" type="array">
+    <obj_property name="ElementShortName">cycles[31:0]</obj_property>
+    <obj_property name="ObjectShortName">cycles[31:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/opcode_coverage" type="array">
+    <obj_property name="ElementShortName">opcode_coverage[15:0]</obj_property>
+    <obj_property name="ObjectShortName">opcode_coverage[15:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/jz_taken_count" type="array">
+    <obj_property name="ElementShortName">jz_taken_count[31:0]</obj_property>
+    <obj_property name="ObjectShortName">jz_taken_count[31:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/jz_not_taken_count" type="array">
+    <obj_property name="ElementShortName">jz_not_taken_count[31:0]</obj_property>
+    <obj_property name="ObjectShortName">jz_not_taken_count[31:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_pc" type="array">
+    <obj_property name="ElementShortName">trace_pc[7:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_pc[7:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_instruction" type="array">
+    <obj_property name="ElementShortName">trace_instruction[15:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_instruction[15:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_z" type="logic">
+    <obj_property name="ElementShortName">trace_z</obj_property>
+    <obj_property name="ObjectShortName">trace_z</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_r0" type="array">
+    <obj_property name="ElementShortName">trace_r0[15:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_r0[15:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_r1" type="array">
+    <obj_property name="ElementShortName">trace_r1[15:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_r1[15:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_r2" type="array">
+    <obj_property name="ElementShortName">trace_r2[15:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_r2[15:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_r3" type="array">
+    <obj_property name="ElementShortName">trace_r3[15:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_r3[15:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_gpio_out" type="array">
+    <obj_property name="ElementShortName">trace_gpio_out[7:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_gpio_out[7:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_gpio_dir" type="array">
+    <obj_property name="ElementShortName">trace_gpio_dir[7:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_gpio_dir[7:0]</obj_property>
+  </wvobject>
+  <wvobject fp_name="/tb_system/trace_gpio_in" type="array">
+    <obj_property name="ElementShortName">trace_gpio_in[7:0]</obj_property>
+    <obj_property name="ObjectShortName">trace_gpio_in[7:0]</obj_property>
+  </wvobject>
+</wave_config>
