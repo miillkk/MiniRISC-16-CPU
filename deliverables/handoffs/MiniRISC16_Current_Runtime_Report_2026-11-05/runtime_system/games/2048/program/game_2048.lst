@@ -1,0 +1,1025 @@
+ADDR WORD  SOURCE
+000  0000  MOVI R0, 0x00
+001  0400  MOVI R1, 0x00
+002  E100  STR  R0, R1
+003  2001  ADDI R0, 0x01
+004  0854  MOVI R2, 0x54
+005  6200  CMP  R0, R2
+006  8008  JZ   INIT_READY
+007  A002  JUMP INIT_CLEAR
+008  0039  MOVI R0, 0x39
+009  0402  MOVI R1, 0x02
+00A  E100  STR  R0, R1
+00B  0020  MOVI R0, 0x20
+00C  C020  OUP  0x20, R0
+00D  0048  MOVI R0, 0x48
+00E  C021  OUP  0x21, R0
+00F  0001  MOVI R0, 0x01
+010  C022  OUP  0x22, R0
+011  F200  JMPA SPAWN_BEGIN
+012  B011  INP  R0, 0x11
+013  0401  MOVI R1, 0x01
+014  7100  AND  R0, R1
+015  6100  CMP  R0, R1
+016  8018  JZ   READ_KEY
+017  A012  JUMP MAIN
+018  B010  INP  R0, 0x10
+019  0452  MOVI R1, 0x52
+01A  6100  CMP  R0, R1
+01B  8000  JZ   INIT
+01C  0472  MOVI R1, 0x72
+01D  6100  CMP  R0, R1
+01E  8000  JZ   INIT
+01F  0441  MOVI R1, 0x41
+020  6100  CMP  R0, R1
+021  802C  JZ   MOVE_LEFT_KEY
+022  0444  MOVI R1, 0x44
+023  6100  CMP  R0, R1
+024  802E  JZ   MOVE_RIGHT_KEY
+025  0457  MOVI R1, 0x57
+026  6100  CMP  R0, R1
+027  8030  JZ   MOVE_UP_KEY
+028  0453  MOVI R1, 0x53
+029  6100  CMP  R0, R1
+02A  8032  JZ   MOVE_DOWN_KEY
+02B  A012  JUMP MAIN
+02C  0000  MOVI R0, 0x00
+02D  A033  JUMP START_MOVE
+02E  0001  MOVI R0, 0x01
+02F  A033  JUMP START_MOVE
+030  0002  MOVI R0, 0x02
+031  A033  JUMP START_MOVE
+032  0003  MOVI R0, 0x03
+033  0C30  MOVI R3, 0x30
+034  EC00  STR  R3, R0
+035  0000  MOVI R0, 0x00
+036  0C31  MOVI R3, 0x31
+037  EC00  STR  R3, R0
+038  0C35  MOVI R3, 0x35
+039  EC00  STR  R3, R0
+03A  F100  JMPA MOVE_LINE_BEGIN
+03B  FFFF  <reserved>
+03C  FFFF  <reserved>
+03D  FFFF  <reserved>
+03E  FFFF  <reserved>
+03F  FFFF  <reserved>
+040  FFFF  <reserved>
+041  FFFF  <reserved>
+042  FFFF  <reserved>
+043  FFFF  <reserved>
+044  FFFF  <reserved>
+045  FFFF  <reserved>
+046  FFFF  <reserved>
+047  FFFF  <reserved>
+048  FFFF  <reserved>
+049  FFFF  <reserved>
+04A  FFFF  <reserved>
+04B  FFFF  <reserved>
+04C  FFFF  <reserved>
+04D  FFFF  <reserved>
+04E  FFFF  <reserved>
+04F  FFFF  <reserved>
+050  FFFF  <reserved>
+051  FFFF  <reserved>
+052  FFFF  <reserved>
+053  FFFF  <reserved>
+054  FFFF  <reserved>
+055  FFFF  <reserved>
+056  FFFF  <reserved>
+057  FFFF  <reserved>
+058  FFFF  <reserved>
+059  FFFF  <reserved>
+05A  FFFF  <reserved>
+05B  FFFF  <reserved>
+05C  FFFF  <reserved>
+05D  FFFF  <reserved>
+05E  FFFF  <reserved>
+05F  FFFF  <reserved>
+060  FFFF  <reserved>
+061  FFFF  <reserved>
+062  FFFF  <reserved>
+063  FFFF  <reserved>
+064  FFFF  <reserved>
+065  FFFF  <reserved>
+066  FFFF  <reserved>
+067  FFFF  <reserved>
+068  FFFF  <reserved>
+069  FFFF  <reserved>
+06A  FFFF  <reserved>
+06B  FFFF  <reserved>
+06C  FFFF  <reserved>
+06D  FFFF  <reserved>
+06E  FFFF  <reserved>
+06F  FFFF  <reserved>
+070  FFFF  <reserved>
+071  FFFF  <reserved>
+072  FFFF  <reserved>
+073  FFFF  <reserved>
+074  FFFF  <reserved>
+075  FFFF  <reserved>
+076  FFFF  <reserved>
+077  FFFF  <reserved>
+078  FFFF  <reserved>
+079  FFFF  <reserved>
+07A  FFFF  <reserved>
+07B  FFFF  <reserved>
+07C  FFFF  <reserved>
+07D  FFFF  <reserved>
+07E  FFFF  <reserved>
+07F  FFFF  <reserved>
+080  FFFF  <reserved>
+081  FFFF  <reserved>
+082  FFFF  <reserved>
+083  FFFF  <reserved>
+084  FFFF  <reserved>
+085  FFFF  <reserved>
+086  FFFF  <reserved>
+087  FFFF  <reserved>
+088  FFFF  <reserved>
+089  FFFF  <reserved>
+08A  FFFF  <reserved>
+08B  FFFF  <reserved>
+08C  FFFF  <reserved>
+08D  FFFF  <reserved>
+08E  FFFF  <reserved>
+08F  FFFF  <reserved>
+090  FFFF  <reserved>
+091  FFFF  <reserved>
+092  FFFF  <reserved>
+093  FFFF  <reserved>
+094  FFFF  <reserved>
+095  FFFF  <reserved>
+096  FFFF  <reserved>
+097  FFFF  <reserved>
+098  FFFF  <reserved>
+099  FFFF  <reserved>
+09A  FFFF  <reserved>
+09B  FFFF  <reserved>
+09C  FFFF  <reserved>
+09D  FFFF  <reserved>
+09E  FFFF  <reserved>
+09F  FFFF  <reserved>
+0A0  FFFF  <reserved>
+0A1  FFFF  <reserved>
+0A2  FFFF  <reserved>
+0A3  FFFF  <reserved>
+0A4  FFFF  <reserved>
+0A5  FFFF  <reserved>
+0A6  FFFF  <reserved>
+0A7  FFFF  <reserved>
+0A8  FFFF  <reserved>
+0A9  FFFF  <reserved>
+0AA  FFFF  <reserved>
+0AB  FFFF  <reserved>
+0AC  FFFF  <reserved>
+0AD  FFFF  <reserved>
+0AE  FFFF  <reserved>
+0AF  FFFF  <reserved>
+0B0  FFFF  <reserved>
+0B1  FFFF  <reserved>
+0B2  FFFF  <reserved>
+0B3  FFFF  <reserved>
+0B4  FFFF  <reserved>
+0B5  FFFF  <reserved>
+0B6  FFFF  <reserved>
+0B7  FFFF  <reserved>
+0B8  FFFF  <reserved>
+0B9  FFFF  <reserved>
+0BA  FFFF  <reserved>
+0BB  FFFF  <reserved>
+0BC  FFFF  <reserved>
+0BD  FFFF  <reserved>
+0BE  FFFF  <reserved>
+0BF  FFFF  <reserved>
+0C0  FFFF  <reserved>
+0C1  FFFF  <reserved>
+0C2  FFFF  <reserved>
+0C3  FFFF  <reserved>
+0C4  FFFF  <reserved>
+0C5  FFFF  <reserved>
+0C6  FFFF  <reserved>
+0C7  FFFF  <reserved>
+0C8  FFFF  <reserved>
+0C9  FFFF  <reserved>
+0CA  FFFF  <reserved>
+0CB  FFFF  <reserved>
+0CC  FFFF  <reserved>
+0CD  FFFF  <reserved>
+0CE  FFFF  <reserved>
+0CF  FFFF  <reserved>
+0D0  FFFF  <reserved>
+0D1  FFFF  <reserved>
+0D2  FFFF  <reserved>
+0D3  FFFF  <reserved>
+0D4  FFFF  <reserved>
+0D5  FFFF  <reserved>
+0D6  FFFF  <reserved>
+0D7  FFFF  <reserved>
+0D8  FFFF  <reserved>
+0D9  FFFF  <reserved>
+0DA  FFFF  <reserved>
+0DB  FFFF  <reserved>
+0DC  FFFF  <reserved>
+0DD  FFFF  <reserved>
+0DE  FFFF  <reserved>
+0DF  FFFF  <reserved>
+0E0  FFFF  <reserved>
+0E1  FFFF  <reserved>
+0E2  FFFF  <reserved>
+0E3  FFFF  <reserved>
+0E4  FFFF  <reserved>
+0E5  FFFF  <reserved>
+0E6  FFFF  <reserved>
+0E7  FFFF  <reserved>
+0E8  FFFF  <reserved>
+0E9  FFFF  <reserved>
+0EA  FFFF  <reserved>
+0EB  FFFF  <reserved>
+0EC  FFFF  <reserved>
+0ED  FFFF  <reserved>
+0EE  FFFF  <reserved>
+0EF  FFFF  <reserved>
+0F0  FFFF  <reserved>
+0F1  FFFF  <reserved>
+0F2  FFFF  <reserved>
+0F3  FFFF  <reserved>
+0F4  FFFF  <reserved>
+0F5  FFFF  <reserved>
+0F6  FFFF  <reserved>
+0F7  FFFF  <reserved>
+0F8  FFFF  <reserved>
+0F9  FFFF  <reserved>
+0FA  FFFF  <reserved>
+0FB  FFFF  <reserved>
+0FC  FFFF  <reserved>
+0FD  FFFF  <reserved>
+0FE  FFFF  <reserved>
+0FF  FFFF  <reserved>
+100  0000  MOVI R0, 0x00
+101  0C50  MOVI R3, 0x50
+102  EC00  STR  R3, R0
+103  2C01  ADDI R3, 0x01
+104  0854  MOVI R2, 0x54
+105  6E00  CMP  R3, R2
+106  8008  JZ   MOVE_SCAN_INIT
+107  A002  JUMP MOVE_CLEAR_TEMP
+108  0C32  MOVI R3, 0x32
+109  EC00  STR  R3, R0
+10A  0C33  MOVI R3, 0x33
+10B  EC00  STR  R3, R0
+10C  0C34  MOVI R3, 0x34
+10D  EC00  STR  R3, R0
+10E  0C31  MOVI R3, 0x31
+10F  D300  LDR  R0, R3
+110  0C32  MOVI R3, 0x32
+111  D700  LDR  R1, R3
+112  0C30  MOVI R3, 0x30
+113  DB00  LDR  R2, R3
+114  0C00  MOVI R3, 0x00
+115  6B00  CMP  R2, R3
+116  801E  JZ   SCAN_ADDR_LEFT
+117  0C01  MOVI R3, 0x01
+118  6B00  CMP  R2, R3
+119  8025  JZ   SCAN_ADDR_RIGHT
+11A  0C02  MOVI R3, 0x02
+11B  6B00  CMP  R2, R3
+11C  802D  JZ   SCAN_ADDR_UP
+11D  A034  JUMP SCAN_ADDR_DOWN
+11E  1800  MOVR R2, R0
+11F  3A00  ADDR R2, R2
+120  3A00  ADDR R2, R2
+121  3900  ADDR R2, R1
+122  0C40  MOVI R3, 0x40
+123  3E00  ADDR R3, R2
+124  A03B  JUMP SCAN_ADDR_READY
+125  0803  MOVI R2, 0x03
+126  5900  SUB  R2, R1
+127  3000  ADDR R0, R0
+128  3000  ADDR R0, R0
+129  3200  ADDR R0, R2
+12A  0C40  MOVI R3, 0x40
+12B  3C00  ADDR R3, R0
+12C  A03B  JUMP SCAN_ADDR_READY
+12D  1900  MOVR R2, R1
+12E  3A00  ADDR R2, R2
+12F  3A00  ADDR R2, R2
+130  3800  ADDR R2, R0
+131  0C40  MOVI R3, 0x40
+132  3E00  ADDR R3, R2
+133  A03B  JUMP SCAN_ADDR_READY
+134  0803  MOVI R2, 0x03
+135  5900  SUB  R2, R1
+136  3A00  ADDR R2, R2
+137  3A00  ADDR R2, R2
+138  3800  ADDR R2, R0
+139  0C40  MOVI R3, 0x40
+13A  3E00  ADDR R3, R2
+13B  D700  LDR  R1, R3
+13C  0800  MOVI R2, 0x00
+13D  6600  CMP  R1, R2
+13E  8087  JZ   MOVE_SCAN_NEXT
+13F  0C3A  MOVI R3, 0x3A
+140  ED00  STR  R3, R1
+141  0C33  MOVI R3, 0x33
+142  D300  LDR  R0, R3
+143  0800  MOVI R2, 0x00
+144  6200  CMP  R0, R2
+145  8056  JZ   MOVE_APPEND
+146  0801  MOVI R2, 0x01
+147  5200  SUB  R0, R2
+148  0C50  MOVI R3, 0x50
+149  3C00  ADDR R3, R0
+14A  D700  LDR  R1, R3
+14B  0C3A  MOVI R3, 0x3A
+14C  DB00  LDR  R2, R3
+14D  6600  CMP  R1, R2
+14E  8050  JZ   MOVE_CHECK_MERGED
+14F  A056  JUMP MOVE_APPEND
+150  0C34  MOVI R3, 0x34
+151  DB00  LDR  R2, R3
+152  0400  MOVI R1, 0x00
+153  6900  CMP  R2, R1
+154  8064  JZ   MOVE_MERGE
+155  A056  JUMP MOVE_APPEND
+156  0C33  MOVI R3, 0x33
+157  D300  LDR  R0, R3
+158  0850  MOVI R2, 0x50
+159  3800  ADDR R2, R0
+15A  0C3A  MOVI R3, 0x3A
+15B  D700  LDR  R1, R3
+15C  E900  STR  R2, R1
+15D  2001  ADDI R0, 0x01
+15E  0C33  MOVI R3, 0x33
+15F  EC00  STR  R3, R0
+160  0000  MOVI R0, 0x00
+161  0C34  MOVI R3, 0x34
+162  EC00  STR  R3, R0
+163  A087  JUMP MOVE_SCAN_NEXT
+164  0C33  MOVI R3, 0x33
+165  D300  LDR  R0, R3
+166  0801  MOVI R2, 0x01
+167  5200  SUB  R0, R2
+168  0C50  MOVI R3, 0x50
+169  3C00  ADDR R3, R0
+16A  D700  LDR  R1, R3
+16B  2401  ADDI R1, 0x01
+16C  ED00  STR  R3, R1
+16D  0C3A  MOVI R3, 0x3A
+16E  ED00  STR  R3, R1
+16F  0001  MOVI R0, 0x01
+170  0C34  MOVI R3, 0x34
+171  EC00  STR  R3, R0
+172  000B  MOVI R0, 0x0B
+173  6400  CMP  R1, R0
+174  8076  JZ   MOVE_SET_WIN
+175  A079  JUMP MOVE_SCORE_INIT
+176  0001  MOVI R0, 0x01
+177  0C38  MOVI R3, 0x38
+178  EC00  STR  R3, R0
+179  0C3A  MOVI R3, 0x3A
+17A  D300  LDR  R0, R3
+17B  0801  MOVI R2, 0x01
+17C  0400  MOVI R1, 0x00
+17D  6100  CMP  R0, R1
+17E  8083  JZ   MOVE_SCORE_ADD
+17F  3A00  ADDR R2, R2
+180  0401  MOVI R1, 0x01
+181  5100  SUB  R0, R1
+182  A07C  JUMP MOVE_SCORE_POWER
+183  0C36  MOVI R3, 0x36
+184  D700  LDR  R1, R3
+185  3600  ADDR R1, R2
+186  ED00  STR  R3, R1
+187  0C32  MOVI R3, 0x32
+188  D300  LDR  R0, R3
+189  2001  ADDI R0, 0x01
+18A  EC00  STR  R3, R0
+18B  0404  MOVI R1, 0x04
+18C  6100  CMP  R0, R1
+18D  808F  JZ   MOVE_WRITE_INIT
+18E  A00E  JUMP MOVE_SCAN_LOOP
+18F  0000  MOVI R0, 0x00
+190  0C32  MOVI R3, 0x32
+191  EC00  STR  R3, R0
+192  0C31  MOVI R3, 0x31
+193  D300  LDR  R0, R3
+194  0C32  MOVI R3, 0x32
+195  D700  LDR  R1, R3
+196  0C30  MOVI R3, 0x30
+197  DB00  LDR  R2, R3
+198  0C00  MOVI R3, 0x00
+199  6B00  CMP  R2, R3
+19A  80A2  JZ   WRITE_ADDR_LEFT
+19B  0C01  MOVI R3, 0x01
+19C  6B00  CMP  R2, R3
+19D  80A9  JZ   WRITE_ADDR_RIGHT
+19E  0C02  MOVI R3, 0x02
+19F  6B00  CMP  R2, R3
+1A0  80B1  JZ   WRITE_ADDR_UP
+1A1  A0B8  JUMP WRITE_ADDR_DOWN
+1A2  1800  MOVR R2, R0
+1A3  3A00  ADDR R2, R2
+1A4  3A00  ADDR R2, R2
+1A5  3900  ADDR R2, R1
+1A6  0C40  MOVI R3, 0x40
+1A7  3E00  ADDR R3, R2
+1A8  A0BF  JUMP WRITE_ADDR_READY
+1A9  0803  MOVI R2, 0x03
+1AA  5900  SUB  R2, R1
+1AB  3000  ADDR R0, R0
+1AC  3000  ADDR R0, R0
+1AD  3200  ADDR R0, R2
+1AE  0C40  MOVI R3, 0x40
+1AF  3C00  ADDR R3, R0
+1B0  A0BF  JUMP WRITE_ADDR_READY
+1B1  1900  MOVR R2, R1
+1B2  3A00  ADDR R2, R2
+1B3  3A00  ADDR R2, R2
+1B4  3800  ADDR R2, R0
+1B5  0C40  MOVI R3, 0x40
+1B6  3E00  ADDR R3, R2
+1B7  A0BF  JUMP WRITE_ADDR_READY
+1B8  0803  MOVI R2, 0x03
+1B9  5900  SUB  R2, R1
+1BA  3A00  ADDR R2, R2
+1BB  3A00  ADDR R2, R2
+1BC  3800  ADDR R2, R0
+1BD  0C40  MOVI R3, 0x40
+1BE  3E00  ADDR R3, R2
+1BF  083C  MOVI R2, 0x3C
+1C0  EB00  STR  R2, R3
+1C1  0832  MOVI R2, 0x32
+1C2  D200  LDR  R0, R2
+1C3  0850  MOVI R2, 0x50
+1C4  3800  ADDR R2, R0
+1C5  D600  LDR  R1, R2
+1C6  083C  MOVI R2, 0x3C
+1C7  DE00  LDR  R3, R2
+1C8  DB00  LDR  R2, R3
+1C9  6600  CMP  R1, R2
+1CA  80CE  JZ   MOVE_WRITE_STORE
+1CB  0001  MOVI R0, 0x01
+1CC  0835  MOVI R2, 0x35
+1CD  E800  STR  R2, R0
+1CE  ED00  STR  R3, R1
+1CF  0C32  MOVI R3, 0x32
+1D0  D300  LDR  R0, R3
+1D1  2001  ADDI R0, 0x01
+1D2  EC00  STR  R3, R0
+1D3  0404  MOVI R1, 0x04
+1D4  6100  CMP  R0, R1
+1D5  80D7  JZ   MOVE_LINE_NEXT
+1D6  A092  JUMP MOVE_WRITE_LOOP
+1D7  0C31  MOVI R3, 0x31
+1D8  D300  LDR  R0, R3
+1D9  2001  ADDI R0, 0x01
+1DA  EC00  STR  R3, R0
+1DB  0404  MOVI R1, 0x04
+1DC  6100  CMP  R0, R1
+1DD  80DF  JZ   MOVE_ALL_DONE
+1DE  A000  JUMP MOVE_LINE_BEGIN
+1DF  0C35  MOVI R3, 0x35
+1E0  D300  LDR  R0, R3
+1E1  0401  MOVI R1, 0x01
+1E2  6100  CMP  R0, R1
+1E3  80E5  JZ   MOVE_SPAWN
+1E4  F23F  JMPA CHECK_GAME_OVER
+1E5  0039  MOVI R0, 0x39
+1E6  0401  MOVI R1, 0x01
+1E7  E100  STR  R0, R1
+1E8  F200  JMPA SPAWN_BEGIN
+1E9  FFFF  <reserved>
+1EA  FFFF  <reserved>
+1EB  FFFF  <reserved>
+1EC  FFFF  <reserved>
+1ED  FFFF  <reserved>
+1EE  FFFF  <reserved>
+1EF  FFFF  <reserved>
+1F0  FFFF  <reserved>
+1F1  FFFF  <reserved>
+1F2  FFFF  <reserved>
+1F3  FFFF  <reserved>
+1F4  FFFF  <reserved>
+1F5  FFFF  <reserved>
+1F6  FFFF  <reserved>
+1F7  FFFF  <reserved>
+1F8  FFFF  <reserved>
+1F9  FFFF  <reserved>
+1FA  FFFF  <reserved>
+1FB  FFFF  <reserved>
+1FC  FFFF  <reserved>
+1FD  FFFF  <reserved>
+1FE  FFFF  <reserved>
+1FF  FFFF  <reserved>
+200  0000  MOVI R0, 0x00
+201  0C3B  MOVI R3, 0x3B
+202  EC00  STR  R3, R0
+203  B013  INP  R0, 0x13
+204  040F  MOVI R1, 0x0F
+205  7100  AND  R0, R1
+206  0C3C  MOVI R3, 0x3C
+207  EC00  STR  R3, R0
+208  0840  MOVI R2, 0x40
+209  3800  ADDR R2, R0
+20A  D600  LDR  R1, R2
+20B  0C00  MOVI R3, 0x00
+20C  6700  CMP  R1, R3
+20D  8028  JZ   SPAWN_PLACE
+20E  0C3B  MOVI R3, 0x3B
+20F  D300  LDR  R0, R3
+210  2001  ADDI R0, 0x01
+211  EC00  STR  R3, R0
+212  0410  MOVI R1, 0x10
+213  6100  CMP  R0, R1
+214  8016  JZ   SPAWN_SCAN_INIT
+215  A003  JUMP SPAWN_RANDOM
+216  0000  MOVI R0, 0x00
+217  0C3C  MOVI R3, 0x3C
+218  EC00  STR  R3, R0
+219  0C3C  MOVI R3, 0x3C
+21A  D300  LDR  R0, R3
+21B  0840  MOVI R2, 0x40
+21C  3800  ADDR R2, R0
+21D  D600  LDR  R1, R2
+21E  0C00  MOVI R3, 0x00
+21F  6700  CMP  R1, R3
+220  8028  JZ   SPAWN_PLACE
+221  2001  ADDI R0, 0x01
+222  0C3C  MOVI R3, 0x3C
+223  EC00  STR  R3, R0
+224  0410  MOVI R1, 0x10
+225  6100  CMP  R0, R1
+226  803F  JZ   CHECK_GAME_OVER
+227  A019  JUMP SPAWN_SCAN
+228  0C3C  MOVI R3, 0x3C
+229  D300  LDR  R0, R3
+22A  0840  MOVI R2, 0x40
+22B  3800  ADDR R2, R0
+22C  B013  INP  R0, 0x13
+22D  0407  MOVI R1, 0x07
+22E  7100  AND  R0, R1
+22F  0400  MOVI R1, 0x00
+230  6100  CMP  R0, R1
+231  8034  JZ   SPAWN_FOUR
+232  0401  MOVI R1, 0x01
+233  A035  JUMP SPAWN_STORE
+234  0402  MOVI R1, 0x02
+235  E900  STR  R2, R1
+236  0C39  MOVI R3, 0x39
+237  D300  LDR  R0, R3
+238  0401  MOVI R1, 0x01
+239  5100  SUB  R0, R1
+23A  EC00  STR  R3, R0
+23B  0400  MOVI R1, 0x00
+23C  6100  CMP  R0, R1
+23D  803F  JZ   CHECK_GAME_OVER
+23E  A000  JUMP SPAWN_BEGIN
+23F  0000  MOVI R0, 0x00
+240  0C40  MOVI R3, 0x40
+241  3C00  ADDR R3, R0
+242  D700  LDR  R1, R3
+243  0800  MOVI R2, 0x00
+244  6600  CMP  R1, R2
+245  8093  JZ   GAME_CAN_MOVE
+246  2001  ADDI R0, 0x01
+247  0810  MOVI R2, 0x10
+248  6200  CMP  R0, R2
+249  804B  JZ   CHECK_HORIZONTAL_INIT
+24A  A040  JUMP CHECK_EMPTY_LOOP
+24B  0000  MOVI R0, 0x00
+24C  0C31  MOVI R3, 0x31
+24D  EC00  STR  R3, R0
+24E  0000  MOVI R0, 0x00
+24F  0C32  MOVI R3, 0x32
+250  EC00  STR  R3, R0
+251  0C31  MOVI R3, 0x31
+252  D300  LDR  R0, R3
+253  3000  ADDR R0, R0
+254  3000  ADDR R0, R0
+255  0C32  MOVI R3, 0x32
+256  D700  LDR  R1, R3
+257  3100  ADDR R0, R1
+258  0C40  MOVI R3, 0x40
+259  3C00  ADDR R3, R0
+25A  D700  LDR  R1, R3
+25B  2C01  ADDI R3, 0x01
+25C  DB00  LDR  R2, R3
+25D  6600  CMP  R1, R2
+25E  8093  JZ   GAME_CAN_MOVE
+25F  0C32  MOVI R3, 0x32
+260  D300  LDR  R0, R3
+261  2001  ADDI R0, 0x01
+262  EC00  STR  R3, R0
+263  0403  MOVI R1, 0x03
+264  6100  CMP  R0, R1
+265  8067  JZ   CHECK_HORIZONTAL_NEXT_ROW
+266  A051  JUMP CHECK_HORIZONTAL_CELL
+267  0C31  MOVI R3, 0x31
+268  D300  LDR  R0, R3
+269  2001  ADDI R0, 0x01
+26A  EC00  STR  R3, R0
+26B  0404  MOVI R1, 0x04
+26C  6100  CMP  R0, R1
+26D  806F  JZ   CHECK_VERTICAL_INIT
+26E  A04E  JUMP CHECK_HORIZONTAL_ROW
+26F  0000  MOVI R0, 0x00
+270  0C31  MOVI R3, 0x31
+271  EC00  STR  R3, R0
+272  0000  MOVI R0, 0x00
+273  0C32  MOVI R3, 0x32
+274  EC00  STR  R3, R0
+275  0C32  MOVI R3, 0x32
+276  D300  LDR  R0, R3
+277  3000  ADDR R0, R0
+278  3000  ADDR R0, R0
+279  0C31  MOVI R3, 0x31
+27A  D700  LDR  R1, R3
+27B  3100  ADDR R0, R1
+27C  0C40  MOVI R3, 0x40
+27D  3C00  ADDR R3, R0
+27E  D700  LDR  R1, R3
+27F  2C04  ADDI R3, 0x04
+280  DB00  LDR  R2, R3
+281  6600  CMP  R1, R2
+282  8093  JZ   GAME_CAN_MOVE
+283  0C32  MOVI R3, 0x32
+284  D300  LDR  R0, R3
+285  2001  ADDI R0, 0x01
+286  EC00  STR  R3, R0
+287  0403  MOVI R1, 0x03
+288  6100  CMP  R0, R1
+289  808B  JZ   CHECK_VERTICAL_NEXT_COLUMN
+28A  A075  JUMP CHECK_VERTICAL_CELL
+28B  0C31  MOVI R3, 0x31
+28C  D300  LDR  R0, R3
+28D  2001  ADDI R0, 0x01
+28E  EC00  STR  R3, R0
+28F  0404  MOVI R1, 0x04
+290  6100  CMP  R0, R1
+291  8094  JZ   GAME_OVER_2048
+292  A072  JUMP CHECK_VERTICAL_COLUMN
+293  F300  JMPA SEND_FRAME
+294  0C38  MOVI R3, 0x38
+295  D300  LDR  R0, R3
+296  0480  MOVI R1, 0x80
+297  9100  OR   R0, R1
+298  EC00  STR  R3, R0
+299  0080  MOVI R0, 0x80
+29A  C030  OUP  0x30, R0
+29B  F300  JMPA SEND_FRAME
+29C  FFFF  <reserved>
+29D  FFFF  <reserved>
+29E  FFFF  <reserved>
+29F  FFFF  <reserved>
+2A0  FFFF  <reserved>
+2A1  FFFF  <reserved>
+2A2  FFFF  <reserved>
+2A3  FFFF  <reserved>
+2A4  FFFF  <reserved>
+2A5  FFFF  <reserved>
+2A6  FFFF  <reserved>
+2A7  FFFF  <reserved>
+2A8  FFFF  <reserved>
+2A9  FFFF  <reserved>
+2AA  FFFF  <reserved>
+2AB  FFFF  <reserved>
+2AC  FFFF  <reserved>
+2AD  FFFF  <reserved>
+2AE  FFFF  <reserved>
+2AF  FFFF  <reserved>
+2B0  FFFF  <reserved>
+2B1  FFFF  <reserved>
+2B2  FFFF  <reserved>
+2B3  FFFF  <reserved>
+2B4  FFFF  <reserved>
+2B5  FFFF  <reserved>
+2B6  FFFF  <reserved>
+2B7  FFFF  <reserved>
+2B8  FFFF  <reserved>
+2B9  FFFF  <reserved>
+2BA  FFFF  <reserved>
+2BB  FFFF  <reserved>
+2BC  FFFF  <reserved>
+2BD  FFFF  <reserved>
+2BE  FFFF  <reserved>
+2BF  FFFF  <reserved>
+2C0  FFFF  <reserved>
+2C1  FFFF  <reserved>
+2C2  FFFF  <reserved>
+2C3  FFFF  <reserved>
+2C4  FFFF  <reserved>
+2C5  FFFF  <reserved>
+2C6  FFFF  <reserved>
+2C7  FFFF  <reserved>
+2C8  FFFF  <reserved>
+2C9  FFFF  <reserved>
+2CA  FFFF  <reserved>
+2CB  FFFF  <reserved>
+2CC  FFFF  <reserved>
+2CD  FFFF  <reserved>
+2CE  FFFF  <reserved>
+2CF  FFFF  <reserved>
+2D0  FFFF  <reserved>
+2D1  FFFF  <reserved>
+2D2  FFFF  <reserved>
+2D3  FFFF  <reserved>
+2D4  FFFF  <reserved>
+2D5  FFFF  <reserved>
+2D6  FFFF  <reserved>
+2D7  FFFF  <reserved>
+2D8  FFFF  <reserved>
+2D9  FFFF  <reserved>
+2DA  FFFF  <reserved>
+2DB  FFFF  <reserved>
+2DC  FFFF  <reserved>
+2DD  FFFF  <reserved>
+2DE  FFFF  <reserved>
+2DF  FFFF  <reserved>
+2E0  FFFF  <reserved>
+2E1  FFFF  <reserved>
+2E2  FFFF  <reserved>
+2E3  FFFF  <reserved>
+2E4  FFFF  <reserved>
+2E5  FFFF  <reserved>
+2E6  FFFF  <reserved>
+2E7  FFFF  <reserved>
+2E8  FFFF  <reserved>
+2E9  FFFF  <reserved>
+2EA  FFFF  <reserved>
+2EB  FFFF  <reserved>
+2EC  FFFF  <reserved>
+2ED  FFFF  <reserved>
+2EE  FFFF  <reserved>
+2EF  FFFF  <reserved>
+2F0  FFFF  <reserved>
+2F1  FFFF  <reserved>
+2F2  FFFF  <reserved>
+2F3  FFFF  <reserved>
+2F4  FFFF  <reserved>
+2F5  FFFF  <reserved>
+2F6  FFFF  <reserved>
+2F7  FFFF  <reserved>
+2F8  FFFF  <reserved>
+2F9  FFFF  <reserved>
+2FA  FFFF  <reserved>
+2FB  FFFF  <reserved>
+2FC  FFFF  <reserved>
+2FD  FFFF  <reserved>
+2FE  FFFF  <reserved>
+2FF  FFFF  <reserved>
+300  0000  MOVI R0, 0x00
+301  04A5  MOVI R1, 0xA5
+302  E100  STR  R0, R1
+303  2001  ADDI R0, 0x01
+304  0404  MOVI R1, 0x04
+305  E100  STR  R0, R1
+306  2001  ADDI R0, 0x01
+307  041B  MOVI R1, 0x1B
+308  E100  STR  R0, R1
+309  2001  ADDI R0, 0x01
+30A  0402  MOVI R1, 0x02
+30B  E100  STR  R0, R1
+30C  2001  ADDI R0, 0x01
+30D  0838  MOVI R2, 0x38
+30E  D600  LDR  R1, R2
+30F  E100  STR  R0, R1
+310  2001  ADDI R0, 0x01
+311  0837  MOVI R2, 0x37
+312  D600  LDR  R1, R2
+313  E100  STR  R0, R1
+314  2401  ADDI R1, 0x01
+315  E900  STR  R2, R1
+316  2001  ADDI R0, 0x01
+317  0836  MOVI R2, 0x36
+318  D600  LDR  R1, R2
+319  0C00  MOVI R3, 0x00
+31A  0880  MOVI R2, 0x80
+31B  3A00  ADDR R2, R2
+31C  6600  CMP  R1, R2
+31D  B032  INP  R0, 0x32
+31E  0820  MOVI R2, 0x20
+31F  7200  AND  R0, R2
+320  6200  CMP  R0, R2
+321  8023  JZ   SEND_SCORE_MORE
+322  A028  JUMP SEND_SCORE_READY
+323  0880  MOVI R2, 0x80
+324  3A00  ADDR R2, R2
+325  5600  SUB  R1, R2
+326  2C01  ADDI R3, 0x01
+327  A01C  JUMP SEND_SCORE_SPLIT
+328  0006  MOVI R0, 0x06
+329  E100  STR  R0, R1
+32A  2001  ADDI R0, 0x01
+32B  E300  STR  R0, R3
+32C  2001  ADDI R0, 0x01
+32D  0404  MOVI R1, 0x04
+32E  E100  STR  R0, R1
+32F  2001  ADDI R0, 0x01
+330  E100  STR  R0, R1
+331  2001  ADDI R0, 0x01
+332  0800  MOVI R2, 0x00
+333  0C40  MOVI R3, 0x40
+334  3E00  ADDR R3, R2
+335  D700  LDR  R1, R3
+336  E100  STR  R0, R1
+337  2001  ADDI R0, 0x01
+338  2801  ADDI R2, 0x01
+339  0C10  MOVI R3, 0x10
+33A  6B00  CMP  R2, R3
+33B  803D  JZ   SEND_CHECKSUM_INIT
+33C  A033  JUMP SEND_COPY_BOARD
+33D  0000  MOVI R0, 0x00
+33E  0400  MOVI R1, 0x00
+33F  D800  LDR  R2, R0
+340  4600  XOR  R1, R2
+341  2001  ADDI R0, 0x01
+342  0C1A  MOVI R3, 0x1A
+343  6300  CMP  R0, R3
+344  8046  JZ   SEND_CHECKSUM_DONE
+345  A03F  JUMP SEND_CHECKSUM_LOOP
+346  E100  STR  R0, R1
+347  0C00  MOVI R3, 0x00
+348  D300  LDR  R0, R3
+349  B411  INP  R1, 0x11
+34A  0802  MOVI R2, 0x02
+34B  7600  AND  R1, R2
+34C  6600  CMP  R1, R2
+34D  804F  JZ   SEND_UART_BYTE
+34E  A049  JUMP SEND_UART_WAIT
+34F  C010  OUP  0x10, R0
+350  2C01  ADDI R3, 0x01
+351  081B  MOVI R2, 0x1B
+352  6E00  CMP  R3, R2
+353  8055  JZ   SEND_UART_DONE
+354  A048  JUMP SEND_UART_LOOP
+355  F012  JMPA MAIN
+356  FFFF  <reserved>
+357  FFFF  <reserved>
+358  FFFF  <reserved>
+359  FFFF  <reserved>
+35A  FFFF  <reserved>
+35B  FFFF  <reserved>
+35C  FFFF  <reserved>
+35D  FFFF  <reserved>
+35E  FFFF  <reserved>
+35F  FFFF  <reserved>
+360  FFFF  <reserved>
+361  FFFF  <reserved>
+362  FFFF  <reserved>
+363  FFFF  <reserved>
+364  FFFF  <reserved>
+365  FFFF  <reserved>
+366  FFFF  <reserved>
+367  FFFF  <reserved>
+368  FFFF  <reserved>
+369  FFFF  <reserved>
+36A  FFFF  <reserved>
+36B  FFFF  <reserved>
+36C  FFFF  <reserved>
+36D  FFFF  <reserved>
+36E  FFFF  <reserved>
+36F  FFFF  <reserved>
+370  FFFF  <reserved>
+371  FFFF  <reserved>
+372  FFFF  <reserved>
+373  FFFF  <reserved>
+374  FFFF  <reserved>
+375  FFFF  <reserved>
+376  FFFF  <reserved>
+377  FFFF  <reserved>
+378  FFFF  <reserved>
+379  FFFF  <reserved>
+37A  FFFF  <reserved>
+37B  FFFF  <reserved>
+37C  FFFF  <reserved>
+37D  FFFF  <reserved>
+37E  FFFF  <reserved>
+37F  FFFF  <reserved>
+380  FFFF  <reserved>
+381  FFFF  <reserved>
+382  FFFF  <reserved>
+383  FFFF  <reserved>
+384  FFFF  <reserved>
+385  FFFF  <reserved>
+386  FFFF  <reserved>
+387  FFFF  <reserved>
+388  FFFF  <reserved>
+389  FFFF  <reserved>
+38A  FFFF  <reserved>
+38B  FFFF  <reserved>
+38C  FFFF  <reserved>
+38D  FFFF  <reserved>
+38E  FFFF  <reserved>
+38F  FFFF  <reserved>
+390  FFFF  <reserved>
+391  FFFF  <reserved>
+392  FFFF  <reserved>
+393  FFFF  <reserved>
+394  FFFF  <reserved>
+395  FFFF  <reserved>
+396  FFFF  <reserved>
+397  FFFF  <reserved>
+398  FFFF  <reserved>
+399  FFFF  <reserved>
+39A  FFFF  <reserved>
+39B  FFFF  <reserved>
+39C  FFFF  <reserved>
+39D  FFFF  <reserved>
+39E  FFFF  <reserved>
+39F  FFFF  <reserved>
+3A0  FFFF  <reserved>
+3A1  FFFF  <reserved>
+3A2  FFFF  <reserved>
+3A3  FFFF  <reserved>
+3A4  FFFF  <reserved>
+3A5  FFFF  <reserved>
+3A6  FFFF  <reserved>
+3A7  FFFF  <reserved>
+3A8  FFFF  <reserved>
+3A9  FFFF  <reserved>
+3AA  FFFF  <reserved>
+3AB  FFFF  <reserved>
+3AC  FFFF  <reserved>
+3AD  FFFF  <reserved>
+3AE  FFFF  <reserved>
+3AF  FFFF  <reserved>
+3B0  FFFF  <reserved>
+3B1  FFFF  <reserved>
+3B2  FFFF  <reserved>
+3B3  FFFF  <reserved>
+3B4  FFFF  <reserved>
+3B5  FFFF  <reserved>
+3B6  FFFF  <reserved>
+3B7  FFFF  <reserved>
+3B8  FFFF  <reserved>
+3B9  FFFF  <reserved>
+3BA  FFFF  <reserved>
+3BB  FFFF  <reserved>
+3BC  FFFF  <reserved>
+3BD  FFFF  <reserved>
+3BE  FFFF  <reserved>
+3BF  FFFF  <reserved>
+3C0  FFFF  <reserved>
+3C1  FFFF  <reserved>
+3C2  FFFF  <reserved>
+3C3  FFFF  <reserved>
+3C4  FFFF  <reserved>
+3C5  FFFF  <reserved>
+3C6  FFFF  <reserved>
+3C7  FFFF  <reserved>
+3C8  FFFF  <reserved>
+3C9  FFFF  <reserved>
+3CA  FFFF  <reserved>
+3CB  FFFF  <reserved>
+3CC  FFFF  <reserved>
+3CD  FFFF  <reserved>
+3CE  FFFF  <reserved>
+3CF  FFFF  <reserved>
+3D0  FFFF  <reserved>
+3D1  FFFF  <reserved>
+3D2  FFFF  <reserved>
+3D3  FFFF  <reserved>
+3D4  FFFF  <reserved>
+3D5  FFFF  <reserved>
+3D6  FFFF  <reserved>
+3D7  FFFF  <reserved>
+3D8  FFFF  <reserved>
+3D9  FFFF  <reserved>
+3DA  FFFF  <reserved>
+3DB  FFFF  <reserved>
+3DC  FFFF  <reserved>
+3DD  FFFF  <reserved>
+3DE  FFFF  <reserved>
+3DF  FFFF  <reserved>
+3E0  FFFF  <reserved>
+3E1  FFFF  <reserved>
+3E2  FFFF  <reserved>
+3E3  FFFF  <reserved>
+3E4  FFFF  <reserved>
+3E5  FFFF  <reserved>
+3E6  FFFF  <reserved>
+3E7  FFFF  <reserved>
+3E8  FFFF  <reserved>
+3E9  FFFF  <reserved>
+3EA  FFFF  <reserved>
+3EB  FFFF  <reserved>
+3EC  FFFF  <reserved>
+3ED  FFFF  <reserved>
+3EE  FFFF  <reserved>
+3EF  FFFF  <reserved>
+3F0  FFFF  <reserved>
+3F1  FFFF  <reserved>
+3F2  FFFF  <reserved>
+3F3  FFFF  <reserved>
+3F4  FFFF  <reserved>
+3F5  FFFF  <reserved>
+3F6  FFFF  <reserved>
+3F7  FFFF  <reserved>
+3F8  FFFF  <reserved>
+3F9  FFFF  <reserved>
+3FA  FFFF  <reserved>
+3FB  FFFF  <reserved>
+3FC  FFFF  <reserved>
+3FD  FFFF  <reserved>
+3FE  FFFF  <reserved>
+3FF  FFFF  <reserved>

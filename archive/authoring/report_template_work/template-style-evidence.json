@@ -1,0 +1,171 @@
+{
+  "input": "C:\\Users\\xieke\\Desktop\\CPU\\deliverables\\report_template_work\\template_reference.docx",
+  "fonts_by_char_count": {
+    "Times New Roman": 387,
+    "Calibri": 15
+  },
+  "direct_run_formatting_runs": 163,
+  "direct_paragraph_formatting_paragraphs": 116,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 5,
+      "text": "XXXX",
+      "style": "Normal"
+    },
+    {
+      "para_index": 12,
+      "text": "Creation Date\uff1a20xx.xx.xx",
+      "style": "Normal"
+    },
+    {
+      "para_index": 13,
+      "text": "Version\uff1a x.x",
+      "style": "Normal"
+    },
+    {
+      "para_index": 21,
+      "text": "University of Electronic Science and Technology of China",
+      "style": "Normal"
+    },
+    {
+      "para_index": 22,
+      "text": "Chengdu, Sichuan",
+      "style": "Normal"
+    },
+    {
+      "para_index": 66,
+      "text": "3.1.1 Function\t9",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 67,
+      "text": "3.1.2 Input/Output\t9",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 68,
+      "text": "3.1.3 Architecture\t9",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 69,
+      "text": "3.1.4 Dataflow\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 71,
+      "text": "3.2.1 Function\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 72,
+      "text": "3.2.2 Input/Output\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 73,
+      "text": "3.2.3 Architecture\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 74,
+      "text": "3.2.4 Dataflow\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 77,
+      "text": "3.4.1 Clock\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 78,
+      "text": "3.4.2 Reset\t10",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 79,
+      "text": "3.4.3 Initial\t11",
+      "style": "toc 3"
+    },
+    {
+      "para_index": 193,
+      "text": "Date",
+      "style": "Normal"
+    },
+    {
+      "para_index": 194,
+      "text": "Version",
+      "style": "Normal"
+    },
+    {
+      "para_index": 195,
+      "text": "Change",
+      "style": "Normal"
+    },
+    {
+      "para_index": 196,
+      "text": "Editer",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "text": "\t",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "XXXX",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 5,
+        "run_text": "XXXX",
+        "style": "Normal"
+      },
+      {
+        "para_index": 6,
+        "run_text": "Design Report",
+        "style": "Normal"
+      },
+      {
+        "para_index": 12,
+        "run_text": "Creation Date",
+        "style": "Normal"
+      },
+      {
+        "para_index": 12,
+        "run_text": "\uff1a",
+        "style": "Normal"
+      },
+      {
+        "para_index": 12,
+        "run_text": "20",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

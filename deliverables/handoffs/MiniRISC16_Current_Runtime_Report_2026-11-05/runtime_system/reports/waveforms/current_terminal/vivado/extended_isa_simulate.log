@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+tb_runtime_extended_isa_wave: TEST PASS
+$finish called at time : 166 ns : File "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/tb/tb_runtime_waveforms.v" Line 231

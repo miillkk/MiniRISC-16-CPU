@@ -1,0 +1,272 @@
+$date
+   Fri Oct 16 10:34:47 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_io_decoder $end
+$var reg 8 ! io_addr [7:0] $end
+$var reg 1 " io_re $end
+$var reg 1 # io_we $end
+$var reg 16 $ display_low_rdata [15:0] $end
+$var reg 16 % display_high_rdata [15:0] $end
+$var reg 16 & display_control_rdata [15:0] $end
+$var reg 16 ' led_rdata [15:0] $end
+$var reg 16 ( switch_rdata [15:0] $end
+$var reg 16 ) input_control_rdata [15:0] $end
+$var reg 16 * status_rdata [15:0] $end
+$var reg 16 + scratchpad_rdata [15:0] $end
+$var wire 16 , io_rdata [15:0] $end
+$var wire 1 - display_low_write $end
+$var wire 1 . display_high_write $end
+$var wire 1 / display_control_write $end
+$var wire 1 0 led_write $end
+$var wire 1 1 scratchpad_write $end
+$var integer 32 2 write_count [31:0] $end
+$scope module dut $end
+$var wire 8 3 io_addr [7:0] $end
+$var wire 1 4 io_re $end
+$var wire 1 5 io_we $end
+$var wire 16 6 display_low_rdata [15:0] $end
+$var wire 16 7 display_high_rdata [15:0] $end
+$var wire 16 8 display_control_rdata [15:0] $end
+$var wire 16 9 led_rdata [15:0] $end
+$var wire 16 : switch_rdata [15:0] $end
+$var wire 16 ; input_control_rdata [15:0] $end
+$var wire 16 < status_rdata [15:0] $end
+$var wire 16 = scratchpad_rdata [15:0] $end
+$var reg 16 > io_rdata [15:0] $end
+$var reg 1 ? display_low_write $end
+$var reg 1 @ display_high_write $end
+$var reg 1 A display_control_write $end
+$var reg 1 B led_write $end
+$var reg 1 C scratchpad_write $end
+$var wire 1 D scratchpad_selected $end
+$upscope $end
+$scope task check_read $end
+$var reg 8 E address [7:0] $end
+$var reg 16 F expected [15:0] $end
+$upscope $end
+$scope task check_write $end
+$var reg 8 G address [7:0] $end
+$var reg 5 H expected [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b0 !
+0"
+0#
+b1000100010001 $
+b10001000100010 %
+b11001100110011 &
+b1000100 '
+b101010101 (
+b11 )
+b1101000 *
+b1010101111001101 +
+b0 ,
+0-
+0.
+0/
+00
+01
+bx 2
+b0 3
+04
+05
+b1000100010001 6
+b10001000100010 7
+b11001100110011 8
+b1000100 9
+b101010101 :
+b11 ;
+b1101000 <
+b1010101111001101 =
+b0 >
+0?
+0@
+0A
+0B
+0C
+0D
+bx E
+bx F
+bx G
+bx H
+$end
+
+#1000
+b100000 !
+1"
+b1000100010001 ,
+b100000 3
+14
+b1000100010001 >
+b100000 E
+b1000100010001 F
+
+#2000
+b100001 !
+b10001000100010 ,
+b100001 3
+b10001000100010 >
+b100001 E
+b10001000100010 F
+
+#3000
+b100010 !
+b11001100110011 ,
+b100010 3
+b11001100110011 >
+b100010 E
+b11001100110011 F
+
+#4000
+b110000 !
+b1000100 ,
+b110000 3
+b1000100 >
+b110000 E
+b1000100 F
+
+#5000
+b110001 !
+b101010101 ,
+b110001 3
+b101010101 >
+b110001 E
+b101010101 F
+
+#6000
+b110010 !
+b1101000 ,
+b110010 3
+b1101000 >
+b110010 E
+b1101000 F
+
+#7000
+b110011 !
+b11 ,
+b110011 3
+b11 >
+b110011 E
+b11 F
+
+#8000
+b1000000 !
+b1010101111001101 ,
+b1000000 3
+b1010101111001101 >
+1D
+b1000000 E
+b1010101111001101 F
+
+#9000
+b1001111 !
+b1001111 3
+b1010101111001101 >
+b1001111 E
+
+#10000
+b1111110 !
+b0 ,
+b1111110 3
+b0 >
+0D
+b1111110 E
+b0 F
+
+#11000
+b100000 !
+0"
+1#
+1-
+b100000 3
+04
+15
+1?
+b100000 G
+b1 H
+
+#12000
+b100001 !
+0-
+1.
+b1 2
+b100001 3
+0?
+1@
+b100001 G
+b10 H
+
+#13000
+b100010 !
+0.
+1/
+b100010 3
+0@
+1A
+b100010 G
+b100 H
+
+#14000
+b110000 !
+0/
+10
+b110000 3
+0A
+1B
+b110000 G
+b1000 H
+
+#15000
+b1000000 !
+00
+11
+b1000000 3
+0B
+1C
+1D
+b1000000 G
+b10000 H
+
+#16000
+b1001111 !
+b1001111 3
+1C
+b1001111 G
+
+#17000
+b110001 !
+01
+b110001 3
+0C
+0D
+b110001 G
+b0 H
+
+#18000
+b110010 !
+b0 2
+b110010 3
+b110010 G
+
+#19000
+b110011 !
+b110011 3
+b110011 G
+
+#20000
+b1111110 !
+b1111110 3
+b1111110 G

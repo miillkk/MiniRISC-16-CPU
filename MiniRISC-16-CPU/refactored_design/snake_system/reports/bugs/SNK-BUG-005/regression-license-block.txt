@@ -1,0 +1,8 @@
+MiniRISC-16 Snake RTL regression
+Tests: 4
+Failures: 0
+License-blocked: 4
+BLOCKED tb_cpu_data_instructions - XSim license unavailable after successful compile/elaboration
+BLOCKED tb_uart_port - XSim license unavailable after successful compile/elaboration
+BLOCKED tb_tick_timer - XSim license unavailable after successful compile/elaboration
+BLOCKED tb_snake_system - XSim license unavailable after successful compile/elaboration

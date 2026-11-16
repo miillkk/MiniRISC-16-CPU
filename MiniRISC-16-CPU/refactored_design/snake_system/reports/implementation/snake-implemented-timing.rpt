@@ -1,0 +1,358 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Fri Oct 16 12:22:01 2026
+| Host         : KENT running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/snake_system/reports/implementation/snake-implemented-timing.rpt
+| Design       : snake_board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (10)
+6. checking no_output_delay (33)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (10)
+-------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 10 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (33)
+--------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 33 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.192        0.000                      0                 2191        0.156        0.000                      0                 2191        3.750        0.000                       0                   614  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----       ------------       ----------      --------------
+clk_100mhz  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_100mhz          0.192        0.000                      0                 2191        0.156        0.000                      0                 2191        3.750        0.000                       0                   614  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_100mhz
+  To Clock:  clk_100mhz
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.192ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.156ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.192ns  (required time - arrival time)
+  Source:                 u_snake_soc/u_cpu_core/u_datapath/u_program_counter/pc_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_100mhz
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_100mhz rise@10.000ns - clk_100mhz rise@0.000ns)
+  Data Path Delay:        9.656ns  (logic 3.238ns (33.532%)  route 6.418ns (66.468%))
+  Logic Levels:           12  (CARRY4=2 LUT2=1 LUT3=2 LUT4=1 LUT6=4 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.066ns = ( 15.066 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.519ns
+    Clock Pessimism Removal (CPR):    0.393ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_100mhz rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.436     1.436 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.205     3.641    clk_100mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.742 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=613, routed)         1.777     5.519    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/clk_100mhz_IBUF_BUFG
+    SLICE_X97Y65         FDRE                                         r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/pc_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X97Y65         FDRE (Prop_fdre_C_Q)         0.456     5.975 r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/pc_reg[6]/Q
+                         net (fo=66, routed)          1.123     7.098    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/mem_addr[6]
+    SLICE_X100Y64        LUT6 (Prop_lut6_I2_O)        0.124     7.222 f  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/z_flag_i_32/O
+                         net (fo=1, routed)           0.000     7.222    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/z_flag_i_32_n_0
+    SLICE_X100Y64        MUXF7 (Prop_muxf7_I1_O)      0.247     7.469 f  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/z_flag_reg_i_15/O
+                         net (fo=1, routed)           0.000     7.469    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/z_flag_reg_i_15_n_0
+    SLICE_X100Y64        MUXF8 (Prop_muxf8_I0_O)      0.098     7.567 f  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/z_flag_reg_i_5/O
+                         net (fo=22, routed)          0.963     8.530    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/instruction[12]
+    SLICE_X103Y64        LUT3 (Prop_lut3_I1_O)        0.348     8.878 r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][14]_i_9/O
+                         net (fo=38, routed)          0.514     9.392    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/alu_src
+    SLICE_X103Y63        LUT3 (Prop_lut3_I1_O)        0.327     9.719 r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][0]_i_9/O
+                         net (fo=3, routed)           0.785    10.504    u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][2]_i_11_0
+    SLICE_X98Y62         LUT2 (Prop_lut2_I1_O)        0.124    10.628 r  u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers[2][2]_i_23/O
+                         net (fo=1, routed)           0.000    10.628    u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers[2][2]_i_23_n_0
+    SLICE_X98Y62         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    11.141 r  u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][2]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    11.141    u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][2]_i_11_n_0
+    SLICE_X98Y63         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    11.464 r  u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][11]_i_14/O[1]
+                         net (fo=1, routed)           0.768    12.232    u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][11]_i_14_n_6
+    SLICE_X97Y64         LUT4 (Prop_lut4_I0_O)        0.306    12.538 r  u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers[2][5]_i_13/O
+                         net (fo=1, routed)           0.263    12.800    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/z_flag_i_7_2
+    SLICE_X97Y64         LUT6 (Prop_lut6_I4_O)        0.124    12.924 r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][5]_i_6/O
+                         net (fo=2, routed)           0.730    13.655    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][5]_i_6_n_0
+    SLICE_X100Y62        LUT6 (Prop_lut6_I5_O)        0.124    13.779 r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][5]_i_2/O
+                         net (fo=1, routed)           0.452    14.231    u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][5]_i_2_n_0
+    SLICE_X100Y62        LUT6 (Prop_lut6_I0_O)        0.124    14.355 r  u_snake_soc/u_cpu_core/u_datapath/u_program_counter/registers[2][5]_i_1/O
+                         net (fo=4, routed)           0.821    15.176    u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][15]_0[5]
+    SLICE_X98Y63         FDRE                                         r  u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_100mhz rise edge)
+                                                     10.000    10.000 r  <hidden>
+    M19                                               0.000    10.000 r  clk_100mhz
+                         net (fo=0)                   0.000    10.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.366    11.366 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.006    13.372    clk_100mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.463 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=613, routed)         1.603    15.066    u_snake_soc/u_cpu_core/u_datapath/u_register_file/clk_100mhz_IBUF_BUFG
+    SLICE_X98Y63         FDRE                                         r  u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][5]/C
+                         clock pessimism              0.393    15.459    <hidden>
+                         clock uncertainty           -0.035    15.424    <hidden>
+    SLICE_X98Y63         FDRE (Setup_fdre_C_D)       -0.056    15.368    u_snake_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[2][5]
+  -------------------------------------------------------------------
+                         required time                         15.368    <hidden>
+                         arrival time                         -15.176    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.192    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.156ns  (arrival time - required time)
+  Source:                 u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/tx_reg/D
+                            (rising edge-triggered cell FDSE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_100mhz
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_100mhz rise@0.000ns - clk_100mhz rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.209ns (80.352%)  route 0.051ns (19.648%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.055ns
+    Source Clock Delay      (SCD):    1.537ns
+    Clock Pessimism Removal (CPR):    0.505ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_100mhz rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.205     0.205 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.674     0.879    clk_100mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.905 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=613, routed)         0.633     1.537    u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/clk_100mhz_IBUF_BUFG
+    SLICE_X108Y61        FDRE                                         r  u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X108Y61        FDRE (Prop_fdre_C_Q)         0.164     1.701 r  u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/shift_reg[1]/Q
+                         net (fo=1, routed)           0.051     1.753    u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/p_0_in_0
+    SLICE_X109Y61        LUT4 (Prop_lut4_I1_O)        0.045     1.798 r  u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/tx_i_2/O
+                         net (fo=1, routed)           0.000     1.798    u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/tx_i_2_n_0
+    SLICE_X109Y61        FDSE                                         r  u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/tx_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_100mhz rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.392     0.392 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.731     1.123    clk_100mhz_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.152 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=613, routed)         0.903     2.055    u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/clk_100mhz_IBUF_BUFG
+    SLICE_X109Y61        FDSE                                         r  u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/tx_reg/C
+                         clock pessimism             -0.505     1.550    <hidden>
+    SLICE_X109Y61        FDSE (Hold_fdse_C_D)         0.091     1.641    u_snake_soc/u_snake_peripheral_subsystem/u_uart_port/u_uart_tx/tx_reg
+  -------------------------------------------------------------------
+                         required time                         -1.641    <hidden>
+                         arrival time                           1.798    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.156    <hidden>
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_100mhz
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_100mhz }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I       n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  clk_100mhz_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    RAMS64E/CLK  n/a            1.250         5.000       3.750      SLICE_X104Y61   u_snake_soc/u_data_memory/memory_reg_0_255_0_0/RAMS64E_A/CLK
+High Pulse Width  Slow    RAMS64E/CLK  n/a            1.250         5.000       3.750      SLICE_X104Y61   u_snake_soc/u_data_memory/memory_reg_0_255_0_0/RAMS64E_A/CLK
+
+
+

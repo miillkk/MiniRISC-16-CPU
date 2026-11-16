@@ -1,0 +1,82 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Oct 15 20:24:52 2026
+| Host         : KENT running 64-bit major release  (build 9200)
+| Command      : report_drc -file C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/reports/board_isa/isa-implemented-drc.rpt
+| Design       : board_top
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: board_top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 9
++-----------+----------+----------------------------+--------+
+| Rule      | Severity | Description                | Checks |
++-----------+----------+----------------------------+--------+
+| REQP-1840 | Warning  | RAMB18 async control check | 8      |
+| ZPS7-1    | Warning  | PS7 block required         | 1      |
++-----------+----------+----------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[10] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_2_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[11] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_1_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[4] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_8_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[5] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_7_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[6] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_6_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[7] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_5_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[8] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_4_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 u_cpu_core/u_datapath/u_program_counter/pc_reg_rep has an input control pin u_cpu_core/u_datapath/u_program_counter/pc_reg_rep/ADDRARDADDR[9] (net: u_cpu_core/u_datapath/u_program_counter/pc_reg_rep_i_3_n_0) which is driven by a register (u_reset_conditioner/release_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

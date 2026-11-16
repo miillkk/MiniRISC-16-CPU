@@ -1,0 +1,8 @@
+MiniRISC-16 Snake RTL regression
+Tests: 4
+Failures: 0
+License-blocked: 0
+PASS tb_cpu_data_instructions
+PASS tb_uart_port
+PASS tb_tick_timer
+PASS tb_snake_system

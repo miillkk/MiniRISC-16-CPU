@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="784" viewBox="0 0 2200 784">
+<style>
+text { font-family: "Segoe UI", Arial, sans-serif; fill: #202020; }
+.title { font-size: 30px; font-weight: 650; }
+.subtitle { font-size: 15px; fill: #5B5B5B; }
+.head { font-size: 17px; }
+.name { font-size: 17px; }
+.value,.bus-text,.time { font-family: Consolas, monospace; }
+.value { font-size: 16px; }
+.time { font-size: 15px; }
+.bus-text { font-size: 15px; font-weight: 600; }
+.event { font-size: 14px; font-weight: 600; }
+.caption { font-size: 17px; font-weight: 650; fill: #303030; }
+.footer { font-size: 15px; fill: #3C3C3C; }
+.border { stroke: #A7A7A7; stroke-width: 1.5; }
+.row { stroke: #D2D2D2; stroke-width: 1; }
+.tick { stroke: #666; stroke-width: 1.2; }
+.minor-tick { stroke: #8D8D8D; stroke-width: 1; }
+.major-grid { stroke: #A9A9A9; stroke-width: 1.2; }
+.minor-grid { stroke: #D9D9D9; stroke-width: 0.8; }
+.wave,.bus { fill: none; stroke: #00C800; stroke-width: 2; }
+.cursor { stroke: #FFC400; stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="#FAFAFA"/>
+<rect width="100%" height="72" fill="#F1F1F1" stroke="#C9C9C9"/>
+<text x="24" y="34" class="title">01  Single-Cycle Commit</text>
+<text x="24" y="59" class="subtitle">Current terminal edition · 10-bit PC · current cpu_core RTL</text>
+<rect x="0" y="88" width="2200" height="628" fill="#FFFFFF" stroke="#A7A7A7"/>
+<rect x="0" y="88" width="362" height="628" fill="#F3F3F3"/>
+<rect x="0" y="88" width="362" height="52" fill="#E9E9E9"/>
+<text x="18" y="121" class="head">Name</text>
+<text x="268" y="121" class="head">Value</text>
+<line x1="250" y1="88" x2="250" y2="716" class="border"/>
+<line x1="362" y1="88" x2="362" y2="716" class="border"/>
+<line x1="0" y1="140" x2="2200" y2="140" class="border"/>
+<line x1="411.6756756756757" y1="140" x2="411.6756756756757" y2="716" class="major-grid"/>
+<line x1="411.6756756756757" y1="126" x2="411.6756756756757" y2="140" class="tick"/>
+<text x="411.6756756756757" y="113" text-anchor="middle" class="time">20.000 ns</text>
+<line x1="511.02702702702703" y1="132" x2="511.02702702702703" y2="140" class="minor-tick"/>
+<line x1="511.02702702702703" y1="140" x2="511.02702702702703" y2="716" class="minor-grid"/>
+<line x1="610.3783783783783" y1="132" x2="610.3783783783783" y2="140" class="minor-tick"/>
+<line x1="610.3783783783783" y1="140" x2="610.3783783783783" y2="716" class="minor-grid"/>
+<line x1="709.7297297297298" y1="132" x2="709.7297297297298" y2="140" class="minor-tick"/>
+<line x1="709.7297297297298" y1="140" x2="709.7297297297298" y2="716" class="minor-grid"/>
+<line x1="809.081081081081" y1="132" x2="809.081081081081" y2="140" class="minor-tick"/>
+<line x1="809.081081081081" y1="140" x2="809.081081081081" y2="716" class="minor-grid"/>
+<line x1="908.4324324324325" y1="140" x2="908.4324324324325" y2="716" class="major-grid"/>
+<line x1="908.4324324324325" y1="126" x2="908.4324324324325" y2="140" class="tick"/>
+<text x="908.4324324324325" y="113" text-anchor="middle" class="time">40.000 ns</text>
+<line x1="1007.7837837837839" y1="132" x2="1007.7837837837839" y2="140" class="minor-tick"/>
+<line x1="1007.7837837837839" y1="140" x2="1007.7837837837839" y2="716" class="minor-grid"/>
+<line x1="1107.1351351351352" y1="132" x2="1107.1351351351352" y2="140" class="minor-tick"/>
+<line x1="1107.1351351351352" y1="140" x2="1107.1351351351352" y2="716" class="minor-grid"/>
+<line x1="1206.4864864864867" y1="132" x2="1206.4864864864867" y2="140" class="minor-tick"/>
+<line x1="1206.4864864864867" y1="140" x2="1206.4864864864867" y2="716" class="minor-grid"/>
+<line x1="1305.837837837838" y1="132" x2="1305.837837837838" y2="140" class="minor-tick"/>
+<line x1="1305.837837837838" y1="140" x2="1305.837837837838" y2="716" class="minor-grid"/>
+<line x1="1405.1891891891892" y1="140" x2="1405.1891891891892" y2="716" class="major-grid"/>
+<line x1="1405.1891891891892" y1="126" x2="1405.1891891891892" y2="140" class="tick"/>
+<text x="1405.1891891891892" y="113" text-anchor="middle" class="time">60.000 ns</text>
+<line x1="1504.5405405405404" y1="132" x2="1504.5405405405404" y2="140" class="minor-tick"/>
+<line x1="1504.5405405405404" y1="140" x2="1504.5405405405404" y2="716" class="minor-grid"/>
+<line x1="1603.8918918918919" y1="132" x2="1603.8918918918919" y2="140" class="minor-tick"/>
+<line x1="1603.8918918918919" y1="140" x2="1603.8918918918919" y2="716" class="minor-grid"/>
+<line x1="1703.2432432432431" y1="132" x2="1703.2432432432431" y2="140" class="minor-tick"/>
+<line x1="1703.2432432432431" y1="140" x2="1703.2432432432431" y2="716" class="minor-grid"/>
+<line x1="1802.5945945945946" y1="132" x2="1802.5945945945946" y2="140" class="minor-tick"/>
+<line x1="1802.5945945945946" y1="140" x2="1802.5945945945946" y2="716" class="minor-grid"/>
+<line x1="1901.9459459459458" y1="140" x2="1901.9459459459458" y2="716" class="major-grid"/>
+<line x1="1901.9459459459458" y1="126" x2="1901.9459459459458" y2="140" class="tick"/>
+<text x="1901.9459459459458" y="113" text-anchor="middle" class="time">80.000 ns</text>
+<line x1="2001.2972972972973" y1="132" x2="2001.2972972972973" y2="140" class="minor-tick"/>
+<line x1="2001.2972972972973" y1="140" x2="2001.2972972972973" y2="716" class="minor-grid"/>
+<line x1="2100.6486486486483" y1="132" x2="2100.6486486486483" y2="140" class="minor-tick"/>
+<line x1="2100.6486486486483" y1="140" x2="2100.6486486486483" y2="716" class="minor-grid"/>
+<line x1="0" y1="140" x2="2200" y2="140" class="row"/>
+<text x="20" y="182" class="name">clk</text>
+<text x="346" y="182" text-anchor="end" class="value">0</text>
+<rect x="362" y="161" width="49.67567567567568" height="30" fill="#D7EBC8"/>
+<rect x="535.8648648648649" y="161" width="124.18918918918916" height="30" fill="#D7EBC8"/>
+<rect x="784.2432432432433" y="161" width="124.18918918918916" height="30" fill="#D7EBC8"/>
+<rect x="1032.6216216216217" y="161" width="124.18918918918916" height="30" fill="#D7EBC8"/>
+<rect x="1281" y="161" width="124.18918918918916" height="30" fill="#D7EBC8"/>
+<rect x="1529.3783783783783" y="161" width="124.18918918918939" height="30" fill="#D7EBC8"/>
+<rect x="1777.7567567567569" y="161" width="124.18918918918894" height="30" fill="#D7EBC8"/>
+<rect x="2026.135135135135" y="161" width="124.18918918918916" height="30" fill="#D7EBC8"/>
+<path d="M 362 161 H 411.6756756756757 V 191 H 535.8648648648649 V 161 H 660.0540540540541 V 191 H 784.2432432432433 V 161 H 908.4324324324325 V 191 H 1032.6216216216217 V 161 H 1156.8108108108108 V 191 H 1281 V 161 H 1405.1891891891892 V 191 H 1529.3783783783783 V 161 H 1653.5675675675677 V 191 H 1777.7567567567569 V 161 H 1901.9459459459458 V 191 H 2026.135135135135 V 161 H 2150.324324324324 V 191 H 2200" class="wave"/>
+<line x1="0" y1="212" x2="2200" y2="212" class="row"/>
+<text x="20" y="254" class="name">rst</text>
+<text x="346" y="254" text-anchor="end" class="value">0</text>
+<rect x="362" y="233" width="298.05405405405406" height="30" fill="#D7EBC8"/>
+<path d="M 362 233 H 660.0540540540541 V 263 H 2200" class="wave"/>
+<line x1="0" y1="284" x2="2200" y2="284" class="row"/>
+<text x="20" y="326" class="name">pc[9:0]</text>
+<text x="346" y="326" text-anchor="end" class="value">008</text>
+<line x1="362" y1="305" x2="784.2432432432433" y2="305" class="bus"/>
+<line x1="362" y1="335" x2="784.2432432432433" y2="335" class="bus"/>
+<text x="573.1216216216217" y="325" text-anchor="middle" class="bus-text">000</text>
+<path d="M 779.2432432432433 305 L 789.2432432432433 335 M 779.2432432432433 335 L 789.2432432432433 305" class="bus"/>
+<line x1="784.2432432432433" y1="305" x2="1032.6216216216217" y2="305" class="bus"/>
+<line x1="784.2432432432433" y1="335" x2="1032.6216216216217" y2="335" class="bus"/>
+<text x="908.4324324324325" y="325" text-anchor="middle" class="bus-text">001</text>
+<path d="M 1027.6216216216217 305 L 1037.6216216216217 335 M 1027.6216216216217 335 L 1037.6216216216217 305" class="bus"/>
+<line x1="1032.6216216216217" y1="305" x2="1281" y2="305" class="bus"/>
+<line x1="1032.6216216216217" y1="335" x2="1281" y2="335" class="bus"/>
+<text x="1156.8108108108108" y="325" text-anchor="middle" class="bus-text">002</text>
+<path d="M 1276 305 L 1286 335 M 1276 335 L 1286 305" class="bus"/>
+<line x1="1281" y1="305" x2="1529.3783783783783" y2="305" class="bus"/>
+<line x1="1281" y1="335" x2="1529.3783783783783" y2="335" class="bus"/>
+<text x="1405.1891891891892" y="325" text-anchor="middle" class="bus-text">003</text>
+<path d="M 1524.3783783783783 305 L 1534.3783783783783 335 M 1524.3783783783783 335 L 1534.3783783783783 305" class="bus"/>
+<line x1="1529.3783783783783" y1="305" x2="1777.7567567567569" y2="305" class="bus"/>
+<line x1="1529.3783783783783" y1="335" x2="1777.7567567567569" y2="335" class="bus"/>
+<text x="1653.5675675675675" y="325" text-anchor="middle" class="bus-text">004</text>
+<path d="M 1772.7567567567569 305 L 1782.7567567567569 335 M 1772.7567567567569 335 L 1782.7567567567569 305" class="bus"/>
+<line x1="1777.7567567567569" y1="305" x2="2026.135135135135" y2="305" class="bus"/>
+<line x1="1777.7567567567569" y1="335" x2="2026.135135135135" y2="335" class="bus"/>
+<text x="1901.9459459459458" y="325" text-anchor="middle" class="bus-text">005</text>
+<path d="M 2021.135135135135 305 L 2031.135135135135 335 M 2021.135135135135 335 L 2031.135135135135 305" class="bus"/>
+<line x1="2026.135135135135" y1="305" x2="2200" y2="305" class="bus"/>
+<line x1="2026.135135135135" y1="335" x2="2200" y2="335" class="bus"/>
+<text x="2113.0675675675675" y="325" text-anchor="middle" class="bus-text">008</text>
+<line x1="0" y1="356" x2="2200" y2="356" class="row"/>
+<text x="20" y="398" class="name">pc_next</text>
+<text x="346" y="398" text-anchor="end" class="value">00A</text>
+<line x1="362" y1="377" x2="784.2432432432433" y2="377" class="bus"/>
+<line x1="362" y1="407" x2="784.2432432432433" y2="407" class="bus"/>
+<text x="573.1216216216217" y="397" text-anchor="middle" class="bus-text">001</text>
+<path d="M 779.2432432432433 377 L 789.2432432432433 407 M 779.2432432432433 407 L 789.2432432432433 377" class="bus"/>
+<line x1="784.2432432432433" y1="377" x2="1032.6216216216217" y2="377" class="bus"/>
+<line x1="784.2432432432433" y1="407" x2="1032.6216216216217" y2="407" class="bus"/>
+<text x="908.4324324324325" y="397" text-anchor="middle" class="bus-text">002</text>
+<path d="M 1027.6216216216217 377 L 1037.6216216216217 407 M 1027.6216216216217 407 L 1037.6216216216217 377" class="bus"/>
+<line x1="1032.6216216216217" y1="377" x2="1281" y2="377" class="bus"/>
+<line x1="1032.6216216216217" y1="407" x2="1281" y2="407" class="bus"/>
+<text x="1156.8108108108108" y="397" text-anchor="middle" class="bus-text">003</text>
+<path d="M 1276 377 L 1286 407 M 1276 407 L 1286 377" class="bus"/>
+<line x1="1281" y1="377" x2="1529.3783783783783" y2="377" class="bus"/>
+<line x1="1281" y1="407" x2="1529.3783783783783" y2="407" class="bus"/>
+<text x="1405.1891891891892" y="397" text-anchor="middle" class="bus-text">004</text>
+<path d="M 1524.3783783783783 377 L 1534.3783783783783 407 M 1524.3783783783783 407 L 1534.3783783783783 377" class="bus"/>
+<line x1="1529.3783783783783" y1="377" x2="1777.7567567567569" y2="377" class="bus"/>
+<line x1="1529.3783783783783" y1="407" x2="1777.7567567567569" y2="407" class="bus"/>
+<text x="1653.5675675675675" y="397" text-anchor="middle" class="bus-text">005</text>
+<path d="M 1772.7567567567569 377 L 1782.7567567567569 407 M 1772.7567567567569 407 L 1782.7567567567569 377" class="bus"/>
+<line x1="1777.7567567567569" y1="377" x2="2026.135135135135" y2="377" class="bus"/>
+<line x1="1777.7567567567569" y1="407" x2="2026.135135135135" y2="407" class="bus"/>
+<text x="1901.9459459459458" y="397" text-anchor="middle" class="bus-text">008</text>
+<path d="M 2021.135135135135 377 L 2031.135135135135 407 M 2021.135135135135 407 L 2031.135135135135 377" class="bus"/>
+<line x1="2026.135135135135" y1="377" x2="2200" y2="377" class="bus"/>
+<line x1="2026.135135135135" y1="407" x2="2200" y2="407" class="bus"/>
+<text x="2113.0675675675675" y="397" text-anchor="middle" class="bus-text">00A</text>
+<line x1="0" y1="428" x2="2200" y2="428" class="row"/>
+<text x="20" y="470" class="name">instruction</text>
+<text x="346" y="470" text-anchor="end" class="value">A00A</text>
+<line x1="362" y1="449" x2="784.2432432432433" y2="449" class="bus"/>
+<line x1="362" y1="479" x2="784.2432432432433" y2="479" class="bus"/>
+<text x="573.1216216216217" y="469" text-anchor="middle" class="bus-text">0022</text>
+<path d="M 779.2432432432433 449 L 789.2432432432433 479 M 779.2432432432433 479 L 789.2432432432433 449" class="bus"/>
+<line x1="784.2432432432433" y1="449" x2="1032.6216216216217" y2="449" class="bus"/>
+<line x1="784.2432432432433" y1="479" x2="1032.6216216216217" y2="479" class="bus"/>
+<text x="908.4324324324325" y="469" text-anchor="middle" class="bus-text">045A</text>
+<path d="M 1027.6216216216217 449 L 1037.6216216216217 479 M 1027.6216216216217 479 L 1037.6216216216217 449" class="bus"/>
+<line x1="1032.6216216216217" y1="449" x2="1281" y2="449" class="bus"/>
+<line x1="1032.6216216216217" y1="479" x2="1281" y2="479" class="bus"/>
+<text x="1156.8108108108108" y="469" text-anchor="middle" class="bus-text">E100</text>
+<path d="M 1276 449 L 1286 479 M 1276 479 L 1286 449" class="bus"/>
+<line x1="1281" y1="449" x2="1529.3783783783783" y2="449" class="bus"/>
+<line x1="1281" y1="479" x2="1529.3783783783783" y2="479" class="bus"/>
+<text x="1405.1891891891892" y="469" text-anchor="middle" class="bus-text">D800</text>
+<path d="M 1524.3783783783783 449 L 1534.3783783783783 479 M 1524.3783783783783 479 L 1534.3783783783783 449" class="bus"/>
+<line x1="1529.3783783783783" y1="449" x2="1777.7567567567569" y2="449" class="bus"/>
+<line x1="1529.3783783783783" y1="479" x2="1777.7567567567569" y2="479" class="bus"/>
+<text x="1653.5675675675675" y="469" text-anchor="middle" class="bus-text">6600</text>
+<path d="M 1772.7567567567569 449 L 1782.7567567567569 479 M 1772.7567567567569 479 L 1782.7567567567569 449" class="bus"/>
+<line x1="1777.7567567567569" y1="449" x2="2026.135135135135" y2="449" class="bus"/>
+<line x1="1777.7567567567569" y1="479" x2="2026.135135135135" y2="479" class="bus"/>
+<text x="1901.9459459459458" y="469" text-anchor="middle" class="bus-text">8008</text>
+<path d="M 2021.135135135135 449 L 2031.135135135135 479 M 2021.135135135135 479 L 2031.135135135135 449" class="bus"/>
+<line x1="2026.135135135135" y1="449" x2="2200" y2="449" class="bus"/>
+<line x1="2026.135135135135" y1="479" x2="2200" y2="479" class="bus"/>
+<text x="2113.0675675675675" y="469" text-anchor="middle" class="bus-text">A00A</text>
+<line x1="0" y1="500" x2="2200" y2="500" class="row"/>
+<text x="20" y="542" class="name">reg_write</text>
+<text x="346" y="542" text-anchor="end" class="value">0</text>
+<rect x="362" y="521" width="670.6216216216217" height="30" fill="#D7EBC8"/>
+<rect x="1281" y="521" width="248.37837837837833" height="30" fill="#D7EBC8"/>
+<path d="M 362 521 H 1032.6216216216217 V 551 H 1281 V 521 H 1529.3783783783783 V 551 H 2200" class="wave"/>
+<line x1="0" y1="572" x2="2200" y2="572" class="row"/>
+<text x="20" y="614" class="name">data_we</text>
+<text x="346" y="614" text-anchor="end" class="value">0</text>
+<rect x="1032.6216216216217" y="593" width="248.37837837837833" height="30" fill="#D7EBC8"/>
+<path d="M 362 623 H 1032.6216216216217 V 593 H 1281 V 623 H 2200" class="wave"/>
+<line x1="0" y1="644" x2="2200" y2="644" class="row"/>
+<text x="20" y="686" class="name">io_we</text>
+<text x="346" y="686" text-anchor="end" class="value">0</text>
+<path d="M 362 695 H 2200" class="wave"/>
+<rect x="0" y="746" width="2200" height="38" fill="#EFEFEF" stroke="#C9C9C9"/>
+<text x="18" y="771" class="footer">SELF-CHECK PASS · reset release, fetch/decode and architectural writes align to clock boundaries</text>
+</svg>

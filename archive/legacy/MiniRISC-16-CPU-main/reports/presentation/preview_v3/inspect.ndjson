@@ -1,0 +1,101 @@
+{"kind":"deck","id":"pr/bom6gk","name":"Deck"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"MiniRISC-16 单周期 CPU 与 8 位 GPIO","textShapes":9}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"textChars":30,"textLines":1}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"textChars":32,"textLines":1}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"textChars":35,"textLines":1}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"textChars":24,"textLines":1}
+{"kind":"textbox","id":"sh/utg3698n","slide":1,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/wn6dc7eh","slide":1,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/ul4vaxgb","slide":1,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/vmdcj2xw","slide":1,"textChars":30,"textLines":1}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"这一页先说明项目主题。本设计不是 Zynq PS 里的 ARM，而是在 Zynq-7020 的 PL 可编程逻辑中实现一个自定义 MiniRISC-16 ..."}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"项目目标与阶段边界","textShapes":10}
+{"kind":"textbox","id":"sh/xk7qlczu","slide":2,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/x4r21kru","slide":2,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/w3i1sfa9","slide":2,"textChars":61,"textLines":1}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/ove9o7yd","slide":2,"textChars":52,"textLines":1}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/nu58f2hs","slide":2,"textChars":45,"textLines":1}
+{"kind":"textbox","id":"sh/wjy9sry9","slide":2,"textChars":42,"textLines":1}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"这一页讲范围。当前阶段已经完成可综合 RTL、测试平台、机器码程序、XSim 回归和波形证据。暂时不声明上板完成，因为还没有 XDC、时钟约束和物理管脚分..."}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"系统架构与外部端口","textShapes":14}
+{"kind":"textbox","id":"sh/tgry9ofu","slide":3,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"textChars":28,"textLines":1}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":3,"textChars":17,"textLines":1}
+{"kind":"textbox","id":"sh/m5cra54z","slide":3,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/n2l4fq98","slide":3,"textChars":18,"textLines":1}
+{"kind":"textbox","id":"sh/m1c3mlsn","slide":3,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/83ulovat","slide":3,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/v6l4jq94","slide":3,"textChars":17,"textLines":2}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":3,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/w7ulsvqp","slide":3,"textChars":15,"textLines":1}
+{"kind":"textbox","id":"sh/i9w3u58v","slide":3,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/e10f2twf","slide":3,"textChars":10,"textLines":1}
+{"kind":"table","id":"tb/x47als3i","slide":3,"name":"","rows":4,"cols":3,"preview":"顶层端口 | 方向 | 说明","bbox":[78,414,668,156]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"这一页说明总体连接。CPU 通过 mem_addr 读取 instruction_memory，通过独立 I/O 接口访问 gpio8，所以可以称为简化 ..."}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"指令集与控制器","textShapes":6}
+{"kind":"textbox","id":"sh/ih8ju9sn","slide":4,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/doj29oba","slide":4,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"textChars":89,"textLines":4}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"textChars":27,"textLines":1}
+{"kind":"table","id":"tb/fe1wvuh4","slide":4,"name":"","rows":8,"cols":3,"preview":"类别 | 指令 | 功能","bbox":[64,138,680,390]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"这一页讲指令集。MiniRISC-16 当前支持 13 个有效 opcode，D、E、F 作为安全保留操作。控制器采用组合逻辑，先给默认安全值，再按 op..."}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"单周期数据通路","textShapes":17}
+{"kind":"textbox","id":"sh/xwn2dszi","slide":5,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/l4bupwny","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":5,"textChars":10,"textLines":1}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"textChars":13,"textLines":1}
+{"kind":"textbox","id":"sh/i54fmlc7","slide":5,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":5,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/tcfel0vu","slide":5,"textChars":17,"textLines":2}
+{"kind":"textbox","id":"sh/gfi5grih","slide":5,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/fe94nm1w","slide":5,"textChars":14,"textLines":1}
+{"kind":"textbox","id":"sh/vu5kbihc","slide":5,"textChars":15,"textLines":1}
+{"kind":"textbox","id":"sh/wve1knyx","slide":5,"textChars":101,"textLines":4}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"这一页是数据通路。它没有流水线、没有多周期状态机，也没有指令寄存器。当前 PC 先组合取指，随后译码、读寄存器、ALU 或 I/O 读、写回选择和下一 P..."}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"GPIO 外设与地址映射","textShapes":10}
+{"kind":"textbox","id":"sh/j6dcr65c","slide":6,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/7m98ru9g","slide":6,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"textChars":15,"textLines":1}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/u1kbu1ov","slide":6,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/5svutgni","slide":6,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/47mt0b6x","slide":6,"textChars":70,"textLines":3}
+{"kind":"table","id":"tb/doji1k36","slide":6,"name":"","rows":5,"cols":4,"preview":"地址 | 名称 | 访问 | 行为","bbox":[64,138,674,246]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"这一页讲 GPIO。GPIO 内部不是直接写 inout 端口，而是分成 gpio_i、gpio_o 和 gpio_oe。地址 0x10 写输出，0x11..."}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"人工验证：控制真值表","textShapes":5}
+{"kind":"textbox","id":"sh/eh0ba1sr","slide":7,"textChars":10,"textLines":1}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":7,"textChars":41,"textLines":1}
+{"kind":"textbox","id":"sh/l0vuh0rm","slide":7,"textChars":41,"textLines":1}
+{"kind":"table","id":"tb/alg7adcj","slide":7,"name":"","rows":17,"cols":11,"preview":"op | 指令 | ALU | src | Rd写 | Z写 | JZ | JMP | I/O读 | I/O写 | PC","bbox":[56,170,1168,420]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"这一页就是人工验证的核心。人工验证不是跑仿真，而是先看真值表。每个 opcode 对应哪些控制信号、是否写寄存器、是否写 Z、是否访问 I/O、PC 怎样..."}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"EDA 验证结果与结论","textShapes":6}
+{"kind":"textbox","id":"sh/o7ydoret","slide":8,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"textChars":40,"textLines":1}
+{"kind":"textbox","id":"sh/tkby9kzm","slide":8,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"textChars":65,"textLines":2}
+{"kind":"textbox","id":"sh/id0fu50z","slide":8,"textChars":49,"textLines":1}
+{"kind":"table","id":"tb/a1gv21o3","slide":8,"name":"","rows":8,"cols":2,"preview":"验证项 | 结果","bbox":[66,136,440,318]}
+{"kind":"image","id":"im/d4vqd4j2","slide":8,"name":"","geometry":"roundRect","bbox":[560,161.25,660,355.5]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"最后讲 EDA 验证。六个 testbench 都通过编译、展开和 XSim 自检。系统级测试覆盖全部 opcode，最终日志显示 Failures 为 ..."}
+{"kind":"notice","message":"Truncated: omitted 0 lines. Increase maxChars or narrow target."}

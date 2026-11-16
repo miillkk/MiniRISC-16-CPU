@@ -1,0 +1,5 @@
+CALC-BUG-004 fix
+The 16-bit result of 0xFF * 0xFF is 0xFE01.
+Because result[15] is one, the software-defined final N flag is one.
+LED2..0 contains operation 5 and LED4 contains N, so the correct LED value is 0x15.
+Both the independent reference model and tb_calculator_system now expect 0x15.

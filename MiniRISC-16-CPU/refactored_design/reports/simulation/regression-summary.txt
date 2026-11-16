@@ -1,0 +1,29 @@
+MiniRISC-16 refactored verification status
+Timestamp: 2026-10-15 10:58:00 +08:00
+
+Historical CPU baseline:
+- 11 CPU testbenches passed before the current XSim toolchain failure.
+- tb_cpu_core passed 29 committed instructions with opcode_coverage=ffff.
+
+Current board extension:
+- xvlog parsed all RTL and all 17 testbenches successfully, including tb_board_isa_test and tb_board_led_chaser.
+- xelab is blocked before simulation by the bundled MinGW 6.2.0 Windows DLL relocation failure.
+- No current-run XSim behavioral PASS or FAIL is claimed for the 6 new board tests.
+- Full failure evidence is stored under reports/bugs/BUG-006/.
+
+Static and implementation verification:
+- board_top synthesized for xc7z020clg484-1 with 0 synthesis errors.
+- Implementation routed with 0 failed nets.
+- Timing met at 100 MHz: WNS=+1.513 ns, TNS=0.000 ns.
+- Bitstream generation passed.
+
+ISA board self-test:
+- Independent instruction model reached the PASS loop after 166 instructions with opcode_coverage=ffff.
+- Final expected state: LED=A5, display=600D0000.
+- ISA-specific synthesis, implementation, timing and bitstream generation passed.
+- ISA timing at 100 MHz: WNS=+0.928 ns, TNS=0.000 ns.
+
+LED chaser:
+- Independent instruction model verified 01,02,04,08,10,20,40,80,01 with no inserted 00 state.
+- LED-specific synthesis, implementation, timing and bitstream generation passed.
+- LED timing at 100 MHz: WNS=+0.683 ns, TNS=0.000 ns.

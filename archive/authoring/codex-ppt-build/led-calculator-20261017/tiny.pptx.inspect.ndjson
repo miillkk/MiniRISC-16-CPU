@@ -1,0 +1,14 @@
+{"kind":"deck","id":"pr/6c8lzy","name":"Deck"}
+{"kind":"layout","id":"ly/47y5cbah","editable":false,"name":"Master","type":"master"}
+{"kind":"layout","id":"ly/xkjul0ry","editable":false,"name":"Title Slide","type":"title","placeholders":[{"name":"title","type":"title"},{"name":"subtitle","type":"subtitle"}]}
+{"kind":"layout","id":"ly/q5wz2507","editable":false,"name":"Section Header","type":"sectionHeader","placeholders":[{"name":"title","type":"title"}]}
+{"kind":"layout","id":"ly/3udczm9o","editable":false,"name":"Title and Body","type":"tx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"}]}
+{"kind":"layout","id":"ly/ip8vydw7","editable":false,"name":"Title and Two Column","type":"twoColTx","placeholders":[{"name":"title","type":"title"},{"name":"Left column","type":"body"},{"name":"Right column","type":"body"}]}
+{"kind":"layout","id":"ly/ytgzet4n","editable":false,"name":"Title and One Column","type":"tx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"}]}
+{"kind":"layout","id":"ly/kv6pgnux","editable":false,"name":"Blank","type":"blank"}
+{"kind":"slide","id":"sl/qbpqhq","slideIndex":0,"layout":{"id":"ly/kv6pgnux","name":"Blank"},"title":"测试 MiniRISC-16","textShapes":1,"backgroundColor":"rgba(255,255,255,1)"}
+{"kind":"textbox","id":"sh/7axwzqls","slideIndex":0,"position":{"left":50,"top":50,"width":400,"height":80},"text":"测试 MiniRISC-16","geometry":"rect","lineWidth":0,"style":{"fontSize":32,"typeface":"Microsoft YaHei","color":"#000000","bold":true,"alignment":"center"}}
+{"kind":"shape","id":"sh/sbqx8vmd","slideIndex":0,"position":{"left":500,"top":50,"width":80,"height":40},"geometry":"rightArrow","fillColor":"#123456","lineWidth":0}
+{"kind":"shape","id":"sh/tcze103y","slideIndex":0,"position":{"left":600,"top":50,"width":120,"height":80},"geometry":"roundRect","fillColor":"#123456","lineColor":"#FF0000","lineWidth":2}
+{"kind":"image","id":"im/3y9k3ads","slideIndex":0,"position":{"left":50,"top":180,"width":500,"height":300},"fit":"contain","name":"","alt":"wave"}
+{"kind":"notes","id":"nt/qbpqhq","slideIndex":0,"text":""}

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1250" viewBox="0 0 2200 1250" role="img" aria-labelledby="title desc">
+  <title id="title">MiniRISC-16 Project Evolution</title>
+  <desc id="desc">Evolution from the original single-cycle CPU to the current non-HDMI runtime, with validation, calculator, terminal arcade, native XSim evidence, and the historical HDMI fork.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .bg{fill:#f6f8fb}.title{font:700 42px "Segoe UI",Arial,sans-serif;fill:#172033}.subtitle{font:400 22px "Segoe UI",Arial,sans-serif;fill:#5b667a}.lane{font:700 20px "Segoe UI",Arial,sans-serif;fill:#334155;letter-spacing:1.5px}.node{fill:#fff;stroke:#94a3b8;stroke-width:2}.node-blue{fill:#eaf2ff;stroke:#2563eb;stroke-width:4}.node-green{fill:#ecfdf3;stroke:#16a34a;stroke-width:3}.node-orange{fill:#fff7ed;stroke:#ea580c;stroke-width:3}.node-gray{fill:#f1f5f9;stroke:#94a3b8;stroke-width:2}.head{font:700 23px "Segoe UI",Arial,sans-serif;fill:#172033}.body{font:400 19px "Segoe UI",Arial,sans-serif;fill:#475569}.small{font:400 17px "Segoe UI",Arial,sans-serif;fill:#475569}.tag{font:700 17px "Segoe UI",Arial,sans-serif;fill:#1d4ed8}.line{fill:none;stroke:#64748b;stroke-width:3;marker-end:url(#arrow)}.line-blue{fill:none;stroke:#2563eb;stroke-width:4;marker-end:url(#arrowBlue)}.line-dash{fill:none;stroke:#94a3b8;stroke-width:2.5;stroke-dasharray:10 8;marker-end:url(#arrow)}.divider{stroke:#dbe1ea;stroke-width:2}.foot{font:400 17px "Segoe UI",Arial,sans-serif;fill:#64748b}
+    </style>
+  </defs>
+  <rect class="bg" width="2200" height="1250"/>
+  <text id="project-title" class="title" x="70" y="70">MiniRISC-16 Project Evolution</text>
+  <text class="subtitle" x="70" y="108">Official report target: current non-HDMI Runtime · 2026-11-05</text>
+
+  <text class="lane" x="70" y="165">CPU AND BOARD MAINLINE</text>
+  <line class="divider" x1="70" y1="180" x2="2130" y2="180"/>
+
+  <rect class="node-gray" x="70" y="215" width="330" height="130" rx="12"/>
+  <text class="head" x="95" y="252">Course Specification</text>
+  <text class="body" x="95" y="287">Single-cycle ISA</text>
+  <text class="body" x="95" y="316">GPIO requirements</text>
+
+  <rect class="node" x="450" y="215" width="350" height="130" rx="12"/>
+  <text class="head" x="475" y="252">Original MiniRISC-16</text>
+  <text class="body" x="475" y="287">16-bit data · 4 registers</text>
+  <text class="body" x="475" y="316">8-bit PC · Z flag only</text>
+
+  <rect class="node" x="850" y="215" width="350" height="130" rx="12"/>
+  <text class="head" x="875" y="252">Refactored CPU Core</text>
+  <text class="body" x="875" y="287">Modular datapath</text>
+  <text class="body" x="875" y="316">Z/N/C/V status flags</text>
+
+  <rect class="node" x="1250" y="215" width="350" height="130" rx="12"/>
+  <text class="head" x="1275" y="252">EES331 Board Platform</text>
+  <text class="body" x="1275" y="287">100 MHz · switches · S1</text>
+  <text class="body" x="1275" y="316">LEDs · seven-segment display</text>
+
+  <rect class="node" x="1650" y="215" width="350" height="130" rx="12"/>
+  <text class="head" x="1675" y="252">Serial Snake V1</text>
+  <text class="body" x="1675" y="287">D=LDR · E=STR</text>
+  <text class="body" x="1675" y="316">256×16 data RAM · UART</text>
+
+  <path class="line" d="M400 280 H438"/>
+  <path class="line" d="M800 280 H838"/>
+  <path class="line" d="M1200 280 H1238"/>
+  <path class="line" d="M1600 280 H1638"/>
+
+  <text class="lane" x="70" y="410">APPLICATION AND VALIDATION BRANCHES</text>
+  <line class="divider" x1="70" y1="425" x2="2130" y2="425"/>
+
+  <path class="line" d="M1025 345 V465 H285 V500"/>
+  <rect class="node" x="70" y="500" width="430" height="140" rx="12"/>
+  <text class="head" x="95" y="537">Verification and Demonstration</text>
+  <text class="body" x="95" y="572">Board Demo · ISA Self-Test</text>
+  <text class="body" x="95" y="603">Running Light · Focused Waveforms</text>
+
+  <path class="line" d="M1425 345 V465 H760 V500"/>
+  <rect class="node" x="545" y="500" width="430" height="140" rx="12"/>
+  <text class="head" x="570" y="537">Interactive Calculator</text>
+  <text class="body" x="570" y="572">Base ISA + Scratchpad</text>
+  <text class="body" x="570" y="603">Software MUL/DIV · S1 control</text>
+
+  <path class="line-blue" d="M1825 345 V500"/>
+  <rect class="node-blue" x="1500" y="500" width="650" height="170" rx="14"/>
+  <text class="tag" x="1530" y="535">CURRENT REPORT VERSION</text>
+  <text class="head" x="1530" y="574">Current Non-HDMI Runtime</text>
+  <text class="body" x="1530" y="610">10-bit PC · 1K×16 writable program RAM</text>
+  <text class="body" x="1530" y="640">256×16 data RAM · D=LDR · E=STR · F=JMPA</text>
+
+  <text class="lane" x="70" y="735">CURRENT RUNTIME OUTCOMES</text>
+  <line class="divider" x1="70" y1="750" x2="2130" y2="750"/>
+
+  <path class="line-blue" d="M1825 670 V790 H440 V830"/>
+  <rect class="node-blue" x="180" y="830" width="520" height="160" rx="14"/>
+  <text class="head" x="210" y="870">Terminal Arcade</text>
+  <text class="body" x="210" y="908">UART Loader switches programs</text>
+  <text class="body" x="210" y="940">Snake · 2048 · Running Light</text>
+  <text class="small" x="210" y="970">No bitstream rebuild required for program changes</text>
+
+  <path class="line-blue" d="M1825 670 V790 H1100 V830"/>
+  <rect class="node-green" x="820" y="830" width="560" height="160" rx="14"/>
+  <text class="head" x="850" y="870">Native Vivado/XSim Evidence</text>
+  <text class="body" x="850" y="908">2/2 TEST PASS · WDB/VCD/WCFG</text>
+  <text class="body" x="850" y="940">5 English Vivado-style waveform figures</text>
+  <text class="small" x="850" y="970">Current structure and extended ISA re-verified</text>
+
+  <path class="line" d="M1825 670 V830"/>
+  <rect class="node-orange" x="1500" y="830" width="650" height="160" rx="14"/>
+  <text class="head" x="1530" y="870">Historical HDMI Fork</text>
+  <text class="body" x="1530" y="908">640×480 video · frame bridge · ADV7511/I²C</text>
+  <text class="body" x="1530" y="940">Independent diagnostics for HPD, SCL and SDA</text>
+  <text class="small" x="1530" y="970">Not the current report target</text>
+
+  <path class="line-dash" d="M760 640 V700 H1650 V670"/>
+  <text class="small" x="965" y="692">Peripheral design experience reused; not a code-parent relationship</text>
+
+  <rect x="70" y="1060" width="2060" height="105" rx="12" fill="#ffffff" stroke="#d5dce6" stroke-width="2"/>
+  <text class="head" x="100" y="1100">Report boundary</text>
+  <text class="body" x="100" y="1135">Use the current non-HDMI Runtime for architecture, ISA, programs and waveform evidence.</text>
+  <text class="body" x="100" y="1162">Older branches remain development history; HDMI remains an independent historical display fork.</text>
+  <text class="foot" x="70" y="1220">MiniRISC-16 · Current report package · English diagram labels</text>
+</svg>

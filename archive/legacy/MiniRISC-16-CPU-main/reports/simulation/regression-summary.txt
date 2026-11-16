@@ -1,0 +1,14 @@
+MiniRISC-16 Vivado XSim regression
+Timestamp: 2026-09-09 22:02:05 +08:00
+Vivado bin: F:\vivado\2026.1\Vivado\bin
+XILINXD_LICENSE_FILE: C:\Users\xieke\AppData\Roaming\XilinxLicense\Xilinx.lic
+
+tb_alu : PASS
+tb_controller : PASS
+tb_datapath : PASS
+tb_reset_conditioner : PASS
+tb_gpio8 : PASS
+tb_system : PASS
+waveform-render : PASS
+
+Failures: 0

@@ -1,0 +1,2 @@
+Initial legal-move counts: 20 / 400 PASS
+PASS: illegal moves, turn, mate/lock, castling/path check, EP/self-check, all promotions, pin, stalemate, frame XOR.

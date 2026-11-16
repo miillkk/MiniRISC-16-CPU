@@ -1,0 +1,13 @@
+SNK-BUG-003 - Vivado process crashed during first bitstream build
+Date: 2026-10-16
+
+The first non-project build reached synthesis IO insertion and then Vivado
+terminated with EXCEPTION_ACCESS_VIOLATION. No RTL error was reported; the
+instruction ROM and 256x16 distributed data RAM had already been inferred.
+
+Workaround: set general.maxThreads to 1 in synthesis and bitstream scripts,
+then rerun the same design.
+
+Evidence:
+- first-vivado-crash.log
+- hs_err_pid91040.log

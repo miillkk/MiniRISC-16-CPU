@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Current Runtime Hardware Architecture</title>
+  <desc id="desc">Board inputs connect to runtime board top, runtime system on chip, CPU, program memory, data memory, loader, peripherals and board outputs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#64748b"/></marker>
+    <style>.bg{fill:#f7f9fc}.box{fill:#fff;stroke:#64748b;stroke-width:3}.main{fill:#eaf2ff;stroke:#2563eb;stroke-width:4}.mem{fill:#ecfdf3;stroke:#16a34a;stroke-width:3}.io{fill:#fff7ed;stroke:#ea580c;stroke-width:3}.t{font:700 28px "Segoe UI",Arial,sans-serif;fill:#172033}.h{font:700 23px "Segoe UI",Arial,sans-serif;fill:#172033}.b{font:400 19px "Segoe UI",Arial,sans-serif;fill:#475569}.line{fill:none;stroke:#64748b;stroke-width:3;marker-end:url(#arrow)}.bus{fill:none;stroke:#2563eb;stroke-width:5;marker-end:url(#arrow)}.label{font:500 17px "Segoe UI",Arial,sans-serif;fill:#334155}</style>
+  </defs>
+  <rect class="bg" width="1800" height="1000"/>
+  <text class="t" x="60" y="58">Current Runtime Hardware Architecture</text>
+  <rect class="box" x="55" y="110" width="300" height="220" rx="14"/>
+  <text class="h" x="85" y="150">Board Inputs</text>
+  <text class="b" x="85" y="195">100 MHz clock</text><text class="b" x="85" y="230">Active-low reset</text><text class="b" x="85" y="265">UART RX</text><text class="b" x="85" y="300">8 switches including SW7</text>
+  <rect class="main" x="430" y="95" width="940" height="790" rx="18"/>
+  <text class="h" x="470" y="140">runtime_board_top</text>
+  <rect class="box" x="480" y="175" width="270" height="125" rx="12"/><text class="h" x="510" y="215">Reset Conditioner</text><text class="b" x="510" y="253">Synchronous system reset</text>
+  <rect class="box" x="1050" y="175" width="270" height="125" rx="12"/><text class="h" x="1080" y="215">Display Driver</text><text class="b" x="1080" y="253">8-digit scan and decode</text>
+  <rect class="main" x="505" y="345" width="790" height="470" rx="16"/>
+  <text class="h" x="540" y="390">runtime_soc</text>
+  <rect class="mem" x="545" y="430" width="300" height="120" rx="12"/><text class="h" x="575" y="470">Program Memory</text><text class="b" x="575" y="507">Writable 1K × 16 RAM</text>
+  <rect class="box" x="930" y="430" width="310" height="120" rx="12"/><text class="h" x="960" y="470">UART Program Loader</text><text class="b" x="960" y="507">SW7 selects load mode</text>
+  <rect class="main" x="545" y="600" width="300" height="135" rx="12"/><text class="h" x="575" y="640">MiniRISC-16 CPU</text><text class="b" x="575" y="677">10-bit PC · single cycle</text><text class="b" x="575" y="708">LDR · STR · JMPA</text>
+  <rect class="mem" x="895" y="600" width="250" height="135" rx="12"/><text class="h" x="925" y="635">Data Memory</text><text class="b" x="925" y="690">256 × 16 RAM</text><text class="b" x="925" y="718">LDR / STR interface</text>
+  <rect class="io" x="1180" y="590" width="80" height="165" rx="12"/><text class="h" x="1205" y="625" transform="rotate(90 1205 625)">Peripherals</text>
+  <path class="line" d="M355 220 H420"/><path class="line" d="M1185 345 V310"/><path class="bus" d="M930 490 H855"/><path class="bus" d="M695 550 V590"/><path class="bus" d="M845 655 H885"/><path class="bus" d="M845 705 V770 H1170 V720"/>
+  <text class="label" x="850" y="478">loader write</text><text class="label" x="710" y="580">instruction</text><text class="label" x="850" y="645">data bus</text><text class="label" x="970" y="762">I/O bus</text>
+  <rect class="box" x="1445" y="110" width="300" height="300" rx="14"/>
+  <text class="h" x="1475" y="150">Board Outputs</text>
+  <text class="b" x="1475" y="195">UART TX</text><text class="b" x="1475" y="230">8 LEDs</text><text class="b" x="1475" y="265">Segment low</text><text class="b" x="1475" y="300">Segment high</text><text class="b" x="1475" y="335">Digit enable</text><text class="b" x="1475" y="370">Loader status display</text>
+  <path class="line" d="M1370 235 H1435"/><path class="line" d="M1320 238 H1435"/>
+  <rect class="box" x="1425" y="500" width="340" height="330" rx="14"/>
+  <text class="h" x="1455" y="540">Peripheral Subsystem</text>
+  <text class="b" x="1455" y="585">UART port</text><text class="b" x="1455" y="620">Tick timer</text><text class="b" x="1455" y="655">LFSR random source</text><text class="b" x="1455" y="690">LED and display registers</text><text class="b" x="1455" y="725">Switch input and flags</text><text class="b" x="1455" y="760">16 × 16 scratchpad</text><text class="b" x="1455" y="795">I/O address decoder</text>
+  <path class="line" d="M1295 675 H1415"/><path class="line" d="M1595 500 V420"/>
+  <text class="b" x="60" y="945">The current report target is the non-HDMI Runtime. HDMI video logic is not part of this architecture.</text>
+</svg>

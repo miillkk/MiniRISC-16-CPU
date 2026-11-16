@@ -1,0 +1,6 @@
+Final report: reports/implementation/calculator-methodology.rpt
+Checks found: 0
+WNS: +0.426 ns
+TNS: 0.000 ns
+WHS: +0.225 ns
+THS: 0.000 ns

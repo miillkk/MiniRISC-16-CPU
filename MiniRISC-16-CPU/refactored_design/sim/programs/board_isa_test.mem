@@ -1,0 +1,244 @@
+@00
+0001 // 00 MOVI R0, 01: enable display
+C022 // 01 OUP  22, R0
+005A // 02 MOVI R0, 5A: running marker
+C030 // 03 OUP  30, R0
+007E // 04 build 7E57 status header
+3000 // 05 ADDR R0, R0
+3000 // 06
+3000 // 07
+3000 // 08
+3000 // 09
+3000 // 0A
+3000 // 0B
+3000 // 0C
+2057 // 0D ADDI R0, 57
+C021 // 0E OUP  21, R0
+0000 // 0F MOVI R0, 00
+C020 // 10 OUP  20, R0
+
+005A // 11 T1: MOVI R0, 5A
+1400 // 12 MOVR R1, R0
+085A // 13 MOVI R2, 5A
+6600 // 14 CMP  R1, R2
+8018 // 15 JZ   T1_OK
+0CE1 // 16 MOVI R3, E1
+A0D3 // 17 JUMP FAIL
+
+0005 // 18 T2: MOVI R0, 05
+2003 // 19 ADDI R0, 03
+0408 // 1A MOVI R1, 08
+6100 // 1B CMP  R0, R1
+801F // 1C JZ   T2_OK
+0CE2 // 1D MOVI R3, E2
+A0D3 // 1E JUMP FAIL
+
+0012 // 1F T3: MOVI R0, 12
+0434 // 20 MOVI R1, 34
+3100 // 21 ADDR R0, R1
+0846 // 22 MOVI R2, 46
+6200 // 23 CMP  R0, R2
+8027 // 24 JZ   T3_OK
+0CE3 // 25 MOVI R3, E3
+A0D3 // 26 JUMP FAIL
+
+00AA // 27 T4: MOVI R0, AA
+040F // 28 MOVI R1, 0F
+4100 // 29 XOR  R0, R1
+08A5 // 2A MOVI R2, A5
+6200 // 2B CMP  R0, R2
+802F // 2C JZ   T4_OK
+0CE4 // 2D MOVI R3, E4
+A0D3 // 2E JUMP FAIL
+
+0009 // 2F T5: MOVI R0, 09
+0404 // 30 MOVI R1, 04
+5100 // 31 SUB  R0, R1
+0805 // 32 MOVI R2, 05
+6200 // 33 CMP  R0, R2
+8037 // 34 JZ   T5_VALUE_OK
+0CE5 // 35 MOVI R3, E5
+A0D3 // 36 JUMP FAIL
+0001 // 37 MOVI R0, 01
+0401 // 38 MOVI R1, 01
+5100 // 39 SUB  R0, R1: result zero
+803D // 3A JZ   T5_OK
+0CE5 // 3B MOVI R3, E5
+A0D3 // 3C JUMP FAIL
+
+0033 // 3D T6: MOVI R0, 33
+0433 // 3E MOVI R1, 33
+6100 // 3F CMP  R0, R1
+8043 // 40 JZ   T6_EQUAL_OK
+0CE6 // 41 MOVI R3, E6
+A0D3 // 42 JUMP FAIL
+0833 // 43 MOVI R2, 33
+6200 // 44 CMP  R0, R2: CMP must not write R0
+8048 // 45 JZ   T6_NOWRITE_OK
+0CE6 // 46 MOVI R3, E6
+A0D3 // 47 JUMP FAIL
+0434 // 48 MOVI R1, 34
+6100 // 49 CMP  R0, R1
+80BF // 4A JZ   BAD_E6: unequal comparison must not branch
+
+00F3 // 4B T7: MOVI R0, F3
+045A // 4C MOVI R1, 5A
+7100 // 4D AND  R0, R1
+0852 // 4E MOVI R2, 52
+6200 // 4F CMP  R0, R2
+8053 // 50 JZ   T7_OK
+0CE7 // 51 MOVI R3, E7
+A0D3 // 52 JUMP FAIL
+
+00A0 // 53 T8: MOVI R0, A0
+040F // 54 MOVI R1, 0F
+9100 // 55 OR   R0, R1
+08AF // 56 MOVI R2, AF
+6200 // 57 CMP  R0, R2
+805B // 58 JZ   T8_OK
+0CE8 // 59 MOVI R3, E8
+A0D3 // 5A JUMP FAIL
+
+A05E // 5B T9: JUMP T9_OK
+0CE9 // 5C must be skipped
+A0D3 // 5D JUMP FAIL
+
+005A // 5E T10: MOVI R0, 5A
+C030 // 5F OUP  30, R0
+B430 // 60 INP  R1, 30: LED readback
+085A // 61 MOVI R2, 5A
+6600 // 62 CMP  R1, R2
+8066 // 63 JZ   T10_OK
+0CEA // 64 MOVI R3, EA
+A0D3 // 65 JUMP FAIL
+
+B031 // 66 T11: INP R0, 31: switches must be 3C
+043C // 67 MOVI R1, 3C
+6100 // 68 CMP  R0, R1
+806C // 69 JZ   T11_OK
+0CEB // 6A MOVI R3, EB
+A0D3 // 6B JUMP FAIL
+
+0011 // 6C T12: create Z=1
+6000 // 6D CMP  R0, R0
+0455 // 6E MOVI R1, 55: must preserve flags
+1900 // 6F MOVR R2, R1: must preserve flags
+0C0F // 70 MOVI R3, 0F: must preserve flags
+4B00 // 71 XOR  R2, R3: nonzero, must preserve flags
+7900 // 72 AND  R2, R1: nonzero, must preserve flags
+9B00 // 73 OR   R2, R3: nonzero, must preserve flags
+B831 // 74 INP  R2, 31: nonzero, must preserve flags
+C130 // 75 OUP  30, R1: must preserve flags
+A077 // 76 JUMP T12_AFTER_JUMP: must preserve flags
+807A // 77 JZ   T12_OK
+0CEC // 78 MOVI R3, EC
+A0D3 // 79 JUMP FAIL
+005A // 7A restore running marker
+C030 // 7B OUP  30, R0
+
+0011 // 7C T13: R0 marker
+08A6 // 7D R2 marker
+0CEE // 7E R3 marker and possible I/O data
+045A // 7F expected LED value
+C130 // 80 OUP  30, R1
+6000 // 81 CMP  R0, R0: create Z=1
+DB30 // 82 reserved D, rd=R2, rs=R3, addr=30
+EB30 // 83 reserved E
+FB30 // 84 reserved F
+8088 // 85 JZ   T13_FLAGS_OK
+0CED // 86 MOVI R3, ED
+A0D3 // 87 JUMP FAIL
+04A6 // 88 expected R2 marker
+6900 // 89 CMP  R2, R1
+808D // 8A JZ   T13_R2_OK
+0CED // 8B MOVI R3, ED
+A0D3 // 8C JUMP FAIL
+04EE // 8D expected R3 marker
+6D00 // 8E CMP  R3, R1
+8092 // 8F JZ   T13_R3_OK
+0CED // 90 MOVI R3, ED
+A0D3 // 91 JUMP FAIL
+B030 // 92 INP  R0, 30: reserved opcodes must not write LED
+045A // 93 MOVI R1, 5A
+6100 // 94 CMP  R0, R1
+8098 // 95 JZ   T13_OK
+0CED // 96 MOVI R3, ED
+A0D3 // 97 JUMP FAIL
+
+0000 // 98 T14: MOVI R0, 0
+0401 // 99 MOVI R1, 1
+5100 // 9A SUB  R0, R1: FFFF
+2001 // 9B ADDI R0, 1: 0000, C=1
+809F // 9C JZ   T14_ZERO_OK
+0CF1 // 9D MOVI R3, F1
+A0D3 // 9E JUMP FAIL
+007F // 9F build 7FFF
+3000 // A0
+3000 // A1
+3000 // A2
+3000 // A3
+3000 // A4
+3000 // A5
+3000 // A6
+3000 // A7
+20FF // A8 ADDI R0, FF: 7FFF
+1800 // A9 MOVR R2, R0: save 7FFF
+2001 // AA ADDI R0, 1: 8000, V=1
+0480 // AB build expected 8000 in R1
+3500 // AC
+3500 // AD
+3500 // AE
+3500 // AF
+3500 // B0
+3500 // B1
+3500 // B2
+3500 // B3
+6100 // B4 CMP  R0, R1
+80B8 // B5 JZ   T14_OVERFLOW_RESULT_OK
+0CF2 // B6 MOVI R3, F2
+A0D3 // B7 JUMP FAIL
+0401 // B8 MOVI R1, 1
+5100 // B9 SUB  R0, R1: 7FFF, V=1
+6200 // BA CMP  R0, R2
+80BE // BB JZ   T14_SUB_EDGE_OK
+0CF3 // BC MOVI R3, F3
+A0D3 // BD JUMP FAIL
+A0C1 // BE JUMP PASS
+
+0CE6 // BF BAD_E6: unequal CMP incorrectly set Z
+A0D3 // C0 JUMP FAIL
+
+00A5 // C1 PASS: LED=A5
+C030 // C2 OUP 30, R0
+0000 // C3 display low=0000
+C020 // C4 OUP 20, R0
+0060 // C5 build display high=600D
+3000 // C6
+3000 // C7
+3000 // C8
+3000 // C9
+3000 // CA
+3000 // CB
+3000 // CC
+3000 // CD
+200D // CE ADDI R0, 0D
+C021 // CF OUP 21, R0
+0001 // D0 display enable
+C022 // D1 OUP 22, R0
+A0D2 // D2 PASS_LOOP
+
+C330 // D3 FAIL: LED=error code in R3
+C320 // D4 display low=00xx
+08E0 // D5 build display high=E000
+3A00 // D6
+3A00 // D7
+3A00 // D8
+3A00 // D9
+3A00 // DA
+3A00 // DB
+3A00 // DC
+3A00 // DD
+C221 // DE OUP 21, R2
+0801 // DF display enable
+C222 // E0 OUP 22, R2
+A0E1 // E1 FAIL_LOOP

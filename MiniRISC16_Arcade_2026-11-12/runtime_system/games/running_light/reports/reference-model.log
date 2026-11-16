@@ -1,0 +1,8 @@
+MiniRISC-16 Running Light independent reference model
+PASS protocol v4 game-id, sequence and XOR checksum
+PASS one-hot LED pattern and right movement
+PASS A/D direction control
+PASS left and right edge wrap
+PASS speed/pause switch metadata and R restart
+Instructions executed: 3454
+REFERENCE MODEL PASS

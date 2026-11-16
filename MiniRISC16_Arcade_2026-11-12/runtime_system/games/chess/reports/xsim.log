@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Thu Nov 12 20:37:23 2026
+# Process ID         : 23268
+# Current directory  : C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/sim
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/chess4k/xsim_script.tcl}
+# Log file           : C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/sim/xsim.log
+# Journal file       : C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/sim\xsim.jou
+# Running On         : LAPTOP-4KJEAADV
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 33736 MB
+# Swap memory        : 5100 MB
+# Total Virtual      : 38836 MB
+# Available Virtual  : 13534 MB
+#-----------------------------------------------------------
+source xsim.dir/chess4k/xsim_script.tcl
+# xsim {chess4k} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+CHESS4K RTL PASS: boot, high PC, four moves, checkmate, frame checksum
+$finish called at time : 7833800 ns : File "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/sim/tb_chess4k.v" Line 49
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Nov 12 20:37:26 2026...

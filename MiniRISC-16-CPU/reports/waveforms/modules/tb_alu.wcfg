@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/reports/waveforms/modules/tb_alu.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_alu" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/tb_alu/dut/operand_a" type="array">
+      <obj_property name="ElementShortName">operand_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">operand_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/operand_b" type="array">
+      <obj_property name="ElementShortName">operand_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">operand_b[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/result" type="array">
+      <obj_property name="ElementShortName">result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/ALU_PASS_B" type="array">
+      <obj_property name="ElementShortName">ALU_PASS_B[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_PASS_B[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/ALU_ADD" type="array">
+      <obj_property name="ElementShortName">ALU_ADD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_ADD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/ALU_SUB" type="array">
+      <obj_property name="ElementShortName">ALU_SUB[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_SUB[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/ALU_AND" type="array">
+      <obj_property name="ElementShortName">ALU_AND[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_AND[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/ALU_OR" type="array">
+      <obj_property name="ElementShortName">ALU_OR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_OR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/dut/ALU_XOR" type="array">
+      <obj_property name="ElementShortName">ALU_XOR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_XOR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/check_alu/test_a" type="array">
+      <obj_property name="ElementShortName">test_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">test_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/check_alu/test_b" type="array">
+      <obj_property name="ElementShortName">test_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">test_b[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/check_alu/test_op" type="array">
+      <obj_property name="ElementShortName">test_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">test_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/check_alu/expected" type="array">
+      <obj_property name="ElementShortName">expected[15:0]</obj_property>
+      <obj_property name="ObjectShortName">expected[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/operand_a" type="array">
+      <obj_property name="ElementShortName">operand_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">operand_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/operand_b" type="array">
+      <obj_property name="ElementShortName">operand_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">operand_b[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/result" type="array">
+      <obj_property name="ElementShortName">result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_alu/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+</wave_config>

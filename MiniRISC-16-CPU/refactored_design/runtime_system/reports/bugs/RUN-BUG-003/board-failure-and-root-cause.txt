@@ -1,0 +1,24 @@
+RUN-BUG-003 - Loader display disabled
+Date: 2026-10-16
+
+Board observation:
+- Runtime design was programmed and UART program upload was exercised.
+- With SW7 selecting Loader mode, the expected 10AD indication was not visible.
+
+Failing RTL:
+  assign display_high = load_mode ? 16'h10AD : game_display_high;
+  assign display_control = load_mode ? 16'h0000 : game_display_control;
+
+Root cause:
+- seven_segment8_driver only drives digit_enable when control_value[0] is 1.
+- Loader mode correctly selected 10AD but simultaneously cleared the global
+  display enable, so every digit remained blank.
+
+Fix:
+  assign display_control = load_mode ? 16'h0001 : game_display_control;
+
+Waveform note:
+- This issue was first observed on the physical board. No pre-fix board
+  waveform is available. The failing combinational values above provide a
+  deterministic RTL reproduction. A post-fix simulation assertion checks both
+  the Loader display value and its global enable.

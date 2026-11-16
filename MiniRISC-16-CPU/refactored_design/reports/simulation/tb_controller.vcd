@@ -1,0 +1,281 @@
+$date
+   Mon Sep 21 21:49:15 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_controller $end
+$var reg 16 ! instruction [15:0] $end
+$var wire 2 " rd_addr [1:0] $end
+$var wire 2 # rs_addr [1:0] $end
+$var wire 8 $ imm8 [7:0] $end
+$var wire 3 % alu_op [2:0] $end
+$var wire 1 & alu_src $end
+$var wire 1 ' reg_write $end
+$var wire 1 ( flags_write $end
+$var wire 1 ) branch_z $end
+$var wire 1 * jump $end
+$var wire 1 + wb_sel $end
+$var wire 1 , io_re $end
+$var wire 1 - io_we $end
+$var wire 11 . controls [10:0] $end
+$var integer 32 / errors [31:0] $end
+$scope module dut $end
+$var wire 16 0 instruction [15:0] $end
+$var wire 2 " rd_addr [1:0] $end
+$var wire 2 # rs_addr [1:0] $end
+$var wire 8 $ imm8 [7:0] $end
+$var reg 3 1 alu_op [2:0] $end
+$var reg 1 2 alu_src $end
+$var reg 1 3 reg_write $end
+$var reg 1 4 flags_write $end
+$var reg 1 5 branch_z $end
+$var reg 1 6 jump $end
+$var reg 1 7 wb_sel $end
+$var reg 1 8 io_re $end
+$var reg 1 9 io_we $end
+$var wire 4 : opcode [3:0] $end
+$var parameter 3 ; ALU_PASS_B [2:0] $end
+$var parameter 3 < ALU_ADD [2:0] $end
+$var parameter 3 = ALU_SUB [2:0] $end
+$var parameter 3 > ALU_AND [2:0] $end
+$var parameter 3 ? ALU_OR [2:0] $end
+$var parameter 3 @ ALU_XOR [2:0] $end
+$upscope $end
+$scope task check_opcode $end
+$var reg 4 A opcode [3:0] $end
+$var reg 11 B expected_controls [10:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b100110100101 !
+b10 "
+b1 #
+b10100101 $
+b0 %
+1&
+1'
+0(
+0)
+0*
+0+
+0,
+0-
+b11000000 .
+b0 /
+b100110100101 0
+b0 1
+12
+13
+04
+05
+06
+07
+08
+09
+b0 :
+b0 ;
+b1 <
+b10 =
+b11 >
+b100 ?
+b101 @
+b0 A
+b11000000 B
+$end
+
+#1000
+b1100110100101 !
+0&
+b1000000 .
+b1100110100101 0
+02
+13
+b1 :
+b1 A
+b1000000 B
+
+#2000
+b10100110100101 !
+b1 %
+1&
+1(
+b111100000 .
+b10100110100101 0
+b1 1
+12
+13
+14
+b10 :
+b10 A
+b111100000 B
+
+#3000
+b11100110100101 !
+0&
+b101100000 .
+b11100110100101 0
+b1 1
+02
+13
+14
+b11 :
+b11 A
+b101100000 B
+
+#4000
+b100100110100101 !
+b101 %
+0(
+b10101000000 .
+b100100110100101 0
+b101 1
+13
+04
+b100 :
+b100 A
+b10101000000 B
+
+#5000
+b101100110100101 !
+b10 %
+1(
+b1001100000 .
+b101100110100101 0
+b10 1
+13
+14
+b101 :
+b101 A
+b1001100000 B
+
+#6000
+b110100110100101 !
+0'
+b1000100000 .
+b110100110100101 0
+b10 1
+03
+14
+b110 :
+b110 A
+b1000100000 B
+
+#7000
+b111100110100101 !
+b11 %
+1'
+0(
+b1101000000 .
+b111100110100101 0
+b11 1
+13
+04
+b111 :
+b111 A
+b1101000000 B
+
+#8000
+b1000100110100101 !
+b0 %
+0'
+1)
+b10000 .
+b1000100110100101 0
+b0 1
+03
+15
+b1000 :
+b1000 A
+b10000 B
+
+#9000
+b1001100110100101 !
+b100 %
+1'
+0)
+b10001000000 .
+b1001100110100101 0
+b100 1
+13
+05
+b1001 :
+b1001 A
+b10001000000 B
+
+#10000
+b1010100110100101 !
+b0 %
+0'
+1*
+b1000 .
+b1010100110100101 0
+b0 1
+03
+16
+b1010 :
+b1010 A
+b1000 B
+
+#11000
+b1011100110100101 !
+1'
+0*
+1+
+1,
+b1000110 .
+b1011100110100101 0
+13
+06
+17
+18
+b1011 :
+b1011 A
+b1000110 B
+
+#12000
+b1100100110100101 !
+0'
+0+
+0,
+1-
+b1 .
+b1100100110100101 0
+03
+07
+08
+19
+b1100 :
+b1100 A
+b1 B
+
+#13000
+b1101100110100101 !
+0-
+b0 .
+b1101100110100101 0
+09
+b1101 :
+b1101 A
+b0 B
+
+#14000
+b1110100110100101 !
+b1110100110100101 0
+b1110 :
+b1110 A
+
+#15000
+b1111100110100101 !
+b1111100110100101 0
+b1111 :
+b1111 A

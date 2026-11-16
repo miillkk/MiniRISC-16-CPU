@@ -1,0 +1,514 @@
+$date
+   Fri Oct 16 21:25:07 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_cpu_data_instructions $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 16 # instruction [15:0] $end
+$var wire 8 $ data_addr [7:0] $end
+$var wire 16 % data_wdata [15:0] $end
+$var wire 16 & data_rdata [15:0] $end
+$var wire 1 ' data_re $end
+$var wire 1 ( data_we $end
+$var wire 10 ) mem_addr [9:0] $end
+$var wire 8 * io_addr [7:0] $end
+$var wire 16 + io_wdata [15:0] $end
+$var wire 1 , io_re $end
+$var wire 1 - io_we $end
+$var wire 1 . z $end
+$var wire 1 / n $end
+$var wire 1 0 c $end
+$var wire 1 1 v $end
+$scope module dut $end
+$var wire 1 2 clk $end
+$var wire 1 3 rst $end
+$var wire 16 4 instruction [15:0] $end
+$var wire 16 5 io_rdata [15:0] $end
+$var wire 16 & data_rdata [15:0] $end
+$var wire 10 ) mem_addr [9:0] $end
+$var wire 8 * io_addr [7:0] $end
+$var wire 16 + io_wdata [15:0] $end
+$var wire 1 , io_re $end
+$var wire 1 - io_we $end
+$var wire 8 $ data_addr [7:0] $end
+$var wire 16 % data_wdata [15:0] $end
+$var wire 1 ' data_re $end
+$var wire 1 ( data_we $end
+$var wire 1 . z_flag $end
+$var wire 1 / n_flag $end
+$var wire 1 0 c_flag $end
+$var wire 1 1 v_flag $end
+$var wire 2 6 rd_addr [1:0] $end
+$var wire 2 7 rs_addr [1:0] $end
+$var wire 8 8 imm8 [7:0] $end
+$var wire 3 9 alu_op [2:0] $end
+$var wire 1 : alu_src $end
+$var wire 1 ; reg_write $end
+$var wire 1 < flags_write $end
+$var wire 1 = branch_z $end
+$var wire 1 > jump $end
+$var wire 1 ? long_jump $end
+$var wire 2 @ wb_sel [1:0] $end
+$var wire 1 A control_io_re $end
+$var wire 1 B control_io_we $end
+$var wire 1 C control_data_re $end
+$var wire 1 D control_data_we $end
+$scope module u_controller $end
+$var wire 16 4 instruction [15:0] $end
+$var wire 2 6 rd_addr [1:0] $end
+$var wire 2 7 rs_addr [1:0] $end
+$var wire 8 8 imm8 [7:0] $end
+$var reg 3 E alu_op [2:0] $end
+$var reg 1 F alu_src $end
+$var reg 1 G reg_write $end
+$var reg 1 H flags_write $end
+$var reg 1 I branch_z $end
+$var reg 1 J jump $end
+$var reg 1 K long_jump $end
+$var reg 2 L wb_sel [1:0] $end
+$var reg 1 M io_re $end
+$var reg 1 N io_we $end
+$var reg 1 O data_re $end
+$var reg 1 P data_we $end
+$var wire 4 Q opcode [3:0] $end
+$upscope $end
+$scope module u_datapath $end
+$var wire 1 2 clk $end
+$var wire 1 3 rst $end
+$var wire 16 5 io_rdata [15:0] $end
+$var wire 16 & data_rdata [15:0] $end
+$var wire 2 6 rd_addr [1:0] $end
+$var wire 2 7 rs_addr [1:0] $end
+$var wire 8 8 imm8 [7:0] $end
+$var wire 3 9 alu_op [2:0] $end
+$var wire 1 : alu_src $end
+$var wire 1 ; reg_write $end
+$var wire 1 < flags_write $end
+$var wire 1 = branch_z $end
+$var wire 1 > jump $end
+$var wire 1 ? long_jump $end
+$var wire 2 @ wb_sel [1:0] $end
+$var wire 1 A control_io_re $end
+$var wire 1 B control_io_we $end
+$var wire 1 C control_data_re $end
+$var wire 1 D control_data_we $end
+$var wire 10 ) mem_addr [9:0] $end
+$var wire 8 * io_addr [7:0] $end
+$var wire 16 + io_wdata [15:0] $end
+$var wire 1 , io_re $end
+$var wire 1 - io_we $end
+$var wire 8 $ data_addr [7:0] $end
+$var wire 16 % data_wdata [15:0] $end
+$var wire 1 ' data_re $end
+$var wire 1 ( data_we $end
+$var wire 1 . z_flag $end
+$var wire 1 / n_flag $end
+$var wire 1 0 c_flag $end
+$var wire 1 1 v_flag $end
+$var wire 10 R pc [9:0] $end
+$var wire 10 S pc_plus_one [9:0] $end
+$var wire 10 T pc_next [9:0] $end
+$var wire 1 U branch_taken $end
+$var wire 16 V rd_data [15:0] $end
+$var wire 16 W rs_data [15:0] $end
+$var wire 16 X immediate [15:0] $end
+$var wire 16 Y alu_b [15:0] $end
+$var wire 16 Z alu_result [15:0] $end
+$var wire 1 [ alu_zero $end
+$var wire 1 \ alu_negative $end
+$var wire 1 ] alu_carry $end
+$var wire 1 ^ alu_overflow $end
+$var wire 16 _ writeback_data [15:0] $end
+$scope module u_program_counter $end
+$var wire 1 2 clk $end
+$var wire 1 3 rst $end
+$var wire 10 T next_pc [9:0] $end
+$var reg 10 ` pc [9:0] $end
+$var wire 10 S pc_plus_one [9:0] $end
+$upscope $end
+$scope module u_next_pc_mux $end
+$var wire 10 S pc_plus_one [9:0] $end
+$var wire 2 a current_page [9:8] $end
+$var wire 8 8 target_addr [7:0] $end
+$var wire 10 b absolute_target [9:0] $end
+$var wire 1 U branch_taken $end
+$var wire 1 > jump $end
+$var wire 1 ? long_jump $end
+$var wire 10 T next_pc [9:0] $end
+$var wire 10 c page_target [9:0] $end
+$upscope $end
+$scope module u_register_file $end
+$var wire 1 2 clk $end
+$var wire 1 3 rst $end
+$var wire 1 d write_enable $end
+$var wire 2 6 write_addr [1:0] $end
+$var wire 16 _ write_data [15:0] $end
+$var wire 2 6 read_addr_a [1:0] $end
+$var wire 2 7 read_addr_b [1:0] $end
+$var wire 16 V read_data_a [15:0] $end
+$var wire 16 W read_data_b [15:0] $end
+$var integer 32 e index [31:0] $end
+$upscope $end
+$scope module u_zero_extender $end
+$var wire 8 8 value_in [7:0] $end
+$var wire 16 X value_out [15:0] $end
+$upscope $end
+$scope module u_alu_operand_mux $end
+$var wire 16 W register_value [15:0] $end
+$var wire 16 X immediate_value [15:0] $end
+$var wire 1 : select_immediate $end
+$var wire 16 Y operand [15:0] $end
+$upscope $end
+$scope module u_alu $end
+$var wire 16 V operand_a [15:0] $end
+$var wire 16 Y operand_b [15:0] $end
+$var wire 3 9 alu_op [2:0] $end
+$var reg 16 f result [15:0] $end
+$var reg 1 g zero $end
+$var reg 1 h negative $end
+$var reg 1 i carry $end
+$var reg 1 j overflow $end
+$var reg 17 k extended_result [16:0] $end
+$upscope $end
+$scope module u_status_register $end
+$var wire 1 2 clk $end
+$var wire 1 3 rst $end
+$var wire 1 < write_enable $end
+$var wire 1 [ zero_in $end
+$var wire 1 \ negative_in $end
+$var wire 1 ] carry_in $end
+$var wire 1 ^ overflow_in $end
+$var reg 1 l z_flag $end
+$var reg 1 m n_flag $end
+$var reg 1 n c_flag $end
+$var reg 1 o v_flag $end
+$upscope $end
+$scope module u_writeback_mux $end
+$var wire 16 Z alu_value [15:0] $end
+$var wire 16 5 io_value [15:0] $end
+$var wire 16 & data_value [15:0] $end
+$var wire 2 @ select_source [1:0] $end
+$var reg 16 p writeback_value [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module ram $end
+$var wire 1 2 clk $end
+$var wire 1 ( write_enable $end
+$var wire 8 $ address [7:0] $end
+$var wire 16 % write_data [15:0] $end
+$var wire 16 & read_data [15:0] $end
+$upscope $end
+$scope task execute $end
+$var reg 16 q word [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+b1111000000000000 #
+bx $
+bx %
+bx &
+0'
+0(
+bx )
+b0 *
+bx +
+0,
+0-
+x.
+x/
+x0
+x1
+02
+13
+b1111000000000000 4
+b0 5
+b0 6
+b0 7
+b0 8
+b0 9
+0:
+0;
+0<
+0=
+0>
+1?
+b0 @
+0A
+0B
+0C
+0D
+b0 E
+0F
+0G
+0H
+0I
+0J
+1K
+b0 L
+0M
+0N
+0O
+0P
+b1111 Q
+bx R
+bx S
+b0 T
+0U
+bx V
+bx W
+b0 X
+bx Y
+bx Z
+x[
+x\
+0]
+0^
+bx _
+bx `
+bx a
+b0 b
+bx00000000 c
+0d
+bx e
+bx f
+xg
+xh
+0i
+0j
+b0 k
+xl
+xm
+xn
+xo
+bx p
+bx q
+$end
+
+#5000
+1!
+b0 $
+b0 %
+b0 )
+b0 +
+0.
+0/
+00
+01
+12
+b0 R
+b1 S
+b0 V
+b0 W
+b0 Y
+b0 Z
+1[
+0\
+b0 _
+b0 `
+b0 a
+b0 c
+b0 f
+1g
+0h
+0l
+0m
+0n
+0o
+b0 p
+
+#10000
+0!
+02
+
+#15000
+1!
+0"
+b100010 #
+b100010 *
+12
+03
+b100010 4
+b100010 8
+1:
+1;
+0?
+1F
+1G
+0K
+b0 Q
+b1 T
+b100010 X
+b100010 Y
+b100010 Z
+0[
+b100010 _
+b100010 b
+b100010 c
+1d
+b100010 f
+0g
+b100010 p
+b100010 q
+
+#20000
+0!
+02
+
+#25000
+1!
+b100010 $
+b100010 %
+b1 )
+b100010 +
+12
+b1 R
+b10 S
+b10 T
+b100010 V
+b100010 W
+b1 `
+b0 a
+b100010 f
+
+#26000
+b10001011010 #
+b1011010 *
+b10001011010 4
+b1 6
+b1011010 8
+b0 V
+b1011010 X
+b1011010 Y
+b1011010 Z
+b1011010 _
+b1011010 b
+b1011010 c
+b1011010 f
+b1011010 p
+b10001011010 q
+
+#30000
+0!
+02
+
+#35000
+1!
+b10 )
+12
+b10 R
+b11 S
+b11 T
+b1011010 V
+b10 `
+b0 a
+b1011010 f
+
+#36000
+b1110000100000000 #
+b100010 $
+b1011010 %
+1(
+b0 *
+b1011010 +
+b1110000100000000 4
+b0 6
+b1 7
+b0 8
+0:
+0;
+1D
+0F
+0G
+1P
+b1110 Q
+b100010 V
+b1011010 W
+b0 X
+b1011010 Y
+b1011010 Z
+0[
+b1011010 _
+b100000000 b
+b0 c
+0d
+b1011010 f
+0g
+b1011010 p
+b1110000100000000 q
+
+#40000
+0!
+02
+
+#45000
+1!
+b1011010 &
+b11 )
+12
+b11 R
+b100 S
+b100 T
+b11 `
+b0 a
+
+#46000
+b1101100000000000 #
+b100010 $
+b100010 %
+b1011010 &
+1'
+0(
+b100010 +
+b1101100000000000 4
+b10 6
+b0 7
+1;
+b10 @
+1C
+0D
+1G
+b10 L
+1O
+0P
+b1101 Q
+b0 V
+b100010 W
+b100010 Y
+b100010 Z
+b1011010 _
+b0 b
+1d
+b100010 f
+b1011010 p
+b1101100000000000 q
+
+#50000
+0!
+02
+
+#55000
+1!
+b100 )
+12
+b100 R
+b101 S
+b101 T
+b1011010 V
+b100 `
+b0 a
+b100010 f

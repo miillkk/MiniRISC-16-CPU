@@ -1,0 +1,66 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/board/hex_to_7seg.v" into library work
+INFO: [VRFC 10-311] analyzing module hex_to_7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/board/reset_conditioner.v" into library work
+INFO: [VRFC 10-311] analyzing module reset_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/board/seven_segment8_driver.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_segment8_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/alu_operand_mux.v" into library work
+INFO: [VRFC 10-311] analyzing module alu_operand_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/alu.v" into library work
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/controller.v" into library work
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/register_file.v" into library work
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/status_register.v" into library work
+INFO: [VRFC 10-311] analyzing module status_register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/writeback_mux.v" into library work
+INFO: [VRFC 10-311] analyzing module writeback_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/core/zero_extender_8_to_16.v" into library work
+INFO: [VRFC 10-311] analyzing module zero_extender_8_to_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/memory/data_memory.v" into library work
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/memory/instruction_memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instruction_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/cpu_status_port.v" into library work
+INFO: [VRFC 10-311] analyzing module cpu_status_port
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/display_registers.v" into library work
+INFO: [VRFC 10-311] analyzing module display_registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/io_decoder.v" into library work
+INFO: [VRFC 10-311] analyzing module io_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/led8.v" into library work
+INFO: [VRFC 10-311] analyzing module led8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/lfsr8.v" into library work
+INFO: [VRFC 10-311] analyzing module lfsr8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/scratchpad16.v" into library work
+INFO: [VRFC 10-311] analyzing module scratchpad16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/snake_peripheral_subsystem.v" into library work
+INFO: [VRFC 10-311] analyzing module snake_peripheral_subsystem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/switch8_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module switch8_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/tick_timer.v" into library work
+INFO: [VRFC 10-311] analyzing module tick_timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/uart_port.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_port
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/peripherals/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/rtl/top/runtime_board_top.v" into library work
+INFO: [VRFC 10-311] analyzing module runtime_board_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/cpu_core.v" into library work
+INFO: [VRFC 10-311] analyzing module cpu_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/datapath.v" into library work
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/next_pc_mux.v" into library work
+INFO: [VRFC 10-311] analyzing module next_pc_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/program_counter.v" into library work
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/program_loader.v" into library work
+INFO: [VRFC 10-311] analyzing module program_loader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/runtime_program_memory.v" into library work
+INFO: [VRFC 10-311] analyzing module runtime_program_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/hardware/runtime_soc.v" into library work
+INFO: [VRFC 10-311] analyzing module runtime_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mr.Untitled/AppData/Local/Temp/minirisc_chess4k_build_20261112/games/chess/sim/tb_chess4k.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_chess4k

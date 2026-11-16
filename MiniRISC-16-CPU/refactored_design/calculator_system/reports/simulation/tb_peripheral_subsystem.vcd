@@ -1,0 +1,527 @@
+$date
+   Fri Oct 16 10:34:55 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_peripheral_subsystem $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 8 # switches [7:0] $end
+$var reg 1 $ confirm_toggle $end
+$var reg 1 % button_valid $end
+$var reg 8 & io_addr [7:0] $end
+$var reg 16 ' io_wdata [15:0] $end
+$var reg 1 ( io_re $end
+$var reg 1 ) io_we $end
+$var reg 1 * z_flag $end
+$var reg 1 + n_flag $end
+$var reg 1 , c_flag $end
+$var reg 1 - v_flag $end
+$var wire 16 . io_rdata [15:0] $end
+$var wire 8 / led [7:0] $end
+$var wire 16 0 display_low [15:0] $end
+$var wire 16 1 display_high [15:0] $end
+$var wire 16 2 display_control [15:0] $end
+$var wire 1 3 input_valid $end
+$scope module dut $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst $end
+$var wire 8 6 switches [7:0] $end
+$var wire 1 7 confirm_toggle $end
+$var wire 1 8 button_valid $end
+$var wire 8 9 io_addr [7:0] $end
+$var wire 16 : io_wdata [15:0] $end
+$var wire 1 ; io_re $end
+$var wire 1 < io_we $end
+$var wire 1 = z_flag $end
+$var wire 1 > n_flag $end
+$var wire 1 ? c_flag $end
+$var wire 1 @ v_flag $end
+$var wire 16 . io_rdata [15:0] $end
+$var wire 8 / led [7:0] $end
+$var wire 16 0 display_low [15:0] $end
+$var wire 16 1 display_high [15:0] $end
+$var wire 16 2 display_control [15:0] $end
+$var wire 1 3 input_valid $end
+$var wire 16 A led_rdata [15:0] $end
+$var wire 16 B switch_rdata [15:0] $end
+$var wire 16 C input_control_rdata [15:0] $end
+$var wire 16 D status_rdata [15:0] $end
+$var wire 16 E scratchpad_rdata [15:0] $end
+$var wire 1 F display_low_write $end
+$var wire 1 G display_high_write $end
+$var wire 1 H display_control_write $end
+$var wire 1 I led_write $end
+$var wire 1 J scratchpad_write $end
+$var wire 1 K switch_valid $end
+$scope module u_display_registers $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst $end
+$var wire 1 F write_low $end
+$var wire 1 G write_high $end
+$var wire 1 H write_control $end
+$var wire 16 : write_data [15:0] $end
+$var reg 16 L low_value [15:0] $end
+$var reg 16 M high_value [15:0] $end
+$var reg 16 N control_value [15:0] $end
+$upscope $end
+$scope module u_led8 $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst $end
+$var wire 1 I write_enable $end
+$var wire 8 O write_data [7:0] $end
+$var reg 8 P led [7:0] $end
+$var wire 16 A read_data [15:0] $end
+$upscope $end
+$scope module u_switch8_input $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst $end
+$var wire 8 6 switches [7:0] $end
+$var wire 16 B read_data [15:0] $end
+$var reg 1 Q input_valid $end
+$var reg 8 R sync_stage_1 [7:0] $end
+$var reg 8 S sync_stage_2 [7:0] $end
+$upscope $end
+$scope module u_cpu_status_port $end
+$var wire 1 = z_flag $end
+$var wire 1 > n_flag $end
+$var wire 1 ? c_flag $end
+$var wire 1 @ v_flag $end
+$var wire 16 D read_data [15:0] $end
+$upscope $end
+$scope module u_scratchpad_ram $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst $end
+$var wire 1 J write_enable $end
+$var wire 4 T address [3:0] $end
+$var wire 16 : write_data [15:0] $end
+$var wire 16 E read_data [15:0] $end
+$var integer 32 U index [31:0] $end
+$upscope $end
+$scope module u_io_decoder $end
+$var wire 8 9 io_addr [7:0] $end
+$var wire 1 ; io_re $end
+$var wire 1 < io_we $end
+$var wire 16 0 display_low_rdata [15:0] $end
+$var wire 16 1 display_high_rdata [15:0] $end
+$var wire 16 2 display_control_rdata [15:0] $end
+$var wire 16 A led_rdata [15:0] $end
+$var wire 16 B switch_rdata [15:0] $end
+$var wire 16 C input_control_rdata [15:0] $end
+$var wire 16 D status_rdata [15:0] $end
+$var wire 16 E scratchpad_rdata [15:0] $end
+$var reg 16 V io_rdata [15:0] $end
+$var reg 1 W display_low_write $end
+$var reg 1 X display_high_write $end
+$var reg 1 Y display_control_write $end
+$var reg 1 Z led_write $end
+$var reg 1 [ scratchpad_write $end
+$var wire 1 \ scratchpad_selected $end
+$upscope $end
+$upscope $end
+$scope task write_io $end
+$var reg 8 ] address [7:0] $end
+$var reg 16 ^ value [15:0] $end
+$upscope $end
+$scope task read_check $end
+$var reg 8 _ address [7:0] $end
+$var reg 16 ` expected [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+b101010 #
+1$
+1%
+b0 &
+b0 '
+0(
+0)
+1*
+0+
+1,
+0-
+b0 .
+bx /
+bx 0
+bx 1
+bx 2
+x3
+04
+15
+b101010 6
+17
+18
+b0 9
+b0 :
+0;
+0<
+1=
+0>
+1?
+0@
+b0xxxxxxxx A
+b0xxxxxxxx B
+b0x1 C
+b101000 D
+bx E
+0F
+0G
+0H
+0I
+0J
+xK
+bx L
+bx M
+bx N
+b0 O
+bx P
+xQ
+bx R
+bx S
+b0 T
+bx U
+b0 V
+0W
+0X
+0Y
+0Z
+0[
+0\
+bx ]
+bx ^
+bx _
+bx `
+$end
+
+#5000
+1!
+b0 /
+b0 0
+b0 1
+b0 2
+03
+14
+b0 A
+b0 B
+b1 C
+b0 E
+0K
+b0 L
+b0 M
+b0 N
+b0 P
+0Q
+b0 R
+b0 S
+
+#10000
+0!
+04
+
+#15000
+1!
+0"
+13
+14
+05
+b11 C
+1K
+1Q
+b101010 R
+
+#20000
+0!
+04
+
+#25000
+1!
+14
+b101010 B
+b101010 S
+
+#30000
+0!
+04
+
+#35000
+1!
+14
+
+#40000
+0!
+04
+
+#45000
+1!
+14
+
+#50000
+0!
+04
+
+#55000
+1!
+14
+
+#60000
+0!
+04
+
+#65000
+1!
+14
+
+#70000
+0!
+04
+
+#75000
+1!
+14
+
+#80000
+0!
+04
+
+#85000
+1!
+14
+
+#90000
+0!
+04
+
+#95000
+1!
+b100000 &
+b1001000110100 '
+1)
+14
+b100000 9
+b1001000110100 :
+1<
+1F
+b110100 O
+b0 T
+1W
+b100000 ]
+b1001000110100 ^
+
+#100000
+0!
+04
+
+#105000
+1!
+b1001000110100 0
+14
+b1001000110100 L
+
+#106000
+b100001 &
+b1010101111001101 '
+1)
+b100001 9
+b1010101111001101 :
+0F
+1G
+b11001101 O
+b1 T
+0W
+1X
+b100001 ]
+b1010101111001101 ^
+
+#110000
+0!
+04
+
+#115000
+1!
+b1010101111001101 1
+14
+b1010101111001101 M
+
+#116000
+b100010 &
+b1 '
+1)
+b100010 9
+b1 :
+0G
+1H
+b1 O
+b10 T
+0X
+1Y
+b100010 ]
+b1 ^
+
+#120000
+0!
+04
+
+#125000
+1!
+b1 2
+14
+b1 N
+
+#126000
+b110000 &
+b1011010 '
+1)
+b110000 9
+b1011010 :
+0H
+1I
+b1011010 O
+b0 T
+0Y
+1Z
+b110000 ]
+b1011010 ^
+
+#130000
+0!
+04
+
+#135000
+1!
+b1011010 /
+14
+b1011010 A
+b1011010 P
+
+#136000
+b1000000 &
+b1100101011111110 '
+1)
+b1000000 9
+b1100101011111110 :
+0I
+1J
+b11111110 O
+b0 T
+0Z
+1[
+1\
+b1000000 ]
+b1100101011111110 ^
+
+#140000
+0!
+04
+
+#145000
+1!
+14
+b1100101011111110 E
+
+#146000
+b1001111 &
+b1011111011101111 '
+1)
+b1001111 9
+b1011111011101111 :
+b0 E
+b11101111 O
+b1111 T
+1[
+b1001111 ]
+b1011111011101111 ^
+
+#150000
+0!
+04
+
+#155000
+1!
+14
+b1011111011101111 E
+
+#156000
+b1000000 &
+1(
+0)
+b1100101011111110 .
+b1000000 9
+1;
+0<
+b1100101011111110 E
+0J
+b0 T
+b1100101011111110 V
+0[
+b1000000 _
+b1100101011111110 `
+
+#157000
+b1001111 &
+1(
+b1011111011101111 .
+b1001111 9
+b1011111011101111 E
+b1111 T
+b1011111011101111 V
+b1001111 _
+b1011111011101111 `
+
+#158000
+b110010 &
+1(
+b101000 .
+b110010 9
+b0 E
+b10 T
+b101000 V
+0\
+b110010 _
+b101000 `
+
+#159000
+b110001 &
+1(
+b101010 .
+b110001 9
+b1 T
+b101010 V
+b110001 _
+b101010 `
+
+#160000
+0!
+b110011 &
+1(
+b11 .
+04
+b110011 9
+b11 T
+b11 V
+b110011 _
+b11 `
+
+#161000
+b1111110 &
+1(
+b0 .
+b1111110 9
+b1110 T
+b0 V
+b1111110 _
+b0 `
+
+#162000
+0(

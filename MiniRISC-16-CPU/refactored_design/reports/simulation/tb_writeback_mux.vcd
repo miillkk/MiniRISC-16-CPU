@@ -1,0 +1,43 @@
+$date
+   Mon Sep 21 21:49:57 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_writeback_mux $end
+$var reg 16 ! alu_value [15:0] $end
+$var reg 16 " io_value [15:0] $end
+$var reg 1 # select_io $end
+$var wire 16 $ writeback_value [15:0] $end
+$var integer 32 % errors [31:0] $end
+$scope module dut $end
+$var wire 16 & alu_value [15:0] $end
+$var wire 16 ' io_value [15:0] $end
+$var wire 1 ( select_io $end
+$var wire 16 $ writeback_value [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b101010110101010 !
+b1010010101011010 "
+0#
+b101010110101010 $
+b0 %
+b101010110101010 &
+b1010010101011010 '
+0(
+$end
+
+#1000
+1#
+b1010010101011010 $
+1(

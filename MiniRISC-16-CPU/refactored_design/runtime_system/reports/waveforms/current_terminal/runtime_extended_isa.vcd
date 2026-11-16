@@ -1,0 +1,360 @@
+$date
+	Wed Nov 04 17:37:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_runtime_extended_isa_wave $end
+$var reg 1 ! clk $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var reg 1 " rst $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 10 # pc [9:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 10 $ pc_next [9:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 % instruction [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 4 & opcode [3:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 ' data_we $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 ( data_re $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 8 ) data_addr [7:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 * data_wdata [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 + data_rdata [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 , reg_write $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 - flags_write $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 . branch_z $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 / branch_taken $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 0 jump $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 1 long_jump $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 2 io_we $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 8 3 io_addr [7:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 4 io_wdata [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 1 5 z_flag $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 6 rd_data [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 7 rs_data [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 8 alu_result [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 9 writeback_data [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 : r0 [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 ; r1 [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 < r2 [15:0] $end
+$upscope $end
+$scope module tb_runtime_extended_isa_wave $end
+$var wire 16 = r3 [15:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+x5
+bx 4
+bx 3
+02
+x1
+x0
+x/
+x.
+x-
+x,
+bx +
+bx *
+bx )
+0(
+0'
+bx &
+bx %
+bx $
+bx #
+1"
+0!
+$end
+#5000
+b100010 9
+b0 )
+01
+00
+0.
+0-
+1,
+b100010 8
+b1 $
+b0 &
+b0 6
+b0 *
+b0 4
+b0 7
+b100010 3
+0/
+b100010 %
+b0 #
+b0 =
+b0 <
+b0 ;
+b0 :
+05
+1!
+#10000
+0!
+#15000
+1!
+#20000
+0!
+#25000
+1!
+#30000
+0"
+0!
+#35000
+b1011010 9
+b10 $
+b100010 )
+b1011010 8
+b1011010 3
+b0 6
+b100010 *
+b100010 4
+b100010 7
+b100010 :
+b10001011010 %
+b1 #
+1!
+#40000
+0!
+#45000
+b11 $
+1'
+b1011010 9
+0,
+b1110 &
+b1011010 *
+b1011010 4
+b1011010 7
+b0 3
+b1011010 8
+b1110000100000000 %
+b10 #
+b100010 6
+b1011010 ;
+1!
+#50000
+0!
+#55000
+b100 $
+1(
+0'
+1,
+b100010 8
+b1101 &
+b0 6
+b100010 *
+b100010 4
+b100010 7
+b1011010 +
+b1101100000000000 %
+b11 #
+1!
+#60000
+0!
+#65000
+b101 $
+0(
+b0 9
+bx +
+b1011010 )
+1-
+0,
+b110 &
+b1011010 *
+b1011010 4
+b1011010 7
+b0 8
+b110011000000000 %
+b100 #
+b1011010 6
+b1011010 <
+1!
+#70000
+0!
+#75000
+b100010 9
+b1000 $
+1/
+b100010 8
+b1011010 +
+b100010 )
+1.
+0-
+b1000 &
+b100010 6
+b100010 *
+b100010 4
+b100010 7
+b1000 3
+15
+b1000000000001000 %
+b101 #
+1!
+#80000
+0!
+#85000
+b1010 $
+0/
+10
+0.
+b1010 &
+b1010 3
+b1010000000001010 %
+b1000 #
+1!
+#90000
+0!
+#95000
+b1011010 9
+b1011010 8
+bx +
+b1011010 )
+b1000000000 $
+11
+00
+b1111 &
+b1011010 *
+b1011010 4
+b1011010 7
+b0 3
+b1111001000000000 %
+b1010 #
+1!
+#100000
+0!
+#105000
+b10100101 9
+b1011010 +
+b100010 )
+1,
+01
+b10100101 8
+b1000000001 $
+b0 &
+b0 6
+b100010 *
+b100010 4
+b100010 7
+b10100101 3
+b110010100101 %
+b1000000000 #
+1!
+#110000
+0!
+#115000
+b10100101 9
+b1000000010 $
+12
+bx +
+b10100101 )
+0,
+b10100101 8
+b1100 &
+b10100101 *
+b10100101 4
+b10100101 7
+b110000 3
+b100010 6
+b10100101 =
+b1100001100110000 %
+b1000000001 #
+1!
+#120000
+0!
+#125000
+b1011010 9
+02
+b1011010 8
+b1011010 )
+11
+b1111 &
+b1011010 *
+b1011010 4
+b1011010 7
+b10 3
+b1111001000000010 %
+b1000000010 #
+1!
+#130000
+0!
+#135000
+1!
+#140000
+0!
+#145000
+1!
+#150000
+0!
+#155000
+1!
+#160000
+0!
+#165000
+1!
+#166000

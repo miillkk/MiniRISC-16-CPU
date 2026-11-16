@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="942" viewBox="0 0 1600 942">
+<style>
+  text { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; fill: #172033; }
+  .title { font-size: 30px; font-weight: 600; }
+  .subtitle { font-size: 16px; fill: #60708A; }
+  .panel-title { font-size: 16px; font-weight: 600; }
+  .panel-range, .axis { font-size: 12px; fill: #60708A; }
+  .signal { font-family: Consolas, monospace; font-size: 14px; font-weight: 600; }
+  .bus-value { font-family: Consolas, monospace; font-size: 12px; fill: #D8F2FF; }
+  .event { font-size: 12px; font-weight: 600; fill: #111827; }
+  .footer { font-size: 13px; fill: #60708A; }
+</style>
+<rect width="100%" height="100%" fill="#F6F8FB"/>
+<text x="48" y="52" class="title">当前终端版 · Running Light I/O 波形</text>
+<text x="48" y="80" class="subtitle">runtime_board_top → runtime_soc → cpu_core → I/O decoder → led8；保留 10 月 17 日要求的 PC、instruction、io_we、io_addr、io_wdata、LED。</text>
+<rect x="48" y="116" width="1504" height="362" rx="8" fill="#FFFFFF" stroke="#D7DFEA"/>
+<rect x="233" y="158" width="1319" height="320" fill="#0B1220"/>
+<text x="62" y="142" class="panel-title">首次写 LED：初始化为 0x01</text>
+<text x="1540" y="142" text-anchor="end" class="panel-range">2.345–2.485 µs</text>
+<line x1="233" y1="158" x2="233" y2="478" stroke="#2B3850" stroke-width="1"/>
+<text x="233" y="150" text-anchor="middle" class="axis">2345 ns</text>
+<line x1="496.8" y1="158" x2="496.8" y2="478" stroke="#2B3850" stroke-width="1"/>
+<text x="496.8" y="150" text-anchor="middle" class="axis">2373 ns</text>
+<line x1="760.6" y1="158" x2="760.6" y2="478" stroke="#2B3850" stroke-width="1"/>
+<text x="760.6" y="150" text-anchor="middle" class="axis">2401 ns</text>
+<line x1="1024.4" y1="158" x2="1024.4" y2="478" stroke="#2B3850" stroke-width="1"/>
+<text x="1024.4" y="150" text-anchor="middle" class="axis">2429 ns</text>
+<line x1="1288.2" y1="158" x2="1288.2" y2="478" stroke="#2B3850" stroke-width="1"/>
+<text x="1288.2" y="150" text-anchor="middle" class="axis">2457 ns</text>
+<line x1="1552" y1="158" x2="1552" y2="478" stroke="#2B3850" stroke-width="1"/>
+<text x="1552" y="150" text-anchor="middle" class="axis">2485 ns</text>
+<line x1="48" y1="158" x2="1552" y2="158" stroke="#2B3850" stroke-opacity="1"/>
+<text x="221" y="183" text-anchor="end" class="signal">clk</text>
+<path d="M 233 167 H 280.10714285714283 V 189 H 327.2142857142857 V 167 H 374.32142857142856 V 189 H 421.42857142857144 V 167 H 468.5357142857143 V 189 H 515.6428571428571 V 167 H 562.75 V 189 H 609.8571428571429 V 167 H 656.9642857142858 V 189 H 704.0714285714286 V 167 H 751.1785714285714 V 189 H 798.2857142857142 V 167 H 845.3928571428571 V 189 H 892.5 V 167 H 939.6071428571429 V 189 H 986.7142857142857 V 167 H 1033.8214285714284 V 189 H 1080.9285714285716 V 167 H 1128.0357142857142 V 189 H 1175.142857142857 V 167 H 1222.25 V 189 H 1269.357142857143 V 167 H 1316.4642857142858 V 189 H 1363.5714285714284 V 167 H 1410.6785714285716 V 189 H 1457.7857142857142 V 167 H 1504.892857142857 V 189 H 1552" fill="none" stroke="#55E68B" stroke-width="2"/>
+<line x1="48" y1="198" x2="1552" y2="198" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="223" text-anchor="end" class="signal">rst</text>
+<path d="M 233 229 H 1552" fill="none" stroke="#55E68B" stroke-width="2"/>
+<line x1="48" y1="238" x2="1552" y2="238" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="263" text-anchor="end" class="signal">PC[9:0]</text>
+<line x1="233" y1="258" x2="327.2142857142857" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="251" text-anchor="middle" class="bus-value">007</text>
+<line x1="327.2142857142857" y1="258" x2="421.42857142857144" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 250 L 331.2142857142857 266 M 323.2142857142857 266 L 331.2142857142857 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="251" text-anchor="middle" class="bus-value">002</text>
+<line x1="421.42857142857144" y1="258" x2="515.6428571428571" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 250 L 425.42857142857144 266 M 417.42857142857144 266 L 425.42857142857144 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="251" text-anchor="middle" class="bus-value">003</text>
+<line x1="515.6428571428571" y1="258" x2="609.8571428571429" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 250 L 519.6428571428571 266 M 511.6428571428571 266 L 519.6428571428571 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="562.75" y="251" text-anchor="middle" class="bus-value">004</text>
+<line x1="609.8571428571429" y1="258" x2="704.0714285714286" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 605.8571428571429 250 L 613.8571428571429 266 M 605.8571428571429 266 L 613.8571428571429 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="656.9642857142858" y="251" text-anchor="middle" class="bus-value">005</text>
+<line x1="704.0714285714286" y1="258" x2="798.2857142857142" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 700.0714285714286 250 L 708.0714285714286 266 M 700.0714285714286 266 L 708.0714285714286 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="751.1785714285713" y="251" text-anchor="middle" class="bus-value">006</text>
+<line x1="798.2857142857142" y1="258" x2="892.5" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 794.2857142857142 250 L 802.2857142857142 266 M 794.2857142857142 266 L 802.2857142857142 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="845.3928571428571" y="251" text-anchor="middle" class="bus-value">008</text>
+<line x1="892.5" y1="258" x2="986.7142857142857" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 250 L 896.5 266 M 888.5 266 L 896.5 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="251" text-anchor="middle" class="bus-value">009</text>
+<line x1="986.7142857142857" y1="258" x2="1080.9285714285716" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 250 L 990.7142857142857 266 M 982.7142857142857 266 L 990.7142857142857 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="251" text-anchor="middle" class="bus-value">00A</text>
+<line x1="1080.9285714285716" y1="258" x2="1175.142857142857" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 250 L 1084.9285714285716 266 M 1076.9285714285716 266 L 1084.9285714285716 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1128.0357142857142" y="251" text-anchor="middle" class="bus-value">00B</text>
+<line x1="1175.142857142857" y1="258" x2="1269.357142857143" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1171.142857142857 250 L 1179.142857142857 266 M 1171.142857142857 266 L 1179.142857142857 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1222.25" y="251" text-anchor="middle" class="bus-value">00C</text>
+<line x1="1269.357142857143" y1="258" x2="1363.5714285714284" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1265.357142857143 250 L 1273.357142857143 266 M 1265.357142857143 266 L 1273.357142857143 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="251" text-anchor="middle" class="bus-value">00D</text>
+<line x1="1363.5714285714284" y1="258" x2="1457.7857142857142" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1359.5714285714284 250 L 1367.5714285714284 266 M 1359.5714285714284 266 L 1367.5714285714284 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1410.6785714285713" y="251" text-anchor="middle" class="bus-value">00E</text>
+<line x1="1457.7857142857142" y1="258" x2="1552" y2="258" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1453.7857142857142 250 L 1461.7857142857142 266 M 1453.7857142857142 266 L 1461.7857142857142 250" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1504.892857142857" y="251" text-anchor="middle" class="bus-value">069</text>
+<line x1="48" y1="278" x2="1552" y2="278" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="303" text-anchor="end" class="signal">instruction</text>
+<line x1="233" y1="298" x2="327.2142857142857" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="291" text-anchor="middle" class="bus-value">A002</text>
+<line x1="327.2142857142857" y1="298" x2="421.42857142857144" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 290 L 331.2142857142857 306 M 323.2142857142857 306 L 331.2142857142857 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="291" text-anchor="middle" class="bus-value">E100</text>
+<line x1="421.42857142857144" y1="298" x2="515.6428571428571" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 290 L 425.42857142857144 306 M 417.42857142857144 306 L 425.42857142857144 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="291" text-anchor="middle" class="bus-value">2001</text>
+<line x1="515.6428571428571" y1="298" x2="609.8571428571429" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 290 L 519.6428571428571 306 M 511.6428571428571 306 L 519.6428571428571 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="562.75" y="291" text-anchor="middle" class="bus-value">0827</text>
+<line x1="609.8571428571429" y1="298" x2="704.0714285714286" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 605.8571428571429 290 L 613.8571428571429 306 M 605.8571428571429 306 L 613.8571428571429 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="656.9642857142858" y="291" text-anchor="middle" class="bus-value">6200</text>
+<line x1="704.0714285714286" y1="298" x2="798.2857142857142" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 700.0714285714286 290 L 708.0714285714286 306 M 700.0714285714286 306 L 708.0714285714286 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="751.1785714285713" y="291" text-anchor="middle" class="bus-value">8008</text>
+<line x1="798.2857142857142" y1="298" x2="892.5" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 794.2857142857142 290 L 802.2857142857142 306 M 794.2857142857142 306 L 802.2857142857142 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="845.3928571428571" y="291" text-anchor="middle" class="bus-value">0001</text>
+<line x1="892.5" y1="298" x2="986.7142857142857" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 290 L 896.5 306 M 888.5 306 L 896.5 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="291" text-anchor="middle" class="bus-value">C030</text>
+<line x1="986.7142857142857" y1="298" x2="1080.9285714285716" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 290 L 990.7142857142857 306 M 982.7142857142857 306 L 990.7142857142857 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="291" text-anchor="middle" class="bus-value">0C25</text>
+<line x1="1080.9285714285716" y1="298" x2="1175.142857142857" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 290 L 1084.9285714285716 306 M 1076.9285714285716 306 L 1084.9285714285716 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1128.0357142857142" y="291" text-anchor="middle" class="bus-value">EC00</text>
+<line x1="1175.142857142857" y1="298" x2="1269.357142857143" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1171.142857142857 290 L 1179.142857142857 306 M 1171.142857142857 306 L 1179.142857142857 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1222.25" y="291" text-anchor="middle" class="bus-value">0001</text>
+<line x1="1269.357142857143" y1="298" x2="1363.5714285714284" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1265.357142857143 290 L 1273.357142857143 306 M 1265.357142857143 306 L 1273.357142857143 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="291" text-anchor="middle" class="bus-value">C022</text>
+<line x1="1363.5714285714284" y1="298" x2="1457.7857142857142" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1359.5714285714284 290 L 1367.5714285714284 306 M 1359.5714285714284 306 L 1367.5714285714284 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1410.6785714285713" y="291" text-anchor="middle" class="bus-value">A069</text>
+<line x1="1457.7857142857142" y1="298" x2="1552" y2="298" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1453.7857142857142 290 L 1461.7857142857142 306 M 1453.7857142857142 306 L 1461.7857142857142 290" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1504.892857142857" y="291" text-anchor="middle" class="bus-value">0000</text>
+<line x1="48" y1="318" x2="1552" y2="318" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="343" text-anchor="end" class="signal">io_we</text>
+<path d="M 233 349 H 892.5 V 327 H 986.7142857142857 V 349 H 1269.357142857143 V 327 H 1363.5714285714284 V 349 H 1552" fill="none" stroke="#55E68B" stroke-width="2"/>
+<line x1="48" y1="358" x2="1552" y2="358" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="383" text-anchor="end" class="signal">io_addr</text>
+<line x1="233" y1="378" x2="327.2142857142857" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="371" text-anchor="middle" class="bus-value">02</text>
+<line x1="327.2142857142857" y1="378" x2="421.42857142857144" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 370 L 331.2142857142857 386 M 323.2142857142857 386 L 331.2142857142857 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="371" text-anchor="middle" class="bus-value">00</text>
+<line x1="421.42857142857144" y1="378" x2="515.6428571428571" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 370 L 425.42857142857144 386 M 417.42857142857144 386 L 425.42857142857144 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="371" text-anchor="middle" class="bus-value">01</text>
+<line x1="515.6428571428571" y1="378" x2="609.8571428571429" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 370 L 519.6428571428571 386 M 511.6428571428571 386 L 519.6428571428571 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="562.75" y="371" text-anchor="middle" class="bus-value">27</text>
+<line x1="609.8571428571429" y1="378" x2="704.0714285714286" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 605.8571428571429 370 L 613.8571428571429 386 M 605.8571428571429 386 L 613.8571428571429 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="656.9642857142858" y="371" text-anchor="middle" class="bus-value">00</text>
+<line x1="704.0714285714286" y1="378" x2="798.2857142857142" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 700.0714285714286 370 L 708.0714285714286 386 M 700.0714285714286 386 L 708.0714285714286 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="751.1785714285713" y="371" text-anchor="middle" class="bus-value">08</text>
+<line x1="798.2857142857142" y1="378" x2="892.5" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 794.2857142857142 370 L 802.2857142857142 386 M 794.2857142857142 386 L 802.2857142857142 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="845.3928571428571" y="371" text-anchor="middle" class="bus-value">01</text>
+<line x1="892.5" y1="378" x2="986.7142857142857" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 370 L 896.5 386 M 888.5 386 L 896.5 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="371" text-anchor="middle" class="bus-value">30</text>
+<line x1="986.7142857142857" y1="378" x2="1080.9285714285716" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 370 L 990.7142857142857 386 M 982.7142857142857 386 L 990.7142857142857 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="371" text-anchor="middle" class="bus-value">25</text>
+<line x1="1080.9285714285716" y1="378" x2="1175.142857142857" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 370 L 1084.9285714285716 386 M 1076.9285714285716 386 L 1084.9285714285716 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1128.0357142857142" y="371" text-anchor="middle" class="bus-value">00</text>
+<line x1="1175.142857142857" y1="378" x2="1269.357142857143" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1171.142857142857 370 L 1179.142857142857 386 M 1171.142857142857 386 L 1179.142857142857 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1222.25" y="371" text-anchor="middle" class="bus-value">01</text>
+<line x1="1269.357142857143" y1="378" x2="1363.5714285714284" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1265.357142857143 370 L 1273.357142857143 386 M 1265.357142857143 386 L 1273.357142857143 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="371" text-anchor="middle" class="bus-value">22</text>
+<line x1="1363.5714285714284" y1="378" x2="1457.7857142857142" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1359.5714285714284 370 L 1367.5714285714284 386 M 1359.5714285714284 386 L 1367.5714285714284 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1410.6785714285713" y="371" text-anchor="middle" class="bus-value">69</text>
+<line x1="1457.7857142857142" y1="378" x2="1552" y2="378" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1453.7857142857142 370 L 1461.7857142857142 386 M 1453.7857142857142 386 L 1461.7857142857142 370" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1504.892857142857" y="371" text-anchor="middle" class="bus-value">00</text>
+<line x1="48" y1="398" x2="1552" y2="398" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="423" text-anchor="end" class="signal">io_wdata</text>
+<line x1="233" y1="418" x2="327.2142857142857" y2="418" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="411" text-anchor="middle" class="bus-value">0026</text>
+<line x1="327.2142857142857" y1="418" x2="421.42857142857144" y2="418" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 410 L 331.2142857142857 426 M 323.2142857142857 426 L 331.2142857142857 410" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="411" text-anchor="middle" class="bus-value">0000</text>
+<line x1="421.42857142857144" y1="418" x2="515.6428571428571" y2="418" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 410 L 425.42857142857144 426 M 417.42857142857144 426 L 425.42857142857144 410" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="411" text-anchor="middle" class="bus-value">0026</text>
+<line x1="515.6428571428571" y1="418" x2="892.5" y2="418" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 410 L 519.6428571428571 426 M 511.6428571428571 426 L 519.6428571428571 410" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="704.0714285714286" y="411" text-anchor="middle" class="bus-value">0027</text>
+<line x1="892.5" y1="418" x2="1552" y2="418" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 410 L 896.5 426 M 888.5 426 L 896.5 410" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1222.25" y="411" text-anchor="middle" class="bus-value">0001</text>
+<line x1="48" y1="438" x2="1552" y2="438" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="463" text-anchor="end" class="signal">board LED</text>
+<line x1="233" y1="458" x2="986.7142857142857" y2="458" stroke="#62C6FF" stroke-width="2"/>
+<text x="609.8571428571429" y="451" text-anchor="middle" class="bus-value">00</text>
+<line x1="986.7142857142857" y1="458" x2="1552" y2="458" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 450 L 990.7142857142857 466 M 982.7142857142857 466 L 990.7142857142857 450" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1269.357142857143" y="451" text-anchor="middle" class="bus-value">01</text>
+<line x1="892.5" y1="158" x2="892.5" y2="478" stroke="#FFB547" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="838.5" y="164" width="108" height="24" rx="12" fill="#FFB547"/>
+<text x="892.5" y="181" text-anchor="middle" class="event">OUP LED = 01</text>
+<rect x="48" y="520" width="1504" height="362" rx="8" fill="#FFFFFF" stroke="#D7DFEA"/>
+<rect x="233" y="562" width="1319" height="320" fill="#0B1220"/>
+<text x="62" y="546" class="panel-title">下一步写 LED：右移到 0x02</text>
+<text x="1540" y="546" text-anchor="end" class="panel-range">7.485–7.625 µs</text>
+<line x1="233" y1="562" x2="233" y2="882" stroke="#2B3850" stroke-width="1"/>
+<text x="233" y="554" text-anchor="middle" class="axis">7485 ns</text>
+<line x1="496.8" y1="562" x2="496.8" y2="882" stroke="#2B3850" stroke-width="1"/>
+<text x="496.8" y="554" text-anchor="middle" class="axis">7513 ns</text>
+<line x1="760.6" y1="562" x2="760.6" y2="882" stroke="#2B3850" stroke-width="1"/>
+<text x="760.6" y="554" text-anchor="middle" class="axis">7541 ns</text>
+<line x1="1024.4" y1="562" x2="1024.4" y2="882" stroke="#2B3850" stroke-width="1"/>
+<text x="1024.4" y="554" text-anchor="middle" class="axis">7569 ns</text>
+<line x1="1288.2" y1="562" x2="1288.2" y2="882" stroke="#2B3850" stroke-width="1"/>
+<text x="1288.2" y="554" text-anchor="middle" class="axis">7597 ns</text>
+<line x1="1552" y1="562" x2="1552" y2="882" stroke="#2B3850" stroke-width="1"/>
+<text x="1552" y="554" text-anchor="middle" class="axis">7625 ns</text>
+<line x1="48" y1="562" x2="1552" y2="562" stroke="#2B3850" stroke-opacity="1"/>
+<text x="221" y="587" text-anchor="end" class="signal">clk</text>
+<path d="M 233 571 H 280.10714285714283 V 593 H 327.2142857142857 V 571 H 374.32142857142856 V 593 H 421.42857142857144 V 571 H 468.5357142857143 V 593 H 515.6428571428571 V 571 H 562.75 V 593 H 609.8571428571429 V 571 H 656.9642857142858 V 593 H 704.0714285714286 V 571 H 751.1785714285714 V 593 H 798.2857142857142 V 571 H 845.3928571428571 V 593 H 892.5 V 571 H 939.6071428571429 V 593 H 986.7142857142857 V 571 H 1033.8214285714284 V 593 H 1080.9285714285716 V 571 H 1552" fill="none" stroke="#55E68B" stroke-width="2"/>
+<line x1="48" y1="602" x2="1552" y2="602" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="627" text-anchor="end" class="signal">rst</text>
+<path d="M 233 633 H 1552" fill="none" stroke="#55E68B" stroke-width="2"/>
+<line x1="48" y1="642" x2="1552" y2="642" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="667" text-anchor="end" class="signal">PC[9:0]</text>
+<line x1="233" y1="662" x2="327.2142857142857" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="655" text-anchor="middle" class="bus-value">062</text>
+<line x1="327.2142857142857" y1="662" x2="421.42857142857144" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 654 L 331.2142857142857 670 M 323.2142857142857 670 L 331.2142857142857 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="655" text-anchor="middle" class="bus-value">063</text>
+<line x1="421.42857142857144" y1="662" x2="515.6428571428571" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 654 L 425.42857142857144 670 M 417.42857142857144 670 L 425.42857142857144 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="655" text-anchor="middle" class="bus-value">064</text>
+<line x1="515.6428571428571" y1="662" x2="609.8571428571429" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 654 L 519.6428571428571 670 M 511.6428571428571 670 L 519.6428571428571 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="562.75" y="655" text-anchor="middle" class="bus-value">065</text>
+<line x1="609.8571428571429" y1="662" x2="704.0714285714286" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 605.8571428571429 654 L 613.8571428571429 670 M 605.8571428571429 670 L 613.8571428571429 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="656.9642857142858" y="655" text-anchor="middle" class="bus-value">05F</text>
+<line x1="704.0714285714286" y1="662" x2="798.2857142857142" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 700.0714285714286 654 L 708.0714285714286 670 M 700.0714285714286 670 L 708.0714285714286 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="751.1785714285713" y="655" text-anchor="middle" class="bus-value">060</text>
+<line x1="798.2857142857142" y1="662" x2="892.5" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 794.2857142857142 654 L 802.2857142857142 670 M 794.2857142857142 670 L 802.2857142857142 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="845.3928571428571" y="655" text-anchor="middle" class="bus-value">061</text>
+<line x1="892.5" y1="662" x2="986.7142857142857" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 654 L 896.5 670 M 888.5 670 L 896.5 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="655" text-anchor="middle" class="bus-value">066</text>
+<line x1="986.7142857142857" y1="662" x2="1080.9285714285716" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 654 L 990.7142857142857 670 M 982.7142857142857 670 L 990.7142857142857 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="655" text-anchor="middle" class="bus-value">067</text>
+<line x1="1080.9285714285716" y1="662" x2="1552" y2="662" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 654 L 1084.9285714285716 670 M 1076.9285714285716 670 L 1084.9285714285716 654" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="655" text-anchor="middle" class="bus-value">068</text>
+<line x1="48" y1="682" x2="1552" y2="682" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="707" text-anchor="end" class="signal">instruction</text>
+<line x1="233" y1="702" x2="327.2142857142857" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="695" text-anchor="middle" class="bus-value">3500</text>
+<line x1="327.2142857142857" y1="702" x2="421.42857142857144" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 694 L 331.2142857142857 710 M 323.2142857142857 710 L 331.2142857142857 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="695" text-anchor="middle" class="bus-value">0801</text>
+<line x1="421.42857142857144" y1="702" x2="515.6428571428571" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 694 L 425.42857142857144 710 M 417.42857142857144 710 L 425.42857142857144 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="695" text-anchor="middle" class="bus-value">5200</text>
+<line x1="515.6428571428571" y1="702" x2="609.8571428571429" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 694 L 519.6428571428571 710 M 511.6428571428571 710 L 519.6428571428571 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="562.75" y="695" text-anchor="middle" class="bus-value">A05F</text>
+<line x1="609.8571428571429" y1="702" x2="704.0714285714286" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 605.8571428571429 694 L 613.8571428571429 710 M 605.8571428571429 710 L 613.8571428571429 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="656.9642857142858" y="695" text-anchor="middle" class="bus-value">0800</text>
+<line x1="704.0714285714286" y1="702" x2="798.2857142857142" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 700.0714285714286 694 L 708.0714285714286 710 M 700.0714285714286 710 L 708.0714285714286 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="751.1785714285713" y="695" text-anchor="middle" class="bus-value">6200</text>
+<line x1="798.2857142857142" y1="702" x2="892.5" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 794.2857142857142 694 L 802.2857142857142 710 M 794.2857142857142 710 L 802.2857142857142 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="845.3928571428571" y="695" text-anchor="middle" class="bus-value">8066</text>
+<line x1="892.5" y1="702" x2="986.7142857142857" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 694 L 896.5 710 M 888.5 710 L 896.5 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="695" text-anchor="middle" class="bus-value">C130</text>
+<line x1="986.7142857142857" y1="702" x2="1080.9285714285716" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 694 L 990.7142857142857 710 M 982.7142857142857 710 L 990.7142857142857 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="695" text-anchor="middle" class="bus-value">0C25</text>
+<line x1="1080.9285714285716" y1="702" x2="1552" y2="702" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 694 L 1084.9285714285716 710 M 1076.9285714285716 710 L 1084.9285714285716 694" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="695" text-anchor="middle" class="bus-value">ED00</text>
+<line x1="48" y1="722" x2="1552" y2="722" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="747" text-anchor="end" class="signal">io_we</text>
+<path d="M 233 753 H 892.5 V 731 H 986.7142857142857 V 753 H 1552" fill="none" stroke="#55E68B" stroke-width="2"/>
+<line x1="48" y1="762" x2="1552" y2="762" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="787" text-anchor="end" class="signal">io_addr</text>
+<line x1="233" y1="782" x2="327.2142857142857" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<text x="280.1071428571429" y="775" text-anchor="middle" class="bus-value">00</text>
+<line x1="327.2142857142857" y1="782" x2="421.42857142857144" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 323.2142857142857 774 L 331.2142857142857 790 M 323.2142857142857 790 L 331.2142857142857 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="374.32142857142856" y="775" text-anchor="middle" class="bus-value">01</text>
+<line x1="421.42857142857144" y1="782" x2="515.6428571428571" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 417.42857142857144 774 L 425.42857142857144 790 M 417.42857142857144 790 L 425.42857142857144 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="468.5357142857143" y="775" text-anchor="middle" class="bus-value">00</text>
+<line x1="515.6428571428571" y1="782" x2="609.8571428571429" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 774 L 519.6428571428571 790 M 511.6428571428571 790 L 519.6428571428571 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="562.75" y="775" text-anchor="middle" class="bus-value">5F</text>
+<line x1="609.8571428571429" y1="782" x2="798.2857142857142" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 605.8571428571429 774 L 613.8571428571429 790 M 605.8571428571429 790 L 613.8571428571429 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="704.0714285714286" y="775" text-anchor="middle" class="bus-value">00</text>
+<line x1="798.2857142857142" y1="782" x2="892.5" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 794.2857142857142 774 L 802.2857142857142 790 M 794.2857142857142 790 L 802.2857142857142 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="845.3928571428571" y="775" text-anchor="middle" class="bus-value">66</text>
+<line x1="892.5" y1="782" x2="986.7142857142857" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 774 L 896.5 790 M 888.5 790 L 896.5 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="775" text-anchor="middle" class="bus-value">30</text>
+<line x1="986.7142857142857" y1="782" x2="1080.9285714285716" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 774 L 990.7142857142857 790 M 982.7142857142857 790 L 990.7142857142857 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="775" text-anchor="middle" class="bus-value">25</text>
+<line x1="1080.9285714285716" y1="782" x2="1552" y2="782" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 774 L 1084.9285714285716 790 M 1076.9285714285716 790 L 1084.9285714285716 774" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="775" text-anchor="middle" class="bus-value">00</text>
+<line x1="48" y1="802" x2="1552" y2="802" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="827" text-anchor="end" class="signal">io_wdata</text>
+<line x1="233" y1="822" x2="515.6428571428571" y2="822" stroke="#62C6FF" stroke-width="2"/>
+<text x="374.32142857142856" y="815" text-anchor="middle" class="bus-value">0001</text>
+<line x1="515.6428571428571" y1="822" x2="892.5" y2="822" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 511.6428571428571 814 L 519.6428571428571 830 M 511.6428571428571 830 L 519.6428571428571 814" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="704.0714285714286" y="815" text-anchor="middle" class="bus-value">0000</text>
+<line x1="892.5" y1="822" x2="986.7142857142857" y2="822" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 888.5 814 L 896.5 830 M 888.5 830 L 896.5 814" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="939.6071428571429" y="815" text-anchor="middle" class="bus-value">0002</text>
+<line x1="986.7142857142857" y1="822" x2="1080.9285714285716" y2="822" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 814 L 990.7142857142857 830 M 982.7142857142857 830 L 990.7142857142857 814" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1033.8214285714287" y="815" text-anchor="middle" class="bus-value">0000</text>
+<line x1="1080.9285714285716" y1="822" x2="1552" y2="822" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 1076.9285714285716 814 L 1084.9285714285716 830 M 1076.9285714285716 830 L 1084.9285714285716 814" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1316.4642857142858" y="815" text-anchor="middle" class="bus-value">0002</text>
+<line x1="48" y1="842" x2="1552" y2="842" stroke="#D7DFEA" stroke-opacity="0.55"/>
+<text x="221" y="867" text-anchor="end" class="signal">board LED</text>
+<line x1="233" y1="862" x2="986.7142857142857" y2="862" stroke="#62C6FF" stroke-width="2"/>
+<text x="609.8571428571429" y="855" text-anchor="middle" class="bus-value">01</text>
+<line x1="986.7142857142857" y1="862" x2="1552" y2="862" stroke="#62C6FF" stroke-width="2"/>
+<path d="M 982.7142857142857 854 L 990.7142857142857 870 M 982.7142857142857 870 L 990.7142857142857 854" stroke="#62C6FF" stroke-width="1.5"/>
+<text x="1269.357142857143" y="855" text-anchor="middle" class="bus-value">02</text>
+<line x1="892.5" y1="562" x2="892.5" y2="882" stroke="#FFB547" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="838.5" y="568" width="108" height="24" rx="12" fill="#FFB547"/>
+<text x="892.5" y="585" text-anchor="middle" class="event">OUP LED = 02</text>
+<text x="48" y="918" class="footer">功能判定：tb_runtime_running_light_wave: TEST PASS · LED 0x01 → 0x02 · 100 MHz 行为仿真</text>
+</svg>

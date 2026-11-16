@@ -1,0 +1,13 @@
+Vivado/XSim license environment failure observed 2026-10-16 after the earlier successful implementation run.
+
+Vivado batch message:
+ERROR: Vivado Design Suite cannot be launched because a valid license was not found.
+Exit code: 42
+
+XSim message:
+Could not obtain the necessary license for Simulator.
+
+All four current testbenches completed xvlog compilation and xelab elaboration before XSim startup was rejected. This is recorded as an environment block, not an RTL test failure.
+
+Resolution:
+The installed node-locked BASIC license was valid and uncounted. The restricted process could not read the per-user license directory. With normal license-directory access, Vivado detected the license (valid through 2027-09-03); XSim passed 4/4 and the full bitstream flow completed successfully.

@@ -1,0 +1,52 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Fri Oct 16 21:44:07 2026
+| Host         : KENT running 64-bit major release  (build 9200)
+| Command      : report_drc -file ./scripts/../reports/implementation/hdmi-snake-postroute-drc.rpt
+| Design       : hdmi_snake_board_top
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_hdmi_snake_routed
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 3
++-------------+----------+---------------------------------+--------+
+| Rule        | Severity | Description                     | Checks |
++-------------+----------+---------------------------------+--------+
+| PLBUFGOPT-1 | Warning  | Non-Optimal connections to BUFG | 2      |
+| ZPS7-1      | Warning  | PS7 block required              | 1      |
++-------------+----------+---------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+PLBUFGOPT-1#1 Warning
+Non-Optimal connections to BUFG  
+A non-muxed BUFG clk_100mhz_IBUF_BUFG_inst is driven by another global buffer clk_100mhz_IBUF_BUFG_inst_replica. Remove non-muxed BUFG if it is not desired
+Related violations: <none>
+
+PLBUFGOPT-1#2 Warning
+Non-Optimal connections to BUFG  
+A non-muxed BUFG clk_100mhz_IBUF_BUFG_inst_replica is driven by another global buffer clk_100mhz_IBUF_BUFG_inst_replica_1. Remove non-muxed BUFG if it is not desired
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

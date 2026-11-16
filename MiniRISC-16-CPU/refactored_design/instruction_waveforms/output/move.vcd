@@ -1,0 +1,143 @@
+$date
+   Sat Oct 17 20:16:37 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_class_move $end
+$scope module u_test $end
+$var reg 1 ! clk $end
+$var wire 8 " mem_addr [7:0] $end
+$var wire 16 # instruction [15:0] $end
+$var wire 16 - r0 [15:0] $end
+$var wire 16 . r1 [15:0] $end
+$var wire 16 / r2 [15:0] $end
+$var wire 16 0 r3 [15:0] $end
+$scope module dut $end
+$var wire 2 % rd_addr [1:0] $end
+$var wire 2 & rs_addr [1:0] $end
+$var wire 8 ' imm8 [7:0] $end
+$var wire 1 ( alu_src $end
+$var wire 1 + reg_write $end
+$scope module u_controller $end
+$var wire 4 $ opcode [3:0] $end
+$upscope $end
+$scope module u_datapath $end
+$var wire 16 ) rs_data [15:0] $end
+$var wire 16 * alu_result [15:0] $end
+$var wire 16 , writeback_data [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+bx "
+bx #
+bx $
+bx %
+bx &
+bx '
+x(
+bx )
+bx *
+x+
+bx ,
+bx -
+bx .
+bx /
+bx 0
+$end
+
+#5000
+1!
+b0 "
+b10010 #
+b0 $
+b0 %
+b0 &
+b10010 '
+1(
+b0 )
+b10010 *
+1+
+b10010 ,
+b0 -
+b0 .
+b0 /
+b0 0
+
+#10000
+0!
+
+#15000
+1!
+
+#20000
+0!
+
+#25000
+1!
+b1 "
+b10000110100 #
+b1 %
+b110100 '
+b10010 )
+b110100 *
+b110100 ,
+b10010 -
+
+#30000
+0!
+
+#35000
+1!
+b10 "
+b1100000000000 #
+b1 $
+b10 %
+b0 '
+0(
+b10010 *
+b10010 ,
+b110100 .
+
+#40000
+0!
+
+#45000
+1!
+b11 "
+b1110100000000 #
+b11 %
+b1 &
+b110100 )
+b110100 *
+b110100 ,
+b10010 /
+
+#50000
+0!
+
+#55000
+1!
+b100 "
+b1010000000000100 #
+b1010 $
+b0 %
+b0 &
+b100 '
+b10010 )
+b10010 *
+0+
+b10010 ,
+b110100 0

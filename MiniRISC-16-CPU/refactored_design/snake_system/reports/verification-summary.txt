@@ -1,0 +1,41 @@
+MiniRISC-16 Serial Snake verification summary
+Date: 2026-10-16
+
+Assembler: PASS (249 active words, 7 reserved words)
+MEM/Verilog ROM equivalence: PASS (256/256 words equal)
+Independent instruction/game reference model: PASS (12229 instructions)
+
+Current Vivado RTL regression: PASS (4/4)
+  PASS tb_cpu_data_instructions
+  PASS tb_uart_port
+  PASS tb_tick_timer
+  PASS tb_snake_system
+
+Current source revision:
+  xvlog compile: PASS (4/4)
+  xelab elaboration: PASS (4/4)
+  XSim execution: PASS (4/4)
+
+Covered behavior in the completed regression/reference model:
+- LDR and STR data-memory instructions
+- physical UART RX and TX serialization
+- sticky timer tick and pause
+- initial snake frame
+- movement and body decay
+- food growth and score
+- opposite-direction protection
+- wall collision and game-over state
+- UART restart command
+
+Current generated-Verilog-ROM implementation:
+  Synthesis: PASS
+  Place and route: PASS, 0 failed/unrouted/partial nets
+  DRC errors: 0 (only expected ZPS7-1 warning)
+  Methodology checks: 0
+  100 MHz timing: PASS, WNS +0.192 ns, TNS 0, WHS +0.156 ns, THS 0
+  Resources: 607 LUT, 549 FF, 44 IOB, 0 BRAM
+  Bitstream: PASS
+  Output: reports/board/MiniRISC16_Snake.bit
+  SHA-256: 9276B09FE59169D77BB34766E88C674C2EF88F02391EB8D07498DCE74752F40B
+
+Physical board test: NOT RUN yet.

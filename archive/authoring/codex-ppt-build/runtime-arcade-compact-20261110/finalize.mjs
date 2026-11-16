@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+const workspaceDir='C:/Users/xieke/Desktop/CPU';
+const buildDir=path.join(workspaceDir,'.codex-ppt-build/runtime-arcade-compact-20261110');
+const skillDir='C:/Users/xieke/.codex/plugins/cache/openai-primary-runtime/presentations/26.1105.12137/skills/presentations';
+const candidatePath=path.join(buildDir,'上板展示_紧凑版_draft.pptx');
+const finalPath=path.join(workspaceDir,'deliverables/上板展示_三项目_图文合页_v5.pptx');
+const pythonExecutable='C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1105-1297-0_26.1105.1297.0_x64__3k8sg7r9htsxt/dependencies/python/python.exe';
+const {finalizePresentation}=await import(pathToFileURL(path.join(skillDir,'container_tools/artifact_tool_utils.mjs')).href);
+const stage=path.join(buildDir,'finalizer');await fs.mkdir(stage,{recursive:true});await fs.mkdir(path.dirname(finalPath),{recursive:true});
+const r=await finalizePresentation({explicitTotalSlideCount:6,requiredNativeTableOwnerSlides:[],requiredNativeChartOwnerSlides:[],workspaceDir,candidatePath,finalPath,pythonExecutable,integrityValidatorPath:path.join(skillDir,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skillDir,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit'],fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,receiptPath:path.join(stage,'上板展示_三项目_图文合页_v5.validation.json')});
+console.log(JSON.stringify({finalPath,sha256:r.finalSha256,slides:r.packageIntegrity.slide_count,findings:r.presentationLayout.finding_count}));

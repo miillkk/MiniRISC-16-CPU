@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/instruction_waveforms/output/branch.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_class_branch" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group51" type="group">
+      <obj_property name="label">Instruction context</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_class_branch/u_test/clk" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+         <obj_property name="label">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/mem_addr" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">mem_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_addr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">mem_addr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/instruction" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+         <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">instruction</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/u_controller/opcode" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+         <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">opcode</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group56" type="group">
+      <obj_property name="label">Class-specific changing signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/imm8" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">imm8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">imm8[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">imm8</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/u_datapath/z_flag" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">z_flag</obj_property>
+         <obj_property name="ObjectShortName">z_flag</obj_property>
+         <obj_property name="label">z_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/branch_z" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">branch_z</obj_property>
+         <obj_property name="ObjectShortName">branch_z</obj_property>
+         <obj_property name="label">branch_z</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/jump" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">jump</obj_property>
+         <obj_property name="ObjectShortName">jump</obj_property>
+         <obj_property name="label">jump</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/u_datapath/branch_taken" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">branch_taken</obj_property>
+         <obj_property name="ObjectShortName">branch_taken</obj_property>
+         <obj_property name="label">branch_taken</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/u_datapath/pc_plus_one" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">pc_plus_one[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_plus_one[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">pc_plus_one</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/dut/u_datapath/pc_next" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">pc_next[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_next[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">pc_next</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/r2" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r2[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">r2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_branch/u_test/r3" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r3[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r3[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">r3</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

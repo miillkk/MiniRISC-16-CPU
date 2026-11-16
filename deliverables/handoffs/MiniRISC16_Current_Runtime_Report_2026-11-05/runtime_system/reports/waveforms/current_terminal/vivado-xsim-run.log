@@ -1,0 +1,485 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 03-sep-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Nov  4 17:33:14 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {C:\Users\xieke\Desktop\CPU\MiniRISC-16-CPU\refactored_design\runtime_system\scripts\run_runtime_waveforms_vivado.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set design_root [file normalize [file join $script_dir ..]]
+# set output_dir [file join $design_root reports waveforms current_terminal vivado]
+# set project_dir [file join $design_root waveform_project]
+# file mkdir $output_dir
+# file mkdir $project_dir
+# create_project runtime_waveforms_project $project_dir -force -part xc7z020clg484-1
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project'
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 610.902 ; gain = 267.254
+# set_property target_simulator XSim [current_project]
+# set gcc_install_path {}
+# if {[info exists ::env(GCC_SIM_EXE_PATH)] && $::env(GCC_SIM_EXE_PATH) ne {}} {
+#     set gcc_install_path [file normalize $::env(GCC_SIM_EXE_PATH)]
+#     if {![file exists [file join $gcc_install_path gcc.exe]]} {
+#         error "GCC_SIM_EXE_PATH does not contain gcc.exe: $gcc_install_path"
+#     }
+#     puts "Using XSim GCC: $gcc_install_path"
+# }
+Using XSim GCC: E:/mingw64/bin
+# set rtl_files [glob -nocomplain [file join $design_root rtl * *.v]]
+# add_files -norecurse $rtl_files
+# add_files -norecurse -fileset sim_1 [file join $design_root tb tb_runtime_waveforms.v]
+# set simset [get_filesets sim_1]
+# set_property xsim.elaborate.debug_level typical $simset
+# set_property xsim.simulate.runtime {} $simset
+# set test_specs [list \
+#     [list running_light tb_runtime_running_light_wave \
+#         {clk rst pc instruction io_we io_addr io_wdata led}] \
+#     [list extended_isa tb_runtime_extended_isa_wave \
+#         {clk rst pc pc_next instruction opcode data_we data_re data_addr data_wdata data_rdata reg_write flags_write branch_z branch_taken jump long_jump io_we io_addr io_wdata z_flag rd_data rs_data alu_result writeback_data r0 r1 r2 r3}]]
+# foreach spec $test_specs {
+#     lassign $spec test_name top_name signals
+#     puts "=== START $test_name ($top_name) ==="
+#     set_property top $top_name $simset
+#     set_property xsim.simulate.wdb [file join $output_dir ${test_name}.wdb] $simset
+#     if {$test_name eq "running_light"} {
+#         set running_light_mem [file normalize [file join $design_root games running_light program running_light.mem]]
+#         set_property -name xsim.simulate.xsim.more_options \
+#             -value "-testplusarg NO_TB_VCD -testplusarg RUNNING_LIGHT_MEM=$running_light_mem" -objects $simset
+#     } else {
+#         set_property -name xsim.simulate.xsim.more_options \
+#             -value "-testplusarg NO_TB_VCD" -objects $simset
+#     }
+#     update_compile_order -fileset sources_1
+#     update_compile_order -fileset sim_1
+#     catch {close_sim -force}
+#     if {$gcc_install_path eq {}} {
+#         launch_simulation -simset $simset -mode behavioral
+#     } else {
+#         launch_simulation -simset $simset -mode behavioral \
+#             -gcc_install_path $gcc_install_path
+#     }
+# 
+#     set objects {}
+#     foreach signal $signals {
+#         set found [get_objects -quiet /${top_name}/${signal}]
+#         if {[llength $found] == 0} {
+#             error "Missing waveform signal /${top_name}/${signal}"
+#         }
+#         lappend objects {*}$found
+#     }
+# 
+#     set vcd_path [file join $output_dir ${test_name}.vcd]
+#     open_vcd $vcd_path
+#     log_vcd $objects
+#     log_wave $objects
+# 
+#     create_wave_config ${test_name}_focused
+#     foreach signal $signals object $objects {
+#         set leaf [file tail $signal]
+#         if {$leaf in {clk rst io_we data_we data_re long_jump z_flag}} {
+#             add_wave -radix bin -name $leaf $object
+#         } else {
+#             add_wave -radix hex -name $leaf $object
+#         }
+#     }
+#     save_wave_config [file join $output_dir ${test_name}.wcfg]
+#     run all
+#     close_vcd
+# 
+#     set sim_log [file join $project_dir runtime_waveforms_project.sim sim_1 behav xsim simulate.log]
+#     if {[file exists $sim_log]} {
+#         set copied_log [file join $output_dir ${test_name}_simulate.log]
+#         file copy -force $sim_log $copied_log
+#         set log_handle [open $copied_log r]
+#         set log_text [read $log_handle]
+#         close $log_handle
+#         if {![string match {*TEST PASS*} $log_text]} {
+#             error "XSim did not report TEST PASS for $test_name"
+#         }
+#     } else {
+#         error "Missing XSim simulate.log for $test_name"
+#     }
+#     foreach artifact [list \
+#         [file join $output_dir ${test_name}.wdb] \
+#         [file join $output_dir ${test_name}.vcd] \
+#         [file join $output_dir ${test_name}.wcfg]] {
+#         if {![file exists $artifact] || [file size $artifact] == 0} {
+#             error "Missing or empty XSim artifact: $artifact"
+#         }
+#     }
+#     puts "=== COMPLETE $test_name ==="
+# }
+=== START running_light (tb_runtime_running_light_wave) ===
+Command: launch_simulation  -simset sim_1 -mode behavioral -gcc_install_path E:/mingw64/bin
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Wed Nov  4 17:33:27 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_runtime_running_light_wave'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'F:/vivado/2026.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_runtime_running_light_wave' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_runtime_running_light_wave_vlog.prj"
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/alu.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module alu
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/alu_operand_mux.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module alu_operand_mux
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/controller.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module controller
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/cpu_core.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module cpu_core
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/cpu_status_port.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module cpu_status_port
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/memory/data_memory.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module data_memory
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/datapath.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module datapath
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/display_registers.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module display_registers
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/board/hex_to_7seg.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module hex_to_7seg
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/io_decoder.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module io_decoder
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/led8.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module led8
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/lfsr8.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module lfsr8
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/next_pc_mux.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module next_pc_mux
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/program_counter.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module program_counter
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/program_loader.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module program_loader
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/register_file.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module register_file
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/board/reset_conditioner.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module reset_conditioner
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/top/runtime_board_top.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module runtime_board_top
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/memory/runtime_program_memory.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module runtime_program_memory
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/top/runtime_soc.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module runtime_soc
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/scratchpad16.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module scratchpad16
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/board/seven_segment8_driver.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module seven_segment8_driver
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/snake_peripheral_subsystem.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module snake_peripheral_subsystem
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/status_register.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module status_register
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/switch8_sync.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module switch8_sync
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/tick_timer.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module tick_timer
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/uart_port.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module uart_port
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/uart_rx.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module uart_rx
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/peripherals/uart_tx.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module uart_tx
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/writeback_mux.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module writeback_mux
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/rtl/core/zero_extender_8_to_16.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module zero_extender_8_to_16
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/tb/tb_runtime_waveforms.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module tb_runtime_running_light_wave
+
+INFO: [VRFC 10-311] analyzing module tb_runtime_extended_isa_wave
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module glbl
+
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_runtime_running_light_wave_behav xil_defaultlib.tb_runtime_running_light_wave xil_defaultlib.glbl -log elaborate.log"
+
+Vivado Simulator v2026.1
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Running: F:/vivado/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_runtime_running_light_wave_behav xil_defaultlib.tb_runtime_running_light_wave xil_defaultlib.glbl -log elaborate.log 
+
+INFO: [XSIM 43-3493] Using 2 slave threads.
+
+Starting static elaboration
+
+Pass Through NonSizing Optimizer
+
+Completed static elaboration
+
+Starting simulation data flow analysis
+
+Completed simulation data flow analysis
+
+Time Resolution for simulation is 1ps
+
+Compiling module xil_defaultlib.reset_conditioner
+
+Compiling module xil_defaultlib.runtime_program_memory
+
+Compiling module xil_defaultlib.uart_rx
+
+Compiling module xil_defaultlib.uart_tx
+
+Compiling module xil_defaultlib.program_loader(CLKS_PER_BIT=2)
+
+Compiling module xil_defaultlib.data_memory
+
+Compiling module xil_defaultlib.controller
+
+Compiling module xil_defaultlib.program_counter
+
+Compiling module xil_defaultlib.next_pc_mux
+
+Compiling module xil_defaultlib.register_file
+
+Compiling module xil_defaultlib.zero_extender_8_to_16
+
+Compiling module xil_defaultlib.alu_operand_mux
+
+Compiling module xil_defaultlib.alu
+
+Compiling module xil_defaultlib.status_register
+
+Compiling module xil_defaultlib.writeback_mux
+
+Compiling module xil_defaultlib.datapath
+
+Compiling module xil_defaultlib.cpu_core
+
+Compiling module xil_defaultlib.switch8_sync
+
+Compiling module xil_defaultlib.uart_port(CLKS_PER_BIT=2)
+
+Compiling module xil_defaultlib.tick_timer(BASE_TICK_CYCLES=6)
+
+Compiling module xil_defaultlib.lfsr8
+
+Compiling module xil_defaultlib.display_registers
+
+Compiling module xil_defaultlib.led8
+
+Compiling module xil_defaultlib.cpu_status_port
+
+Compiling module xil_defaultlib.scratchpad16
+
+Compiling module xil_defaultlib.io_decoder
+
+Compiling module xil_defaultlib.snake_peripheral_subsystem(UART_...
+
+Compiling module xil_defaultlib.runtime_soc(UART_CLKS_PER_BIT=2,...
+
+Compiling module xil_defaultlib.hex_to_7seg
+
+Compiling module xil_defaultlib.seven_segment8_driver(SCAN_DIVID...
+
+Compiling module xil_defaultlib.runtime_board_top(UART_CLKS_PER_...
+
+Compiling module xil_defaultlib.tb_runtime_running_light_wave
+
+Compiling module xil_defaultlib.glbl
+
+Built simulation snapshot tb_runtime_running_light_wave_behav
+
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_runtime_running_light_wave_behav -key {Behavioral:sim_1:Functional:tb_runtime_running_light_wave} -tclbatch {tb_runtime_running_light_wave.tcl} -wdb {C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/reports/waveforms/current_terminal/vivado/running_light.wdb} -log {simulate.log} -testplusarg NO_TB_VCD -testplusarg RUNNING_LIGHT_MEM=C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/games/running_light/program/running_light.mem"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_runtime_running_light_wave.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_runtime_running_light_wave_behav' loaded.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 620.840 ; gain = 9.938
+RUNNING_LIGHT_LED_WRITE cycle=242 pc=009 instruction=c030 value=01
+RUNNING_LIGHT_LED_WRITE cycle=756 pc=066 instruction=c130 value=02
+tb_runtime_running_light_wave: TEST PASS
+$finish called at time : 7576 ns : File "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/tb/tb_runtime_waveforms.v" Line 91
+=== COMPLETE running_light ===
+=== START extended_isa (tb_runtime_extended_isa_wave) ===
+INFO: [Simtcl 6-16] Simulation closed
+Command: launch_simulation  -simset sim_1 -mode behavioral -gcc_install_path E:/mingw64/bin
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Wed Nov  4 17:33:37 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_runtime_extended_isa_wave'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'F:/vivado/2026.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_runtime_extended_isa_wave' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_runtime_extended_isa_wave_vlog.prj"
+
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_runtime_extended_isa_wave_behav xil_defaultlib.tb_runtime_extended_isa_wave xil_defaultlib.glbl -log elaborate.log"
+
+Vivado Simulator v2026.1
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Running: F:/vivado/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_runtime_extended_isa_wave_behav xil_defaultlib.tb_runtime_extended_isa_wave xil_defaultlib.glbl -log elaborate.log 
+
+INFO: [XSIM 43-3493] Using 2 slave threads.
+
+Starting static elaboration
+
+Pass Through NonSizing Optimizer
+
+Completed static elaboration
+
+Starting simulation data flow analysis
+
+Completed simulation data flow analysis
+
+Time Resolution for simulation is 1ps
+
+Compiling module xil_defaultlib.controller
+
+Compiling module xil_defaultlib.program_counter
+
+Compiling module xil_defaultlib.next_pc_mux
+
+Compiling module xil_defaultlib.register_file
+
+Compiling module xil_defaultlib.zero_extender_8_to_16
+
+Compiling module xil_defaultlib.alu_operand_mux
+
+Compiling module xil_defaultlib.alu
+
+Compiling module xil_defaultlib.status_register
+
+Compiling module xil_defaultlib.writeback_mux
+
+Compiling module xil_defaultlib.datapath
+
+Compiling module xil_defaultlib.cpu_core
+
+Compiling module xil_defaultlib.data_memory
+
+Compiling module xil_defaultlib.tb_runtime_extended_isa_wave
+
+Compiling module xil_defaultlib.glbl
+
+Built simulation snapshot tb_runtime_extended_isa_wave_behav
+
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/waveform_project/runtime_waveforms_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_runtime_extended_isa_wave_behav -key {Behavioral:sim_1:Functional:tb_runtime_extended_isa_wave} -tclbatch {tb_runtime_extended_isa_wave.tcl} -wdb {C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/reports/waveforms/current_terminal/vivado/extended_isa.wdb} -log {simulate.log} -testplusarg NO_TB_VCD"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_runtime_extended_isa_wave.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_runtime_extended_isa_wave_behav' loaded.
+tb_runtime_extended_isa_wave: TEST PASS
+$finish called at time : 166 ns : File "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/tb/tb_runtime_waveforms.v" Line 231
+=== COMPLETE extended_isa ===
+# catch {close_sim -force}
+INFO: [Simtcl 6-16] Simulation closed
+# close_project
+# puts "RUNTIME_WAVEFORMS_COMPLETE"
+RUNTIME_WAVEFORMS_COMPLETE
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 17:33:42 2026...

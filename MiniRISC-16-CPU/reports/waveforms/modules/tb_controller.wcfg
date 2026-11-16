@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/reports/waveforms/modules/tb_controller.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_controller" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="37" />
+   <wvobject fp_name="/tb_controller/dut/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/rd_addr" type="array">
+      <obj_property name="ElementShortName">rd_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/rs_addr" type="array">
+      <obj_property name="ElementShortName">rs_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/imm8" type="array">
+      <obj_property name="ElementShortName">imm8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">imm8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/alu_src" type="logic">
+      <obj_property name="ElementShortName">alu_src</obj_property>
+      <obj_property name="ObjectShortName">alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/reg_write" type="logic">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/z_write" type="logic">
+      <obj_property name="ElementShortName">z_write</obj_property>
+      <obj_property name="ObjectShortName">z_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/branch_z" type="logic">
+      <obj_property name="ElementShortName">branch_z</obj_property>
+      <obj_property name="ObjectShortName">branch_z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/jump" type="logic">
+      <obj_property name="ElementShortName">jump</obj_property>
+      <obj_property name="ObjectShortName">jump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/wb_sel" type="logic">
+      <obj_property name="ElementShortName">wb_sel</obj_property>
+      <obj_property name="ObjectShortName">wb_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/io_re" type="logic">
+      <obj_property name="ElementShortName">io_re</obj_property>
+      <obj_property name="ObjectShortName">io_re</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/io_we" type="logic">
+      <obj_property name="ElementShortName">io_we</obj_property>
+      <obj_property name="ObjectShortName">io_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/ALU_PASS_B" type="array">
+      <obj_property name="ElementShortName">ALU_PASS_B[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_PASS_B[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/ALU_ADD" type="array">
+      <obj_property name="ElementShortName">ALU_ADD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_ADD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/ALU_SUB" type="array">
+      <obj_property name="ElementShortName">ALU_SUB[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_SUB[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/ALU_AND" type="array">
+      <obj_property name="ElementShortName">ALU_AND[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_AND[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/ALU_OR" type="array">
+      <obj_property name="ElementShortName">ALU_OR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_OR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/dut/ALU_XOR" type="array">
+      <obj_property name="ElementShortName">ALU_XOR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_XOR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/check_opcode/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/check_opcode/expected_controls" type="array">
+      <obj_property name="ElementShortName">expected_controls[10:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_controls[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/rd_addr" type="array">
+      <obj_property name="ElementShortName">rd_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/rs_addr" type="array">
+      <obj_property name="ElementShortName">rs_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/imm8" type="array">
+      <obj_property name="ElementShortName">imm8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">imm8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/alu_src" type="logic">
+      <obj_property name="ElementShortName">alu_src</obj_property>
+      <obj_property name="ObjectShortName">alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/reg_write" type="logic">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/z_write" type="logic">
+      <obj_property name="ElementShortName">z_write</obj_property>
+      <obj_property name="ObjectShortName">z_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/branch_z" type="logic">
+      <obj_property name="ElementShortName">branch_z</obj_property>
+      <obj_property name="ObjectShortName">branch_z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/jump" type="logic">
+      <obj_property name="ElementShortName">jump</obj_property>
+      <obj_property name="ObjectShortName">jump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/wb_sel" type="logic">
+      <obj_property name="ElementShortName">wb_sel</obj_property>
+      <obj_property name="ObjectShortName">wb_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/io_re" type="logic">
+      <obj_property name="ElementShortName">io_re</obj_property>
+      <obj_property name="ObjectShortName">io_re</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/io_we" type="logic">
+      <obj_property name="ElementShortName">io_we</obj_property>
+      <obj_property name="ObjectShortName">io_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/controls" type="array">
+      <obj_property name="ElementShortName">controls[10:0]</obj_property>
+      <obj_property name="ObjectShortName">controls[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_controller/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,15 @@
+CALC-BUG-003 workaround verification
+Date: 2026-10-16
+
+Changed the project-mode portability check from two launch jobs to one.
+The same independent XPR then completed synth_design successfully.
+
+Verified:
+- calculator.mem was found and read successfully.
+- all RTL sources and the XDC were loaded from paths inside calculator_system.
+- target part was xc7z020clg484-1.
+- synthesis completed with 0 errors, 0 critical warnings and 0 warnings.
+- final message: CALCULATOR PROJECT CHECK PASS: synth_design Complete!
+
+Full successful log:
+reports/implementation/project-check.log

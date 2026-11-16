@@ -1,0 +1,19 @@
+MiniRISC-16 Interactive Calculator verification summary
+Date: 2026-10-16
+
+Assembler: PASS (240 active words, 16 reserved words)
+Independent reference model: PASS (15/15)
+Vivado RTL regression: PASS (9/9)
+Overall calculator testbench: PASS
+Board-top S1 short-press/long-press integration: PASS
+Synthesis: PASS
+Independent XPR project-mode synthesis: pending refresh after the currently open Vivado GUI releases the project directory
+Place and route: PASS (0 failed/unrouted nets)
+Timing at 100 MHz: PASS (WNS +0.559 ns, TNS 0.000 ns, WHS +0.202 ns, THS 0.000 ns)
+Methodology: PASS (0 checks)
+DRC: 0 errors; ZPS7-1 warning retained for pure PL/JTAG design
+Utilization: 444 Slice LUT, 494 Slice Register, 42 bonded IOB, 1 BUFG
+Bitstream: reports/board/MiniRISC16_Calculator.bit
+SHA-256: E8B9984318B8A8D33639D54C4E5C425A926B63323A09F8C07640C9E2BA6CD404
+
+Pending: physical board interaction tests in BOARD_TEST_GUIDE.md.

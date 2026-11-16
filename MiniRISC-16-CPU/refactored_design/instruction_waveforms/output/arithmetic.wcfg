@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/instruction_waveforms/output/arithmetic.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_class_arithmetic" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group19" type="group">
+      <obj_property name="label">Instruction context</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/clk" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+         <obj_property name="label">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/mem_addr" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">mem_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_addr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">mem_addr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/instruction" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+         <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">instruction</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/u_controller/opcode" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+         <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">opcode</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group24" type="group">
+      <obj_property name="label">Class-specific changing signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/u_datapath/rd_data" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">rd_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_data[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">rd_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/u_datapath/rs_data" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">rs_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">rs_data[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">rs_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/imm8" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">imm8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">imm8[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">imm8</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/alu_src" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">alu_src</obj_property>
+         <obj_property name="ObjectShortName">alu_src</obj_property>
+         <obj_property name="label">alu_src</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/alu_op" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">alu_op[2:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_op[2:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">alu_op</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/u_datapath/alu_result" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">alu_result[15:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_result[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">alu_result</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/reg_write" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">reg_write</obj_property>
+         <obj_property name="ObjectShortName">reg_write</obj_property>
+         <obj_property name="label">reg_write</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/flags_write" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">flags_write</obj_property>
+         <obj_property name="ObjectShortName">flags_write</obj_property>
+         <obj_property name="label">flags_write</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/u_datapath/z_flag" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">z_flag</obj_property>
+         <obj_property name="ObjectShortName">z_flag</obj_property>
+         <obj_property name="label">z_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/dut/u_datapath/c_flag" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">c_flag</obj_property>
+         <obj_property name="ObjectShortName">c_flag</obj_property>
+         <obj_property name="label">c_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/r0" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r0[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">r0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_class_arithmetic/u_test/r1" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r1[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="label">r1</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

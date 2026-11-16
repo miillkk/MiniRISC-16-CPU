@@ -1,0 +1,18 @@
+Vivado license diagnosis summary
+Date: 2026-10-16
+
+Result:
+- License file exists in the standard per-user AMD/Xilinx license directory.
+- Product tier: Vivado Design Suite BASIC.
+- License type: node-locked, uncounted.
+- Expiration: 2027-09-03.
+- This machine matches the node-lock.
+- Vivado_Simulation checkout: permitted.
+- Vivado_Synthesis checkout: permitted.
+- Vivado_Implementation checkout: permitted.
+
+Root cause of the earlier error:
+The restricted execution process could not read the per-user license directory. Vivado therefore reported that no valid license was found. Running with normal access to the existing license directory immediately detected the license and completed XSim, synthesis, implementation and bitstream generation.
+
+Conclusion:
+The license did not disappear, is not expired, and is not short of seats.

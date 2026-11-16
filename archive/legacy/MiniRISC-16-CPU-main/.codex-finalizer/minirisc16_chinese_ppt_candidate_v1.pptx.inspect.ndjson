@@ -1,0 +1,143 @@
+{"kind":"deck","id":"pr/qe1gs6","name":"Deck"}
+{"kind":"layout","layoutId":"92562874-6d9a-40d0-87a5-8c16c1ac0b16","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"8377851b-19ad-412d-af8f-7db4f1f5b404","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/s2avd8","slide":1,"title":"MiniRISC-16 单周期 CPU 与 8 位 GPIO","textShapes":9}
+{"kind":"shape","id":"sh/kn6xwj25","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/jmxwnelk","slide":1,"text":"MiniRISC-16 单周期 CPU 与 8 位 GPIO","textPreview":"MiniRISC-16 单周期 CPU 与 8 位 GPIO","textChars":30,"textLines":1,"bbox":[76,130,960,132]}
+{"kind":"textbox","id":"sh/il4fut4z","slide":1,"text":"Verilog RTL 设计与 Vivado XSim 功能验证","textPreview":"Verilog RTL 设计与 Vivado XSim 功能验证","textChars":32,"textLines":1,"bbox":[80,286,780,42]}
+{"kind":"textbox","id":"sh/tcfyt83m","slide":1,"text":"EES331 Zynq-7020 FPGA，PL 侧自定义软核 CPU","textPreview":"EES331 Zynq-7020 FPGA，PL 侧自定义软核 CPU","textChars":35,"textLines":1,"bbox":[80,348,730,34]}
+{"kind":"shape","id":"sh/sb6x0321","slide":1,"bbox":[80,462,306,116]}
+{"kind":"textbox","id":"sh/raxgrylg","slide":1,"text":"设计对象","textPreview":"设计对象","textChars":4,"textLines":1,"bbox":[102,482,262,28]}
+{"kind":"textbox","id":"sh/6pofytkb","slide":1,"text":"16 位数据宽度，4 个通用寄存器，8 位 PC","textPreview":"16 位数据宽度，4 个通用寄存器，8 位 PC","textChars":24,"textLines":1,"bbox":[102,520,262,44]}
+{"kind":"shape","id":"sh/1gzyx83y","slide":1,"bbox":[414,462,306,116]}
+{"kind":"textbox","id":"sh/gfqx432d","slide":1,"text":"执行方式","textPreview":"执行方式","textChars":4,"textLines":1,"bbox":[436,482,262,28]}
+{"kind":"textbox","id":"sh/6lwf25oz","slide":1,"text":"非流水线单周期结构，每个周期提交一条指令","textPreview":"非流水线单周期结构，每个周期提交一条指令","textChars":20,"textLines":1,"bbox":[436,520,262,44]}
+{"kind":"shape","id":"sh/rmpwva5k","slide":1,"bbox":[748,462,306,116]}
+{"kind":"textbox","id":"sh/snyx4f65","slide":1,"text":"验证结果","textPreview":"验证结果","textChars":4,"textLines":1,"bbox":[770,482,262,28]}
+{"kind":"textbox","id":"sh/to7yxknq","slide":1,"text":"六个 testbench PASS，Failures 为 0","textPreview":"六个 testbench PASS，Failures 为 0","textChars":30,"textLines":1,"bbox":[770,520,262,44]}
+{"kind":"notes","id":"nt/s2avd8","slide":1,"text":"这一页先说明项目主题。本设计不是 Zynq PS 里的 ARM，而是在 Zynq-7020 的 PL 可编程逻辑中实现一个自定义 MiniRISC-16 软核 CPU。汇报重点是 RTL 设计、GPIO 外设和 Vivado XSim 功能验证。"}
+{"kind":"slide","id":"sl/hntb4d","slide":2,"title":"项目目标与阶段边界","textShapes":10}
+{"kind":"textbox","id":"sh/yt4fy107","slide":2,"name":"slide_title","text":"项目目标与阶段边界","textPreview":"项目目标与阶段边界","textChars":9,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/lwvytgji","slide":2,"name":"page_number","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/kvmx0bid","slide":2,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/7idgv61o","slide":2,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"shape","id":"sh/mh4f2103","slide":2,"bbox":[64,142,350,386]}
+{"kind":"textbox","id":"sh/9kfyxgju","slide":2,"text":"已完成内容","textPreview":"已完成内容","textChars":5,"textLines":1,"bbox":[86,162,306,28]}
+{"kind":"textbox","id":"sh/8j6x4bi9","slide":2,"text":"Verilog RTL、模块级 testbench、系统级 testbench、机器码程序、回归脚本、仿真日志和波形截图。","textPreview":"Verilog RTL、模块级 testbench、系统级 testbench、机器码程序、回归脚本、仿真日志和波形截图。","textChars":61,"textLines":1,"bbox":[86,200,306,314]}
+{"kind":"shape","id":"sh/vmxgzqh0","slide":2,"bbox":[466,142,350,386]}
+{"kind":"textbox","id":"sh/ulof6l0f","slide":2,"text":"设计规格","textPreview":"设计规格","textChars":4,"textLines":1,"bbox":[488,162,306,28]}
+{"kind":"textbox","id":"sh/0729kv2l","slide":2,"text":"16 位数据宽度，4 个寄存器，8 位 PC，13 个有效 opcode，3 个安全保留 opcode。","textPreview":"16 位数据宽度，4 个寄存器，8 位 PC，13 个有效 opcode，3 个安全保留 opcode。","textChars":52,"textLines":1,"bbox":[488,200,306,314]}
+{"kind":"shape","id":"sh/18bqd036","slide":2,"bbox":[868,142,350,386]}
+{"kind":"textbox","id":"sh/e50rilkf","slide":2,"text":"本阶段不包含","textPreview":"本阶段不包含","textChars":6,"textLines":1,"bbox":[890,162,306,28]}
+{"kind":"textbox","id":"sh/z6t8bql0","slide":2,"text":"XDC、综合时序、bitstream、ILA 和上板验证。这些工作需要后续管脚和板级约束。","textPreview":"XDC、综合时序、bitstream、ILA 和上板验证。这些工作需要后续管脚和板级约束。","textChars":45,"textLines":1,"bbox":[890,200,306,314]}
+{"kind":"textbox","id":"sh/ov29ov2h","slide":2,"text":"目标是在仿真阶段证明 CPU 和 GPIO 的功能正确，为后续上板保留清晰顶层边界。","textPreview":"目标是在仿真阶段证明 CPU 和 GPIO 的功能正确，为后续上板保留清晰顶层边界。","textChars":42,"textLines":1,"bbox":[118,578,1040,44]}
+{"kind":"notes","id":"nt/hntb4d","slide":2,"text":"这一页讲范围。当前阶段已经完成可综合 RTL、测试平台、机器码程序、XSim 回归和波形证据。暂时不声明上板完成，因为还没有 XDC、时钟约束和物理管脚分配。这样说比较严谨，也方便后续继续扩展。"}
+{"kind":"slide","id":"sl/getvci","slide":3,"title":"系统架构与外部端口","textShapes":14}
+{"kind":"textbox","id":"sh/sjm5ojep","slide":3,"name":"slide_title","text":"系统架构与外部端口","textPreview":"系统架构与外部端口","textChars":9,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/ritofex4","slide":3,"name":"page_number","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/qhknm9wj","slide":3,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/5gb6d4fy","slide":3,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"textbox","id":"sh/4f25kzed","slide":3,"text":"简化 Harvard 架构：指令通路和 I/O 通路分离","textPreview":"简化 Harvard 架构：指令通路和 I/O 通路分离","textChars":28,"textLines":1,"bbox":[70,126,680,32]}
+{"kind":"shape","id":"sh/3ut4bexs","slide":3,"bbox":[72,238,190,96]}
+{"kind":"textbox","id":"sh/itkni9w7","slide":3,"text":"reset_conditioner","textPreview":"reset_conditioner","textChars":17,"textLines":1,"bbox":[88,252,158,26]}
+{"kind":"textbox","id":"sh/pcf6p8f2","slide":3,"text":"resetn 转换为同步 rst","textPreview":"resetn 转换为同步 rst","textChars":16,"textLines":1,"bbox":[86,285,162,40]}
+{"kind":"shape","id":"sh/ob65w3ex","slide":3,"bbox":[338,170,218,116]}
+{"kind":"textbox","id":"sh/qpo7ylkn","slide":3,"text":"instruction_memory","textPreview":"instruction_memory","textChars":18,"textLines":1,"bbox":[354,184,186,26]}
+{"kind":"textbox","id":"sh/rqx8r6l8","slide":3,"text":"256 × 16 组合读 ROM","textPreview":"256 × 16 组合读 ROM","textChars":16,"textLines":1,"bbox":[352,217,190,60]}
+{"kind":"shape","id":"sh/crqp0b2t","slide":3,"bbox":[632,172,218,116]}
+{"kind":"textbox","id":"sh/dczqtg3e","slide":3,"text":"cpu_core","textPreview":"cpu_core","textChars":8,"textLines":1,"bbox":[648,186,186,26]}
+{"kind":"textbox","id":"sh/2lo7u1kr","slide":3,"text":"controller、datapath、ALU、寄存器组","textPreview":"controller、datapath、ALU、寄存器组","textChars":28,"textLines":1,"bbox":[646,219,190,60]}
+{"kind":"shape","id":"sh/3mxon6lc","slide":3,"bbox":[926,170,218,116]}
+{"kind":"textbox","id":"sh/4n6pwb2x","slide":3,"text":"gpio8","textPreview":"gpio8","textChars":5,"textLines":1,"bbox":[942,184,186,26]}
+{"kind":"textbox","id":"sh/pofqpg32","slide":3,"text":"OUT、IN、DIR 地址映射","textPreview":"OUT、IN、DIR 地址映射","textChars":15,"textLines":1,"bbox":[940,217,190,60]}
+{"kind":"shape","id":"sh/mh8765kv","slide":3,"bbox":[928,386,216,94]}
+{"kind":"textbox","id":"sh/nih8zqlg","slide":3,"text":"gpio[7:0]","textPreview":"gpio[7:0]","textChars":9,"textLines":1,"bbox":[944,400,184,26]}
+{"kind":"textbox","id":"sh/jmt4r21s","slide":3,"text":"顶层形成逐位三态引脚","textPreview":"顶层形成逐位三态引脚","textChars":10,"textLines":1,"bbox":[942,433,188,38]}
+{"kind":"shape","id":"sh/y1knyx07","slide":3,"bbox":[556,228,76,0]}
+{"kind":"shape","id":"sh/5obmtsjy","slide":3,"bbox":[850,228,76,0]}
+{"kind":"shape","id":"sh/kn250nid","slide":3,"bbox":[1036,286,0,100]}
+{"kind":"shape","id":"sh/7qt4v214","slide":3,"bbox":[262,228,76,58]}
+{"kind":"shape","id":"sh/6pkn2x0j","slide":3,"bbox":[262,228,370,58]}
+{"kind":"table","id":"tb/6xcn6xwj","slide":3,"name":"","rows":4,"cols":3,"preview":"顶层端口 | 方向 | 说明","bbox":[78,414,668,156]}
+{"kind":"notes","id":"nt/getvci","slide":3,"text":"这一页说明总体连接。CPU 通过 mem_addr 读取 instruction_memory，通过独立 I/O 接口访问 gpio8，所以可以称为简化 Harvard 架构。顶层对外只有 clk、resetn 和 8 位 gpio，内部再拆成输入、输出和方向控制。"}
+{"kind":"slide","id":"sl/176cc1","slide":4,"title":"指令集与控制器","textShapes":6}
+{"kind":"textbox","id":"sh/3qtkz2dg","slide":4,"name":"slide_title","text":"指令集与控制器","textPreview":"指令集与控制器","textChars":7,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/4r2ls7u1","slide":4,"name":"page_number","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/psb21cvm","slide":4,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/qtk3uxc7","slide":4,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"textbox","id":"sh/cv2lw7ud","slide":4,"text":"控制器是纯组合逻辑","textPreview":"控制器是纯组合逻辑","textChars":9,"textLines":1,"bbox":[812,144,340,34]}
+{"kind":"textbox","id":"sh/dwv25cvi","slide":4,"text":"先给所有控制信号安全默认值\n再按 opcode 覆盖 ALU、写回、分支和 I/O 控制\n保留 opcode 不写寄存器，不写 Z，不访问 I/O\n不使用隐式锁存，方便综合和验证","textPreview":"先给所有控制信号安全默认值 | 再按 opcode 覆盖 ALU、写回、分支和 I/O 控制 | 保留 opcode 不写寄存器，不写 Z，不访问 I/O | 不使用隐式锁存，方便综合和验证","textChars":89,"textLines":4,"bbox":[804,204,360,214]}
+{"kind":"textbox","id":"sh/6xgjidc3","slide":4,"text":"1010 是 JUMP；0111 在本设计中是 AND","textPreview":"1010 是 JUMP；0111 在本设计中是 AND","textChars":27,"textLines":1,"bbox":[804,484,360,42]}
+{"kind":"table","id":"tb/6x03el0j","slide":4,"name":"","rows":8,"cols":3,"preview":"类别 | 指令 | 功能","bbox":[64,138,680,390]}
+{"kind":"notes","id":"nt/176cc1","slide":4,"text":"这一页讲指令集。MiniRISC-16 当前支持 13 个有效 opcode，D、E、F 作为安全保留操作。控制器采用组合逻辑，先给默认安全值，再按 opcode 覆盖，这样可以避免未定义指令造成寄存器或外设被错误写入。"}
+{"kind":"slide","id":"sl/amxtyy","slide":5,"title":"单周期数据通路","textShapes":17}
+{"kind":"textbox","id":"sh/218zatwr","slide":5,"name":"slide_title","text":"单周期数据通路","textPreview":"单周期数据通路","textChars":7,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/p4jy5ofi","slide":5,"name":"page_number","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/43qhcjex","slide":5,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/fyhgzexg","slide":5,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"shape","id":"sh/ux8z69wv","slide":5,"bbox":[74,190,150,78]}
+{"kind":"textbox","id":"sh/h0zy1of6","slide":5,"text":"PC","textPreview":"PC","textChars":2,"textLines":1,"bbox":[90,204,118,26]}
+{"kind":"textbox","id":"sh/gzqh8jel","slide":5,"text":"8 位指令地址","textPreview":"8 位指令地址","textChars":7,"textLines":1,"bbox":[88,237,122,22]}
+{"kind":"shape","id":"sh/7axgvux4","slide":5,"bbox":[282,190,184,78]}
+{"kind":"textbox","id":"sh/69oz29wj","slide":5,"text":"ROM","textPreview":"ROM","textChars":3,"textLines":1,"bbox":[298,204,152,26]}
+{"kind":"textbox","id":"sh/8zy5orqt","slide":5,"text":"组合读指令","textPreview":"组合读指令","textChars":5,"textLines":1,"bbox":[296,237,156,22]}
+{"kind":"shape","id":"sh/9076xwre","slide":5,"bbox":[524,156,178,78]}
+{"kind":"textbox","id":"sh/mxwnmh8n","slide":5,"text":"controller","textPreview":"controller","textChars":10,"textLines":1,"bbox":[540,170,146,26]}
+{"kind":"textbox","id":"sh/7ypovm98","slide":5,"text":"opcode 译码","textPreview":"opcode 译码","textChars":9,"textLines":1,"bbox":[538,203,150,22]}
+{"kind":"shape","id":"sh/kve5k7qx","slide":5,"bbox":[524,276,178,78]}
+{"kind":"textbox","id":"sh/lwn6tcri","slide":5,"text":"register_file","textPreview":"register_file","textChars":13,"textLines":1,"bbox":[540,290,146,26]}
+{"kind":"textbox","id":"sh/ytwnih8r","slide":5,"text":"组合读，同步写","textPreview":"组合读，同步写","textChars":7,"textLines":1,"bbox":[538,323,150,22]}
+{"kind":"shape","id":"sh/zu5orm9c","slide":5,"bbox":[760,216,150,78]}
+{"kind":"textbox","id":"sh/4ripwbq1","slide":5,"text":"ALU","textPreview":"ALU","textChars":3,"textLines":1,"bbox":[776,230,118,26]}
+{"kind":"textbox","id":"sh/5sr6pg7m","slide":5,"text":"PASS、ADD、SUB、逻辑","textPreview":"PASS、ADD、SUB、逻辑","textChars":15,"textLines":1,"bbox":[774,263,122,22]}
+{"kind":"shape","id":"sh/d8n69gzq","slide":5,"bbox":[966,216,162,78]}
+{"kind":"textbox","id":"sh/s7e5gbi5","slide":5,"text":"writeback","textPreview":"writeback","textChars":9,"textLines":1,"bbox":[982,230,130,26]}
+{"kind":"textbox","id":"sh/r65o76hk","slide":5,"text":"ALU 或 io_rdata","textPreview":"ALU 或 io_rdata","textChars":14,"textLines":1,"bbox":[980,263,134,22]}
+{"kind":"shape","id":"sh/qlwne10z","slide":5,"bbox":[224,229,58,0]}
+{"kind":"shape","id":"sh/5kn65wzu","slide":5,"bbox":[466,194,58,35]}
+{"kind":"shape","id":"sh/4ju5cri9","slide":5,"bbox":[466,229,58,85]}
+{"kind":"shape","id":"sh/3ilo3mho","slide":5,"bbox":[702,255,58,59]}
+{"kind":"shape","id":"sh/ihcnah03","slide":5,"bbox":[910,255,56,0]}
+{"kind":"shape","id":"sh/hg3m1wzi","slide":5,"bbox":[1047,294,0,146]}
+{"kind":"shape","id":"sh/gfu58rix","slide":5,"bbox":[150,440,897,0]}
+{"kind":"shape","id":"sh/6ls3ixgv","slide":5,"bbox":[150,268,0,172]}
+{"kind":"textbox","id":"sh/7m1kbixg","slide":5,"text":"一个非复位时钟周期提交一条指令","textPreview":"一个非复位时钟周期提交一条指令","textChars":15,"textLines":1,"bbox":[418,104,450,24]}
+{"kind":"textbox","id":"sh/8nalkny1","slide":5,"text":"当前 PC 组合读出指令，控制器和寄存器组同时产生操作数\nALU 或 I/O 读数据形成写回值\n时钟上升沿同时提交 PC、Rd、Z 和 GPIO 写操作\n只有 CMP 更新 Z，JZ 使用此前保存的 Z","textPreview":"当前 PC 组合读出指令，控制器和寄存器组同时产生操作数 | ALU 或 I/O 读数据形成写回值 | 时钟上升沿同时提交 PC、Rd、Z 和 GPIO 写操作 | 只有 CMP 更新 Z，JZ 使用此前保存的 Z","textChars":101,"textLines":4,"bbox":[128,504,1030,112]}
+{"kind":"notes","id":"nt/amxtyy","slide":5,"text":"这一页是数据通路。它没有流水线、没有多周期状态机，也没有指令寄存器。当前 PC 先组合取指，随后译码、读寄存器、ALU 或 I/O 读、写回选择和下一 PC 计算都在一个周期内完成，最后在上升沿一起提交。"}
+{"kind":"slide","id":"sl/wmi7nj","slide":6,"title":"GPIO 外设与地址映射","textShapes":10}
+{"kind":"textbox","id":"sh/i5wzq1gr","slide":6,"name":"slide_title","text":"GPIO 外设与地址映射","textPreview":"GPIO 外设与地址映射","textChars":12,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/58ny1wz2","slide":6,"name":"page_number","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/47ehsryh","slide":6,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/vilgvmh0","slide":6,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"shape","id":"sh/h4nyxwz6","slide":6,"bbox":[820,170,260,72]}
+{"kind":"textbox","id":"sh/gjuxoryl","slide":6,"text":"gpio_oe = 1","textPreview":"gpio_oe = 1","textChars":11,"textLines":1,"bbox":[836,184,228,26]}
+{"kind":"textbox","id":"sh/fepg76h4","slide":6,"text":"驱动 gpio_o 到外部引脚","textPreview":"驱动 gpio_o 到外部引脚","textChars":15,"textLines":1,"bbox":[834,217,232,16]}
+{"kind":"shape","id":"sh/edgzylgj","slide":6,"bbox":[820,284,260,72]}
+{"kind":"textbox","id":"sh/wjydkvuh","slide":6,"text":"gpio_oe = 0","textPreview":"gpio_oe = 0","textChars":11,"textLines":1,"bbox":[836,298,228,26]}
+{"kind":"textbox","id":"sh/xk7et0vm","slide":6,"text":"引脚保持高阻，作为输入","textPreview":"引脚保持高阻，作为输入","textChars":11,"textLines":1,"bbox":[834,331,232,16]}
+{"kind":"shape","id":"sh/ahgvilcb","slide":6,"bbox":[820,426,260,72]}
+{"kind":"textbox","id":"sh/bipcrqdw","slide":6,"text":"输入同步","textPreview":"输入同步","textChars":4,"textLines":1,"bbox":[836,440,228,26]}
+{"kind":"textbox","id":"sh/ofedgbu5","slide":6,"text":"外部输入经过两级触发器","textPreview":"外部输入经过两级触发器","textChars":11,"textLines":1,"bbox":[834,473,232,16]}
+{"kind":"textbox","id":"sh/9g7upgvq","slide":6,"text":"GPIO_OUT 和 GPIO_DIR 复位清零，默认全部为输入\nI/O 读数据统一扩展为 16 位\n顶层才形成真正的 inout 三态端口","textPreview":"GPIO_OUT 和 GPIO_DIR 复位清零，默认全部为输入 | I/O 读数据统一扩展为 16 位 | 顶层才形成真正的 inout 三态端口","textChars":70,"textLines":3,"bbox":[92,454,610,116]}
+{"kind":"table","id":"tb/3u5svi9o","slide":6,"name":"","rows":5,"cols":4,"preview":"地址 | 名称 | 访问 | 行为","bbox":[64,138,674,246]}
+{"kind":"notes","id":"nt/wmi7nj","slide":6,"text":"这一页讲 GPIO。GPIO 内部不是直接写 inout 端口，而是分成 gpio_i、gpio_o 和 gpio_oe。地址 0x10 写输出，0x11 读输入，0x12 写方向。方向为 1 时输出，为 0 时高阻输入，外部输入再经过两级同步器。"}
+{"kind":"slide","id":"sl/zp8xtn","slide":7,"title":"人工验证：控制真值表","textShapes":5}
+{"kind":"textbox","id":"sh/mhsbixoj","slide":7,"name":"slide_title","text":"人工验证：控制真值表","textPreview":"人工验证：控制真值表","textChars":10,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/9kjudcnu","slide":7,"name":"page_number","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/8jatk769","slide":7,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/zehc7i5s","slide":7,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"textbox","id":"sh/yd8bexo7","slide":7,"text":"静态核对的核心是逐 opcode 检查控制信号，确认 RTL 与设计 md 一致。","textPreview":"静态核对的核心是逐 opcode 检查控制信号，确认 RTL 与设计 md 一致。","textChars":41,"textLines":1,"bbox":[70,120,1060,32]}
+{"kind":"textbox","id":"sh/kfqtgn6d","slide":7,"text":"结论：13 个有效 opcode 和 3 个保留 opcode 都有明确安全控制。","textPreview":"结论：13 个有效 opcode 和 3 个保留 opcode 都有明确安全控制。","textChars":41,"textLines":1,"bbox":[86,610,900,30]}
+{"kind":"table","id":"tb/w32tk3ud","slide":7,"name":"","rows":17,"cols":11,"preview":"op | 指令 | ALU | src | Rd写 | Z写 | JZ | JMP | I/O读 | I/O写 | PC","bbox":[56,170,1168,420]}
+{"kind":"notes","id":"nt/zp8xtn","slide":7,"text":"这一页就是人工验证的核心。人工验证不是跑仿真，而是先看真值表。每个 opcode 对应哪些控制信号、是否写寄存器、是否写 Z、是否访问 I/O、PC 怎样更新，都在表里直接列出。保留指令 D、E、F 全部是安全 NOP。"}
+{"kind":"slide","id":"sl/9wvdfu","slide":8,"title":"EDA 验证结果与结论","textShapes":6}
+{"kind":"textbox","id":"sh/ny18bato","slide":8,"name":"slide_title","text":"EDA 验证结果与结论","textPreview":"EDA 验证结果与结论","textChars":11,"textLines":1,"bbox":[56,38,950,54]}
+{"kind":"textbox","id":"sh/8zap4fut","slide":8,"name":"page_number","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1152,42,72,32]}
+{"kind":"shape","id":"sh/90jqdkbe","slide":8,"name":"title_rule","bbox":[56,103,1168,0]}
+{"kind":"textbox","id":"sh/a1s76pcz","slide":8,"name":"footer","text":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textPreview":"MiniRISC-16 CPU，RTL 设计与 Vivado XSim 功能验证","textChars":40,"textLines":1,"bbox":[56,666,740,24]}
+{"kind":"textbox","id":"sh/w3up8fu5","slide":8,"text":"系统终态","textPreview":"系统终态","textChars":4,"textLines":1,"bbox":[72,486,170,28]}
+{"kind":"textbox","id":"sh/x43qhkbq","slide":8,"text":"PC=0x21，Z=1，R0～R3=0x00A5，GPIO_OUT=0xA5，GPIO_DIR=0x0F，GPIO_IN=0xA5","textPreview":"PC=0x21，Z=1，R0～R3=0x00A5，GPIO_OUT=0xA5，GPIO_DIR=0x0F，GPIO_IN=0xA5","textChars":65,"textLines":1,"bbox":[72,526,478,82]}
+{"kind":"textbox","id":"sh/b6ho3qtg","slide":8,"text":"波形截图显示 errors=0、completed=1、opcode_coverage=ffff。","textPreview":"波形截图显示 errors=0、completed=1、opcode_coverage=ffff。","textChars":49,"textLines":1,"bbox":[578,568,610,34]}
+{"kind":"table","id":"tb/yp43ahsb","slide":8,"name":"","rows":8,"cols":2,"preview":"验证项 | 结果","bbox":[66,136,440,318]}
+{"kind":"image","id":"im/z2pkv2p0","slide":8,"name":"","geometry":"roundRect","alt":"Vivado XSim PASS 摘要波形截图","bbox":[560,132,660,414]}
+{"kind":"notes","id":"nt/9wvdfu","slide":8,"text":"最后讲 EDA 验证。六个 testbench 都通过编译、展开和 XSim 自检。系统级测试覆盖全部 opcode，最终日志显示 Failures 为 0。右侧 Vivado 波形截图能看到 errors 等于 0、completed 等于 1、opcode_coverage 等于 ffff，所以功能验证通过。"}

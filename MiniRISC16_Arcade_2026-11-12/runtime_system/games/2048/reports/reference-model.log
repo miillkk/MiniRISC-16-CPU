@@ -1,0 +1,10 @@
+MiniRISC-16 2048 independent reference model
+PASS protocol v4 game-id, dimensions, sequence and XOR checksum
+PASS two-tile initial board
+PASS left/right/up/down transforms
+PASS one-merge-per-tile rule
+PASS spawn only after a changed move
+PASS 16-bit score transport
+PASS 2048 win state and full-board game over
+Instructions executed: 20086
+REFERENCE MODEL PASS

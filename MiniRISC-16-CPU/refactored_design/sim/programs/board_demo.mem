@@ -1,0 +1,30 @@
+0055 // 00: MOVI R0, #0x55       ; running marker
+C030 // 01: OUP  0x30, R0        ; LEDs = 0x55
+00C0 // 02: MOVI R0, #0xC0
+3000 // 03: ADDR R0, R0          ; build 0xC000 by shifting left 8
+3000 // 04
+3000 // 05
+3000 // 06
+3000 // 07
+3000 // 08
+3000 // 09
+3000 // 0A
+20DE // 0B: ADDI R0, #0xDE       ; R0 = 0xC0DE
+C021 // 0C: OUP  0x21, R0        ; upper four display digits
+0001 // 0D: MOVI R0, #0x01
+C022 // 0E: OUP  0x22, R0        ; display enable, decimal points off
+0005 // 0F: MOVI R0, #0x05
+2003 // 10: ADDI R0, #0x03       ; simple ALU self-test: 5 + 3
+0408 // 11: MOVI R1, #0x08
+6100 // 12: CMP  R0, R1
+8017 // 13: JZ   #0x17           ; branch to pass path
+00FF // 14: MOVI R0, #0xFF       ; fail marker
+C030 // 15: OUP  0x30, R0        ; LEDs = 0xFF
+A016 // 16: JUMP #0x16           ; stop on failure
+00A5 // 17: MOVI R0, #0xA5       ; pass marker
+C030 // 18: OUP  0x30, R0        ; LEDs = 0xA5
+B031 // 19: INP  R0, 0x31        ; read SW7..SW0
+1400 // 1A: MOVR R1, R0
+2401 // 1B: ADDI R1, #0x01       ; displayed result = switches + 1
+C120 // 1C: OUP  0x20, R1        ; lower four display digits
+A019 // 1D: JUMP #0x19           ; interactive loop

@@ -1,0 +1,6 @@
+MiniRISC-16 Runtime Arcade RTL verification (Icarus fallback)
+Simulator: Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
+Tests: 2
+Failures: 0
+PASS tb_runtime_running_light_wave
+PASS tb_runtime_extended_isa_wave

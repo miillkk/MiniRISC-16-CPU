@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/reports/waveforms/current_terminal/vivado/running_light.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_runtime_running_light_wave" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/tb_runtime_running_light_wave/clk" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="label">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/rst" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+      <obj_property name="label">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/pc" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">pc[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">pc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/instruction" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">instruction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/io_we" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">io_we</obj_property>
+      <obj_property name="ObjectShortName">io_we</obj_property>
+      <obj_property name="label">io_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/io_addr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">io_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">io_addr[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">io_addr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/io_wdata" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">io_wdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">io_wdata[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">io_wdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_runtime_running_light_wave/led" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">led</obj_property>
+   </wvobject>
+</wave_config>

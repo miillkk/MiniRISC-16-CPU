@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="666" viewBox="0 0 2200 666">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<rect x="0" y="0" width="360" height="666" fill="#F3F3F3"/>
+<rect x="0" y="0" width="360" height="72" fill="#E8E8E8"/>
+<line x1="250" y1="0" x2="250" y2="666" stroke="#A9A9A9" stroke-width="1"/>
+<line x1="360" y1="0" x2="360" y2="666" stroke="#7D7D7D" stroke-width="1"/>
+<line x1="0" y1="72" x2="2200" y2="72" stroke="#7D7D7D" stroke-width="1"/>
+<text x="18" y="45" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="18">Name</text>
+<text x="266" y="45" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="18">Value</text>
+<line x1="360" y1="40" x2="360" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="360" y1="72" x2="360" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="364" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">20.000 ns</text>
+<line x1="396.32" y1="55" x2="396.32" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="396.32" y1="72" x2="396.32" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="432.64" y1="55" x2="432.64" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="432.64" y1="72" x2="432.64" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="468.96" y1="55" x2="468.96" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="468.96" y1="72" x2="468.96" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="505.28" y1="55" x2="505.28" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="505.28" y1="72" x2="505.28" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="541.6" y1="40" x2="541.6" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="541.6" y1="72" x2="541.6" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="545.6" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">25.000 ns</text>
+<line x1="577.92" y1="55" x2="577.92" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="577.92" y1="72" x2="577.92" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="614.24" y1="55" x2="614.24" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="614.24" y1="72" x2="614.24" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="650.56" y1="55" x2="650.56" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="650.56" y1="72" x2="650.56" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="686.88" y1="55" x2="686.88" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="686.88" y1="72" x2="686.88" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="723.2" y1="40" x2="723.2" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="723.2" y1="72" x2="723.2" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="727.2" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">30.000 ns</text>
+<line x1="759.52" y1="55" x2="759.52" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="759.52" y1="72" x2="759.52" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="795.8399999999999" y1="55" x2="795.8399999999999" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="795.8399999999999" y1="72" x2="795.8399999999999" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="832.1600000000001" y1="55" x2="832.1600000000001" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="832.1600000000001" y1="72" x2="832.1600000000001" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="868.48" y1="55" x2="868.48" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="868.48" y1="72" x2="868.48" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="904.8" y1="40" x2="904.8" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="904.8" y1="72" x2="904.8" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="908.8" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">35.000 ns</text>
+<line x1="941.12" y1="55" x2="941.12" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="941.12" y1="72" x2="941.12" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="977.44" y1="55" x2="977.44" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="977.44" y1="72" x2="977.44" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1013.76" y1="55" x2="1013.76" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1013.76" y1="72" x2="1013.76" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1050.08" y1="55" x2="1050.08" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1050.08" y1="72" x2="1050.08" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1086.4" y1="40" x2="1086.4" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="1086.4" y1="72" x2="1086.4" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="1090.4" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">40.000 ns</text>
+<line x1="1122.72" y1="55" x2="1122.72" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1122.72" y1="72" x2="1122.72" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1159.04" y1="55" x2="1159.04" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1159.04" y1="72" x2="1159.04" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1195.3600000000001" y1="55" x2="1195.3600000000001" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1195.3600000000001" y1="72" x2="1195.3600000000001" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1231.6799999999998" y1="55" x2="1231.6799999999998" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1231.6799999999998" y1="72" x2="1231.6799999999998" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1268" y1="40" x2="1268" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="1268" y1="72" x2="1268" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="1272" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">45.000 ns</text>
+<line x1="1304.3200000000002" y1="55" x2="1304.3200000000002" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1304.3200000000002" y1="72" x2="1304.3200000000002" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1340.64" y1="55" x2="1340.64" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1340.64" y1="72" x2="1340.64" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1376.96" y1="55" x2="1376.96" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1376.96" y1="72" x2="1376.96" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1413.28" y1="55" x2="1413.28" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1413.28" y1="72" x2="1413.28" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1449.6" y1="40" x2="1449.6" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="1449.6" y1="72" x2="1449.6" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="1453.6" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">50.000 ns</text>
+<line x1="1485.92" y1="55" x2="1485.92" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1485.92" y1="72" x2="1485.92" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1522.24" y1="55" x2="1522.24" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1522.24" y1="72" x2="1522.24" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1558.56" y1="55" x2="1558.56" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1558.56" y1="72" x2="1558.56" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1594.88" y1="55" x2="1594.88" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1594.88" y1="72" x2="1594.88" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1631.1999999999998" y1="40" x2="1631.1999999999998" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="1631.1999999999998" y1="72" x2="1631.1999999999998" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="1635.1999999999998" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">55.000 ns</text>
+<line x1="1667.52" y1="55" x2="1667.52" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1667.52" y1="72" x2="1667.52" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1703.84" y1="55" x2="1703.84" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1703.84" y1="72" x2="1703.84" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1740.16" y1="55" x2="1740.16" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1740.16" y1="72" x2="1740.16" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1776.48" y1="55" x2="1776.48" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1776.48" y1="72" x2="1776.48" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1812.8000000000002" y1="40" x2="1812.8000000000002" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="1812.8000000000002" y1="72" x2="1812.8000000000002" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="1816.8000000000002" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">60.000 ns</text>
+<line x1="1849.12" y1="55" x2="1849.12" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1849.12" y1="72" x2="1849.12" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1885.44" y1="55" x2="1885.44" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1885.44" y1="72" x2="1885.44" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1921.76" y1="55" x2="1921.76" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1921.76" y1="72" x2="1921.76" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1958.08" y1="55" x2="1958.08" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="1958.08" y1="72" x2="1958.08" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="1994.4" y1="40" x2="1994.4" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="1994.4" y1="72" x2="1994.4" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="1998.4" y="30" text-anchor="start" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">65.000 ns</text>
+<line x1="2030.72" y1="55" x2="2030.72" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="2030.72" y1="72" x2="2030.72" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="2067.04" y1="55" x2="2067.04" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="2067.04" y1="72" x2="2067.04" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="2103.3599999999997" y1="55" x2="2103.3599999999997" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="2103.3599999999997" y1="72" x2="2103.3599999999997" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="2139.6800000000003" y1="55" x2="2139.6800000000003" y2="72" stroke="#555555" stroke-width="0.7"/>
+<line x1="2139.6800000000003" y1="72" x2="2139.6800000000003" y2="666" stroke="#D7D7D7" stroke-width="0.6"/>
+<line x1="2176" y1="40" x2="2176" y2="72" stroke="#555555" stroke-width="1"/>
+<line x1="2176" y1="72" x2="2176" y2="666" stroke="#7A7A7A" stroke-width="1"/>
+<text x="2172" y="30" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="16">70.000 ns</text>
+<line x1="0" y1="120" x2="2200" y2="120" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="102" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">clk</text>
+<text x="346" y="102" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">1</text>
+<rect x="541.6" y="82" width="181.60000000000002" height="28" fill="#CDE8B9"/>
+<rect x="904.8" y="82" width="181.60000000000014" height="28" fill="#CDE8B9"/>
+<rect x="1268" y="82" width="181.5999999999999" height="28" fill="#CDE8B9"/>
+<rect x="1631.1999999999998" y="82" width="181.60000000000036" height="28" fill="#CDE8B9"/>
+<rect x="1994.4" y="82" width="181.5999999999999" height="28" fill="#CDE8B9"/>
+<path d="M 360 110 L 541.6 110 L 541.6 110 L 541.6 82 L 723.2 82 L 723.2 82 L 723.2 110 L 904.8 110 L 904.8 110 L 904.8 82 L 1086.4 82 L 1086.4 82 L 1086.4 110 L 1268 110 L 1268 110 L 1268 82 L 1449.6 82 L 1449.6 82 L 1449.6 110 L 1631.1999999999998 110 L 1631.1999999999998 110 L 1631.1999999999998 82 L 1812.8000000000002 82 L 1812.8000000000002 82 L 1812.8000000000002 110 L 1994.4 110 L 1994.4 110 L 1994.4 82 L 2176 82" fill="none" stroke="#22C000" stroke-width="1.6" shape-rendering="crispEdges"/>
+<line x1="0" y1="168" x2="2200" y2="168" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="150" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">mem_addr</text>
+<text x="346" y="150" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">05</text>
+<line x1="360" y1="132" x2="541.6" y2="132" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="156" x2="541.6" y2="156" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="149" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00</text>
+<line x1="541.6" y1="132" x2="904.8" y2="132" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="156" x2="904.8" y2="156" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 132 L 547.6 156 M 535.6 156 L 547.6 132" stroke="#22C000" stroke-width="1.2"/>
+<text x="723.2" y="149" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">01</text>
+<line x1="904.8" y1="132" x2="1268" y2="132" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="156" x2="1268" y2="156" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 132 L 910.8 156 M 898.8 156 L 910.8 132" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="149" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">02</text>
+<line x1="1268" y1="132" x2="1631.1999999999998" y2="132" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="156" x2="1631.1999999999998" y2="156" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 132 L 1274 156 M 1262 156 L 1274 132" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="149" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">03</text>
+<line x1="1631.1999999999998" y1="132" x2="1994.4" y2="132" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="156" x2="1994.4" y2="156" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 132 L 1637.1999999999998 156 M 1625.1999999999998 156 L 1637.1999999999998 132" stroke="#22C000" stroke-width="1.2"/>
+<text x="1812.8" y="149" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">04</text>
+<line x1="1994.4" y1="132" x2="2176" y2="132" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="156" x2="2176" y2="156" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 132 L 2000.4 156 M 1988.4 156 L 2000.4 132" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="149" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">05</text>
+<line x1="0" y1="216" x2="2200" y2="216" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="198" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">instruction</text>
+<text x="346" y="198" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">A005</text>
+<line x1="360" y1="180" x2="541.6" y2="180" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="204" x2="541.6" y2="204" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="197" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00AA</text>
+<line x1="541.6" y1="180" x2="904.8" y2="180" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="204" x2="904.8" y2="204" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 180 L 547.6 204 M 535.6 204 L 547.6 180" stroke="#22C000" stroke-width="1.2"/>
+<text x="723.2" y="197" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">040F</text>
+<line x1="904.8" y1="180" x2="1268" y2="180" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="204" x2="1268" y2="204" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 180 L 910.8 204 M 898.8 204 L 910.8 180" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="197" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">7100</text>
+<line x1="1268" y1="180" x2="1631.1999999999998" y2="180" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="204" x2="1631.1999999999998" y2="204" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 180 L 1274 204 M 1262 204 L 1274 180" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="197" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">9100</text>
+<line x1="1631.1999999999998" y1="180" x2="1994.4" y2="180" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="204" x2="1994.4" y2="204" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 180 L 1637.1999999999998 204 M 1625.1999999999998 204 L 1637.1999999999998 180" stroke="#22C000" stroke-width="1.2"/>
+<text x="1812.8" y="197" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">4100</text>
+<line x1="1994.4" y1="180" x2="2176" y2="180" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="204" x2="2176" y2="204" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 180 L 2000.4 204 M 1988.4 204 L 2000.4 180" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="197" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">A005</text>
+<line x1="0" y1="264" x2="2200" y2="264" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="246" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">opcode</text>
+<text x="346" y="246" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">A</text>
+<line x1="360" y1="228" x2="904.8" y2="228" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="252" x2="904.8" y2="252" stroke="#22C000" stroke-width="1.4"/>
+<text x="632.4" y="245" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0</text>
+<line x1="904.8" y1="228" x2="1268" y2="228" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="252" x2="1268" y2="252" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 228 L 910.8 252 M 898.8 252 L 910.8 228" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="245" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">7</text>
+<line x1="1268" y1="228" x2="1631.1999999999998" y2="228" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="252" x2="1631.1999999999998" y2="252" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 228 L 1274 252 M 1262 252 L 1274 228" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="245" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">9</text>
+<line x1="1631.1999999999998" y1="228" x2="1994.4" y2="228" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="252" x2="1994.4" y2="252" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 228 L 1637.1999999999998 252 M 1625.1999999999998 252 L 1637.1999999999998 228" stroke="#22C000" stroke-width="1.2"/>
+<text x="1812.8" y="245" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">4</text>
+<line x1="1994.4" y1="228" x2="2176" y2="228" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="252" x2="2176" y2="252" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 228 L 2000.4 252 M 1988.4 252 L 2000.4 228" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="245" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">A</text>
+<line x1="0" y1="312" x2="2200" y2="312" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="294" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">rd_data</text>
+<text x="346" y="294" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0000</text>
+<line x1="360" y1="276" x2="541.6" y2="276" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="300" x2="541.6" y2="300" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="293" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="541.6" y1="276" x2="904.8" y2="276" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="300" x2="904.8" y2="300" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 276 L 547.6 300 M 535.6 300 L 547.6 276" stroke="#22C000" stroke-width="1.2"/>
+<text x="723.2" y="293" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="904.8" y1="276" x2="1268" y2="276" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="300" x2="1268" y2="300" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 276 L 910.8 300 M 898.8 300 L 910.8 276" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="293" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00AA</text>
+<line x1="1268" y1="276" x2="1631.1999999999998" y2="276" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="300" x2="1631.1999999999998" y2="300" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 276 L 1274 300 M 1262 300 L 1274 276" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="293" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000A</text>
+<line x1="1631.1999999999998" y1="276" x2="1994.4" y2="276" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="300" x2="1994.4" y2="300" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 276 L 1637.1999999999998 300 M 1625.1999999999998 300 L 1637.1999999999998 276" stroke="#22C000" stroke-width="1.2"/>
+<text x="1812.8" y="293" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="1994.4" y1="276" x2="2176" y2="276" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="300" x2="2176" y2="300" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 276 L 2000.4 300 M 1988.4 300 L 2000.4 276" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="293" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="0" y1="360" x2="2200" y2="360" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="342" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">rs_data</text>
+<text x="346" y="342" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0000</text>
+<line x1="360" y1="324" x2="541.6" y2="324" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="348" x2="541.6" y2="348" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="341" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="541.6" y1="324" x2="904.8" y2="324" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="348" x2="904.8" y2="348" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 324 L 547.6 348 M 535.6 348 L 547.6 324" stroke="#22C000" stroke-width="1.2"/>
+<text x="723.2" y="341" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00AA</text>
+<line x1="904.8" y1="324" x2="1994.4" y2="324" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="348" x2="1994.4" y2="348" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 324 L 910.8 348 M 898.8 348 L 910.8 324" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="341" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="1994.4" y1="324" x2="2176" y2="324" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="348" x2="2176" y2="348" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 324 L 2000.4 348 M 1988.4 348 L 2000.4 324" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="341" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="0" y1="408" x2="2200" y2="408" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="390" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">alu_op</text>
+<text x="346" y="390" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0</text>
+<line x1="360" y1="372" x2="904.8" y2="372" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="396" x2="904.8" y2="396" stroke="#22C000" stroke-width="1.4"/>
+<text x="632.4" y="389" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0</text>
+<line x1="904.8" y1="372" x2="1268" y2="372" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="396" x2="1268" y2="396" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 372 L 910.8 396 M 898.8 396 L 910.8 372" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="389" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">3</text>
+<line x1="1268" y1="372" x2="1631.1999999999998" y2="372" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="396" x2="1631.1999999999998" y2="396" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 372 L 1274 396 M 1262 396 L 1274 372" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="389" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">4</text>
+<line x1="1631.1999999999998" y1="372" x2="1994.4" y2="372" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="396" x2="1994.4" y2="396" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 372 L 1637.1999999999998 396 M 1625.1999999999998 396 L 1637.1999999999998 372" stroke="#22C000" stroke-width="1.2"/>
+<text x="1812.8" y="389" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">5</text>
+<line x1="1994.4" y1="372" x2="2176" y2="372" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="396" x2="2176" y2="396" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 372 L 2000.4 396 M 1988.4 396 L 2000.4 372" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="389" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0</text>
+<line x1="0" y1="456" x2="2200" y2="456" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="438" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">alu_result</text>
+<text x="346" y="438" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0000</text>
+<line x1="360" y1="420" x2="541.6" y2="420" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="444" x2="541.6" y2="444" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="437" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00AA</text>
+<line x1="541.6" y1="420" x2="904.8" y2="420" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="444" x2="904.8" y2="444" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 420 L 547.6 444 M 535.6 444 L 547.6 420" stroke="#22C000" stroke-width="1.2"/>
+<text x="723.2" y="437" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="904.8" y1="420" x2="1268" y2="420" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="444" x2="1268" y2="444" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 420 L 910.8 444 M 898.8 444 L 910.8 420" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="437" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000A</text>
+<line x1="1268" y1="420" x2="1631.1999999999998" y2="420" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="444" x2="1631.1999999999998" y2="444" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 420 L 1274 444 M 1262 444 L 1274 420" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="437" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="1631.1999999999998" y1="420" x2="2176" y2="420" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="444" x2="2176" y2="444" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 420 L 1637.1999999999998 444 M 1625.1999999999998 444 L 1637.1999999999998 420" stroke="#22C000" stroke-width="1.2"/>
+<text x="1903.6" y="437" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="0" y1="504" x2="2200" y2="504" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="486" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">reg_write</text>
+<text x="346" y="486" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0</text>
+<rect x="360" y="466" width="1634.4" height="28" fill="#CDE8B9"/>
+<path d="M 360 466 L 1994.4 466 L 1994.4 466 L 1994.4 494 L 2176 494" fill="none" stroke="#22C000" stroke-width="1.6" shape-rendering="crispEdges"/>
+<line x1="0" y1="552" x2="2200" y2="552" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="534" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">writeback_data</text>
+<text x="346" y="534" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0000</text>
+<line x1="360" y1="516" x2="541.6" y2="516" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="540" x2="541.6" y2="540" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="533" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00AA</text>
+<line x1="541.6" y1="516" x2="904.8" y2="516" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="540" x2="904.8" y2="540" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 516 L 547.6 540 M 535.6 540 L 547.6 516" stroke="#22C000" stroke-width="1.2"/>
+<text x="723.2" y="533" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="904.8" y1="516" x2="1268" y2="516" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="540" x2="1268" y2="540" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 516 L 910.8 540 M 898.8 540 L 910.8 516" stroke="#22C000" stroke-width="1.2"/>
+<text x="1086.4" y="533" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000A</text>
+<line x1="1268" y1="516" x2="1631.1999999999998" y2="516" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="540" x2="1631.1999999999998" y2="540" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 516 L 1274 540 M 1262 540 L 1274 516" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="533" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="1631.1999999999998" y1="516" x2="2176" y2="516" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="540" x2="2176" y2="540" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 516 L 1637.1999999999998 540 M 1625.1999999999998 540 L 1637.1999999999998 516" stroke="#22C000" stroke-width="1.2"/>
+<text x="1903.6" y="533" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="0" y1="600" x2="2200" y2="600" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="582" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">r0</text>
+<text x="346" y="582" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">0000</text>
+<line x1="360" y1="564" x2="541.6" y2="564" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="588" x2="541.6" y2="588" stroke="#22C000" stroke-width="1.4"/>
+<text x="450.8" y="581" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="541.6" y1="564" x2="1268" y2="564" stroke="#22C000" stroke-width="1.4"/>
+<line x1="541.6" y1="588" x2="1268" y2="588" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 535.6 564 L 547.6 588 M 535.6 588 L 547.6 564" stroke="#22C000" stroke-width="1.2"/>
+<text x="904.8" y="581" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">00AA</text>
+<line x1="1268" y1="564" x2="1631.1999999999998" y2="564" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1268" y1="588" x2="1631.1999999999998" y2="588" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1262 564 L 1274 588 M 1262 588 L 1274 564" stroke="#22C000" stroke-width="1.2"/>
+<text x="1449.6" y="581" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000A</text>
+<line x1="1631.1999999999998" y1="564" x2="1994.4" y2="564" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1631.1999999999998" y1="588" x2="1994.4" y2="588" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1625.1999999999998 564 L 1637.1999999999998 588 M 1625.1999999999998 588 L 1637.1999999999998 564" stroke="#22C000" stroke-width="1.2"/>
+<text x="1812.8" y="581" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+<line x1="1994.4" y1="564" x2="2176" y2="564" stroke="#22C000" stroke-width="1.4"/>
+<line x1="1994.4" y1="588" x2="2176" y2="588" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 1988.4 564 L 2000.4 588 M 1988.4 588 L 2000.4 564" stroke="#22C000" stroke-width="1.2"/>
+<text x="2085.2" y="581" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="0" y1="648" x2="2200" y2="648" stroke="#D0D0D0" stroke-width="0.7"/>
+<text x="24" y="630" fill="#111111" font-family="Segoe UI,Arial,sans-serif" font-size="18">r1</text>
+<text x="346" y="630" text-anchor="end" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="17">000F</text>
+<line x1="360" y1="612" x2="904.8" y2="612" stroke="#22C000" stroke-width="1.4"/>
+<line x1="360" y1="636" x2="904.8" y2="636" stroke="#22C000" stroke-width="1.4"/>
+<text x="632.4" y="629" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">0000</text>
+<line x1="904.8" y1="612" x2="2176" y2="612" stroke="#22C000" stroke-width="1.4"/>
+<line x1="904.8" y1="636" x2="2176" y2="636" stroke="#22C000" stroke-width="1.4"/>
+<path d="M 898.8 612 L 910.8 636 M 898.8 636 L 910.8 612" stroke="#22C000" stroke-width="1.2"/>
+<text x="1540.4" y="629" text-anchor="middle" fill="#111111" font-family="Consolas,Courier New,monospace" font-size="15" font-weight="600">000F</text>
+</svg>

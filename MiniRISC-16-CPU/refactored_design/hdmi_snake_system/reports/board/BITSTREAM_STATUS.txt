@@ -1,0 +1,25 @@
+MiniRISC-16 HDMI Snake bitstream status
+Date: 2026-10-16
+
+GENERATED AND STATICALLY VERIFIED
+
+Device: xc7z020clg484-1
+File: reports/board/MiniRISC16_HDMISnake.bit
+SHA256: BA5B7B3A314A72495435F0CA260FC7B332D6E2FF0BDCDCB18C4FEA86095D520A
+
+Assembler: PASS, 294 active words
+Independent instruction reference model: PASS, 13964 instructions
+XSim regression: PASS, 10/10
+Synthesis: 0 errors, 0 critical warnings
+Implementation: fully routed
+Post-route setup WNS: +0.073 ns
+Post-route setup TNS: 0.000 ns
+Post-route hold WHS: +0.034 ns
+DRC: 0 errors; warnings ZPS7-1 and two PLBUFGOPT-1
+Bitstream: Vivado 2026.1 reports Bitgen Completed Successfully
+
+Evidence: reports/implementation/synthesis-checkpoint.log,
+bitstream.log, hdmi-snake-implemented-timing.rpt,
+hdmi-snake-implemented-drc.rpt, and hdmi_snake_timing_closed.dcp.
+
+Physical board tests are still pending. Use BOARD_TEST_GUIDE.md.

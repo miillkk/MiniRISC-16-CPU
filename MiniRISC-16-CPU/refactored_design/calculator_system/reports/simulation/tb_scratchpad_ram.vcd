@@ -1,0 +1,106 @@
+$date
+   Fri Oct 16 10:34:39 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_scratchpad_ram $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # write_enable $end
+$var reg 4 $ address [3:0] $end
+$var reg 16 % write_data [15:0] $end
+$var wire 16 & read_data [15:0] $end
+$scope module dut $end
+$var wire 1 ' clk $end
+$var wire 1 ( rst $end
+$var wire 1 ) write_enable $end
+$var wire 4 * address [3:0] $end
+$var wire 16 + write_data [15:0] $end
+$var wire 16 & read_data [15:0] $end
+$var integer 32 , index [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+0#
+b0 $
+b0 %
+bx &
+0'
+1(
+0)
+b0 *
+b0 +
+bx ,
+$end
+
+#5000
+1!
+b0 &
+1'
+
+#10000
+0!
+0'
+
+#15000
+1!
+0"
+1'
+0(
+
+#16000
+b1111 $
+b1111 *
+
+#17000
+1#
+b0 $
+b1001000110100 %
+1)
+b0 *
+b1001000110100 +
+
+#20000
+0!
+0'
+
+#25000
+1!
+b1001000110100 &
+1'
+
+#26000
+1#
+b1111 $
+b1011111011101111 %
+b0 &
+b1111 *
+b1011111011101111 +
+
+#30000
+0!
+0'
+
+#35000
+1!
+b1011111011101111 &
+1'
+
+#36000
+0#
+b0 $
+b1001000110100 &
+0)
+b0 *

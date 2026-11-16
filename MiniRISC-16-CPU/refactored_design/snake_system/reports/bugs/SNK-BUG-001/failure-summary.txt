@@ -1,0 +1,12 @@
+SNK-BUG-001 - XSim Tcl path escaping
+Date: 2026-10-16
+
+Initial regression result: 4/4 tests failed before simulation started.
+Compilation and elaboration had completed successfully.
+
+Cause:
+The Windows path passed to xsim -tclbatch contained backslashes. Tcl treated
+sequences such as \r as escapes, so run_simulation.tcl could not be opened.
+
+Evidence is retained in the initial test logs under reports/simulation.
+Fix: normalize the Tcl batch path to forward slashes before invoking xsim.

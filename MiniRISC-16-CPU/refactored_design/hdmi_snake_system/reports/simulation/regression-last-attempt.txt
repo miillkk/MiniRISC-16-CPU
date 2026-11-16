@@ -1,0 +1,14 @@
+MiniRISC-16 HDMI Snake RTL regression
+Tests: 10
+Failures: 10
+License-blocked: 0
+FAIL tb_cpu_data_instructions - xelab exit 1
+FAIL tb_program_capacity - xelab exit 1
+FAIL tb_program_loader - xelab exit 1
+FAIL tb_uart_port - xelab exit 1
+FAIL tb_tick_timer - xelab exit 1
+FAIL tb_snake_system - xelab exit 1
+FAIL tb_video_timing_640x480 - xelab exit 1
+FAIL tb_video_frame_bridge - xelab exit 1
+FAIL tb_snake_renderer - xelab exit 1
+FAIL tb_i2c_master - xelab exit 1

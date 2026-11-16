@@ -1,0 +1,17 @@
+SNK-BUG-002 - timer could reassert on the acknowledge cycle
+Date: 2026-10-16
+
+Failure:
+tb_tick_timer reported "pause failed" after clearing a pending fast tick.
+
+Root cause:
+The divider continued counting while tick_pending was already one. If the CPU
+acknowledged on another terminal count, the later nonblocking assignment set
+tick_pending back to one in the same clock. That could produce two adjacent
+snake moves after a long UART transfer.
+
+Fix:
+Freeze the divider while tick_pending is one. The timer now behaves as a
+one-entry event queue and resumes counting after the CPU consumes the event.
+
+Failure log: failing-tb_tick_timer.log

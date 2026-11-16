@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Fri Oct 30 13:14:34 2026
+| Host         : KENT running 64-bit major release  (build 9200)
+| Command      : report_drc -file ./scripts/../reports/diagnostics/i2c_electrical/drc.rpt
+| Design       : hdmi_i2c_electrical_test_top
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_i2c_electrical_placed
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 2
++--------+----------+---------------------------------+--------+
+| Rule   | Severity | Description                     | Checks |
++--------+----------+---------------------------------+--------+
+| RPBF-3 | Warning  | IO port buffering is incomplete | 1      |
+| ZPS7-1 | Warning  | PS7 block required              | 1      |
++--------+----------+---------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port iic_sda_hdmi expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

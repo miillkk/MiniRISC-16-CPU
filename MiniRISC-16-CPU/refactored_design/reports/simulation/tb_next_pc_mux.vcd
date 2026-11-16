@@ -1,0 +1,70 @@
+$date
+   Mon Sep 21 21:49:33 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_next_pc_mux $end
+$var reg 8 ! pc_plus_one [7:0] $end
+$var reg 8 " target_addr [7:0] $end
+$var reg 1 # branch_taken $end
+$var reg 1 $ jump $end
+$var wire 8 % next_pc [7:0] $end
+$var integer 32 & errors [31:0] $end
+$scope module dut $end
+$var wire 8 ' pc_plus_one [7:0] $end
+$var wire 8 ( target_addr [7:0] $end
+$var wire 1 ) branch_taken $end
+$var wire 1 * jump $end
+$var wire 8 % next_pc [7:0] $end
+$upscope $end
+$scope task check_mux $end
+$var reg 1 + test_branch $end
+$var reg 1 , test_jump $end
+$var reg 8 - expected [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b10001 !
+b10100101 "
+0#
+0$
+b10001 %
+b0 &
+b10001 '
+b10100101 (
+0)
+0*
+0+
+0,
+b10001 -
+$end
+
+#1000
+1#
+b10100101 %
+1)
+1+
+b10100101 -
+
+#2000
+0#
+1$
+0)
+1*
+0+
+1,
+
+#3000
+1#
+1)
+1+

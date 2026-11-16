@@ -1,0 +1,10 @@
+MiniRISC-16 Runtime/Snake V2 RTL regression
+Tests: 6
+Failures: 6
+License-blocked: 0
+FAIL tb_cpu_data_instructions - xelab exit 1
+FAIL tb_program_capacity - xelab exit 1
+FAIL tb_program_loader - xelab exit 1
+FAIL tb_uart_port - xelab exit 1
+FAIL tb_tick_timer - xelab exit 1
+FAIL tb_snake_system - xelab exit 1

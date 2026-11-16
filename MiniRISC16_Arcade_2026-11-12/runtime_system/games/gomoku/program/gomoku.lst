@@ -1,0 +1,1025 @@
+ADDR WORD  SOURCE
+000  0000  MOVI R0, 0
+001  0CE1  MOVI R3, 225
+002  EC00  STR R3, R0
+003  F004  JMPA RESET
+004  0000  MOVI R0, 0
+005  0400  MOVI R1, 0
+006  E100  STR R0, R1
+007  2001  ADDI R0, 1
+008  08E1  MOVI R2, 225
+009  6200  CMP R0, R2
+00A  800C  JZ branch_0
+00B  F00D  JMPA branch_0_end
+00C  F00E  JMPA CLEARED
+00D  F006  JMPA CLEAR
+00E  0001  MOVI R0, 1
+00F  0CE2  MOVI R3, 226
+010  EC00  STR R3, R0
+011  0000  MOVI R0, 0
+012  0CE3  MOVI R3, 227
+013  EC00  STR R3, R0
+014  0000  MOVI R0, 0
+015  0CE4  MOVI R3, 228
+016  EC00  STR R3, R0
+017  F235  JMPA SEND
+018  B011  INP R0, 0x11
+019  0401  MOVI R1, 1
+01A  7100  AND R0, R1
+01B  6100  CMP R0, R1
+01C  801E  JZ branch_1
+01D  F01F  JMPA branch_1_end
+01E  F020  JMPA READ
+01F  F018  JMPA MAIN
+020  B010  INP R0, 0x10
+021  0CE5  MOVI R3, 229
+022  EC00  STR R3, R0
+023  04F0  MOVI R1, 240
+024  6100  CMP R0, R1
+025  8027  JZ branch_2
+026  F028  JMPA branch_2_end
+027  F045  JMPA PVP
+028  04F1  MOVI R1, 241
+029  6100  CMP R0, R1
+02A  802C  JZ branch_3
+02B  F02D  JMPA branch_3_end
+02C  F049  JMPA PVE
+02D  04F2  MOVI R1, 242
+02E  6100  CMP R0, R1
+02F  8031  JZ branch_4
+030  F032  JMPA branch_4_end
+031  F004  JMPA RESET
+032  04F3  MOVI R1, 243
+033  6100  CMP R0, R1
+034  8036  JZ branch_5
+035  F037  JMPA branch_5_end
+036  F235  JMPA SEND
+037  04E1  MOVI R1, 225
+038  6100  CMP R0, R1
+039  803B  JZ branch_6
+03A  F03C  JMPA branch_6_end
+03B  F235  JMPA SEND
+03C  2401  ADDI R1, 1
+03D  0800  MOVI R2, 0
+03E  08FF  MOVI R2, 255
+03F  2801  ADDI R2, 1
+040  6600  CMP R1, R2
+041  8043  JZ branch_7
+042  F044  JMPA branch_7_end
+043  F04D  JMPA PLACE
+044  F038  JMPA BAD_LOOP
+045  0000  MOVI R0, 0
+046  0CE1  MOVI R3, 225
+047  EC00  STR R3, R0
+048  F004  JMPA RESET
+049  0001  MOVI R0, 1
+04A  0CE1  MOVI R3, 225
+04B  EC00  STR R3, R0
+04C  F004  JMPA RESET
+04D  0CE3  MOVI R3, 227
+04E  D300  LDR R0, R3
+04F  0400  MOVI R1, 0
+050  6100  CMP R0, R1
+051  8053  JZ branch_8
+052  F054  JMPA branch_8_end
+053  F055  JMPA PLACE_OK
+054  F235  JMPA SEND
+055  0CE5  MOVI R3, 229
+056  D300  LDR R0, R3
+057  D400  LDR R1, R0
+058  0800  MOVI R2, 0
+059  6600  CMP R1, R2
+05A  805C  JZ branch_9
+05B  F05D  JMPA branch_9_end
+05C  F05E  JMPA COMMIT
+05D  F235  JMPA SEND
+05E  0CE2  MOVI R3, 226
+05F  D700  LDR R1, R3
+060  0CE5  MOVI R3, 229
+061  D300  LDR R0, R3
+062  E100  STR R0, R1
+063  0CE4  MOVI R3, 228
+064  D300  LDR R0, R3
+065  2001  ADDI R0, 1
+066  0CE4  MOVI R3, 228
+067  EC00  STR R3, R0
+068  0000  MOVI R0, 0
+069  0CE6  MOVI R3, 230
+06A  EC00  STR R3, R0
+06B  F155  JMPA SCAN
+06C  0CE3  MOVI R3, 227
+06D  D300  LDR R0, R3
+06E  0400  MOVI R1, 0
+06F  6100  CMP R0, R1
+070  8072  JZ branch_10
+071  F073  JMPA branch_10_end
+072  F074  JMPA NO_WIN
+073  F235  JMPA SEND
+074  0CE4  MOVI R3, 228
+075  D300  LDR R0, R3
+076  04E1  MOVI R1, 225
+077  6100  CMP R0, R1
+078  807A  JZ branch_11
+079  F07B  JMPA branch_11_end
+07A  F091  JMPA DRAW
+07B  0CE2  MOVI R3, 226
+07C  D300  LDR R0, R3
+07D  0403  MOVI R1, 3
+07E  5400  SUB R1, R0
+07F  0CE2  MOVI R3, 226
+080  ED00  STR R3, R1
+081  0CE1  MOVI R3, 225
+082  D300  LDR R0, R3
+083  0401  MOVI R1, 1
+084  6100  CMP R0, R1
+085  8087  JZ branch_12
+086  F088  JMPA branch_12_end
+087  F089  JMPA MAY_AI
+088  F235  JMPA SEND
+089  0CE2  MOVI R3, 226
+08A  D300  LDR R0, R3
+08B  0402  MOVI R1, 2
+08C  6100  CMP R0, R1
+08D  808F  JZ branch_13
+08E  F090  JMPA branch_13_end
+08F  F095  JMPA AI_START
+090  F235  JMPA SEND
+091  0003  MOVI R0, 3
+092  0CE3  MOVI R3, 227
+093  EC00  STR R3, R0
+094  F235  JMPA SEND
+095  0001  MOVI R0, 1
+096  0CE6  MOVI R3, 230
+097  EC00  STR R3, R0
+098  0000  MOVI R0, 0
+099  0CE5  MOVI R3, 229
+09A  EC00  STR R3, R0
+09B  F09C  JMPA AI_TRY
+09C  0CE5  MOVI R3, 229
+09D  D300  LDR R0, R3
+09E  D400  LDR R1, R0
+09F  0800  MOVI R2, 0
+0A0  6600  CMP R1, R2
+0A1  80A3  JZ branch_14
+0A2  F0A4  JMPA branch_14_end
+0A3  F0A5  JMPA AI_EMPTY
+0A4  F0BC  JMPA AI_NEXT
+0A5  0CE6  MOVI R3, 230
+0A6  D300  LDR R0, R3
+0A7  0403  MOVI R1, 3
+0A8  5400  SUB R1, R0
+0A9  0CE5  MOVI R3, 229
+0AA  D300  LDR R0, R3
+0AB  E100  STR R0, R1
+0AC  F155  JMPA SCAN
+0AD  0CE5  MOVI R3, 229
+0AE  D300  LDR R0, R3
+0AF  0400  MOVI R1, 0
+0B0  E100  STR R0, R1
+0B1  0CE3  MOVI R3, 227
+0B2  D300  LDR R0, R3
+0B3  0400  MOVI R1, 0
+0B4  6100  CMP R0, R1
+0B5  80B7  JZ branch_15
+0B6  F0B8  JMPA branch_15_end
+0B7  F0BC  JMPA AI_NEXT
+0B8  0000  MOVI R0, 0
+0B9  0CE3  MOVI R3, 227
+0BA  EC00  STR R3, R0
+0BB  F05E  JMPA COMMIT
+0BC  0CE5  MOVI R3, 229
+0BD  D300  LDR R0, R3
+0BE  2001  ADDI R0, 1
+0BF  0CE5  MOVI R3, 229
+0C0  EC00  STR R3, R0
+0C1  04E1  MOVI R1, 225
+0C2  6100  CMP R0, R1
+0C3  80C5  JZ branch_16
+0C4  F0C6  JMPA branch_16_end
+0C5  F0C7  JMPA AI_PHASE_END
+0C6  F09C  JMPA AI_TRY
+0C7  0CE6  MOVI R3, 230
+0C8  D300  LDR R0, R3
+0C9  0401  MOVI R1, 1
+0CA  6100  CMP R0, R1
+0CB  80CD  JZ branch_17
+0CC  F0CE  JMPA branch_17_end
+0CD  F0CF  JMPA AI_BLOCK
+0CE  F0D6  JMPA FALLBACK
+0CF  0002  MOVI R0, 2
+0D0  0CE6  MOVI R3, 230
+0D1  EC00  STR R3, R0
+0D2  0000  MOVI R0, 0
+0D3  0CE5  MOVI R3, 229
+0D4  EC00  STR R3, R0
+0D5  F09C  JMPA AI_TRY
+0D6  0070  MOVI R0, 112
+0D7  0CE5  MOVI R3, 229
+0D8  EC00  STR R3, R0
+0D9  0000  MOVI R0, 0
+0DA  0CF0  MOVI R3, 240
+0DB  EC00  STR R3, R0
+0DC  0000  MOVI R0, 0
+0DD  0CF1  MOVI R3, 241
+0DE  EC00  STR R3, R0
+0DF  0000  MOVI R0, 0
+0E0  0CF2  MOVI R3, 242
+0E1  EC00  STR R3, R0
+0E2  0000  MOVI R0, 0
+0E3  0CF3  MOVI R3, 243
+0E4  EC00  STR R3, R0
+0E5  00FF  MOVI R0, 255
+0E6  0CF4  MOVI R3, 244
+0E7  EC00  STR R3, R0
+0E8  0CF1  MOVI R3, 241
+0E9  D300  LDR R0, R3
+0EA  D400  LDR R1, R0
+0EB  0800  MOVI R2, 0
+0EC  6600  CMP R1, R2
+0ED  80EF  JZ branch_18
+0EE  F0F0  JMPA branch_18_end
+0EF  F0F1  JMPA SCORE_EMPTY
+0F0  F137  JMPA SCORE_NEXT
+0F1  0000  MOVI R0, 0
+0F2  0CF5  MOVI R3, 245
+0F3  EC00  STR R3, R0
+0F4  0CF2  MOVI R3, 242
+0F5  D300  LDR R0, R3
+0F6  0407  MOVI R1, 7
+0F7  5100  SUB R0, R1
+0F8  0480  MOVI R1, 128
+0F9  7400  AND R1, R0
+0FA  0800  MOVI R2, 0
+0FB  6600  CMP R1, R2
+0FC  80FE  JZ branch_19
+0FD  F0FF  JMPA branch_19_end
+0FE  F102  JMPA positive_242
+0FF  0400  MOVI R1, 0
+100  5400  SUB R1, R0
+101  1100  MOVR R0, R1
+102  0CF5  MOVI R3, 245
+103  D700  LDR R1, R3
+104  3100  ADDR R0, R1
+105  0CF5  MOVI R3, 245
+106  EC00  STR R3, R0
+107  0CF3  MOVI R3, 243
+108  D300  LDR R0, R3
+109  0407  MOVI R1, 7
+10A  5100  SUB R0, R1
+10B  0480  MOVI R1, 128
+10C  7400  AND R1, R0
+10D  0800  MOVI R2, 0
+10E  6600  CMP R1, R2
+10F  8011  JZ branch_20
+110  F112  JMPA branch_20_end
+111  F115  JMPA positive_243
+112  0400  MOVI R1, 0
+113  5400  SUB R1, R0
+114  1100  MOVR R0, R1
+115  0CF5  MOVI R3, 245
+116  D700  LDR R1, R3
+117  3100  ADDR R0, R1
+118  0CF5  MOVI R3, 245
+119  EC00  STR R3, R0
+11A  0000  MOVI R0, 0
+11B  0CF6  MOVI R3, 246
+11C  EC00  STR R3, R0
+11D  0CF6  MOVI R3, 246
+11E  D300  LDR R0, R3
+11F  0CF4  MOVI R3, 244
+120  D700  LDR R1, R3
+121  6100  CMP R0, R1
+122  8024  JZ branch_21
+123  F125  JMPA branch_21_end
+124  F137  JMPA SCORE_NEXT
+125  0CF5  MOVI R3, 245
+126  D700  LDR R1, R3
+127  6100  CMP R0, R1
+128  802A  JZ branch_22
+129  F12B  JMPA branch_22_end
+12A  F12F  JMPA BETTER
+12B  2001  ADDI R0, 1
+12C  0CF6  MOVI R3, 246
+12D  EC00  STR R3, R0
+12E  F11D  JMPA COMPARE
+12F  0CF5  MOVI R3, 245
+130  D300  LDR R0, R3
+131  0CF4  MOVI R3, 244
+132  EC00  STR R3, R0
+133  0CF1  MOVI R3, 241
+134  D300  LDR R0, R3
+135  0CE5  MOVI R3, 229
+136  EC00  STR R3, R0
+137  0CF1  MOVI R3, 241
+138  D300  LDR R0, R3
+139  2001  ADDI R0, 1
+13A  0CF1  MOVI R3, 241
+13B  EC00  STR R3, R0
+13C  04E1  MOVI R1, 225
+13D  6100  CMP R0, R1
+13E  8040  JZ branch_23
+13F  F141  JMPA branch_23_end
+140  F05E  JMPA COMMIT
+141  0CF3  MOVI R3, 243
+142  D300  LDR R0, R3
+143  2001  ADDI R0, 1
+144  0CF3  MOVI R3, 243
+145  EC00  STR R3, R0
+146  040F  MOVI R1, 15
+147  6100  CMP R0, R1
+148  804A  JZ branch_24
+149  F14B  JMPA branch_24_end
+14A  F14C  JMPA SCORE_ROW
+14B  F0E8  JMPA SCORE_LOOP
+14C  0000  MOVI R0, 0
+14D  0CF3  MOVI R3, 243
+14E  EC00  STR R3, R0
+14F  0CF2  MOVI R3, 242
+150  D300  LDR R0, R3
+151  2001  ADDI R0, 1
+152  0CF2  MOVI R3, 242
+153  EC00  STR R3, R0
+154  F0E8  JMPA SCORE_LOOP
+155  0000  MOVI R0, 0
+156  0CE3  MOVI R3, 227
+157  EC00  STR R3, R0
+158  0000  MOVI R0, 0
+159  0CE7  MOVI R3, 231
+15A  EC00  STR R3, R0
+15B  0000  MOVI R0, 0
+15C  0CE8  MOVI R3, 232
+15D  EC00  STR R3, R0
+15E  0000  MOVI R0, 0
+15F  0CE9  MOVI R3, 233
+160  EC00  STR R3, R0
+161  0CE7  MOVI R3, 231
+162  D300  LDR R0, R3
+163  D400  LDR R1, R0
+164  0CEA  MOVI R3, 234
+165  ED00  STR R3, R1
+166  0800  MOVI R2, 0
+167  6600  CMP R1, R2
+168  806A  JZ branch_25
+169  F16B  JMPA branch_25_end
+16A  F20B  JMPA SCAN_NEXT
+16B  0000  MOVI R0, 0
+16C  0CEB  MOVI R3, 235
+16D  EC00  STR R3, R0
+16E  0CE7  MOVI R3, 231
+16F  D300  LDR R0, R3
+170  0CEC  MOVI R3, 236
+171  EC00  STR R3, R0
+172  0CE8  MOVI R3, 232
+173  D300  LDR R0, R3
+174  0CED  MOVI R3, 237
+175  EC00  STR R3, R0
+176  0CE9  MOVI R3, 233
+177  D300  LDR R0, R3
+178  0CEE  MOVI R3, 238
+179  EC00  STR R3, R0
+17A  0001  MOVI R0, 1
+17B  0CEF  MOVI R3, 239
+17C  EC00  STR R3, R0
+17D  0CEB  MOVI R3, 235
+17E  D300  LDR R0, R3
+17F  0400  MOVI R1, 0
+180  6100  CMP R0, R1
+181  8083  JZ branch_26
+182  F184  JMPA branch_26_end
+183  F193  JMPA STEP_RIGHT
+184  0CEB  MOVI R3, 235
+185  D300  LDR R0, R3
+186  0401  MOVI R1, 1
+187  6100  CMP R0, R1
+188  808A  JZ branch_27
+189  F18B  JMPA branch_27_end
+18A  F1A3  JMPA STEP_DOWN
+18B  0CEB  MOVI R3, 235
+18C  D300  LDR R0, R3
+18D  0402  MOVI R1, 2
+18E  6100  CMP R0, R1
+18F  8091  JZ branch_28
+190  F192  JMPA branch_28_end
+191  F1B3  JMPA STEP_DIAG
+192  F1CF  JMPA STEP_LEFT_DIAG
+193  0CEE  MOVI R3, 238
+194  D300  LDR R0, R3
+195  040E  MOVI R1, 14
+196  6100  CMP R0, R1
+197  8099  JZ branch_29
+198  F19A  JMPA branch_29_end
+199  F200  JMPA DIR_NEXT
+19A  0CEE  MOVI R3, 238
+19B  D300  LDR R0, R3
+19C  2001  ADDI R0, 1
+19D  0CEE  MOVI R3, 238
+19E  EC00  STR R3, R0
+19F  0CEC  MOVI R3, 236
+1A0  D300  LDR R0, R3
+1A1  2001  ADDI R0, 1
+1A2  F1EB  JMPA CHECK_STONE
+1A3  0CED  MOVI R3, 237
+1A4  D300  LDR R0, R3
+1A5  040E  MOVI R1, 14
+1A6  6100  CMP R0, R1
+1A7  80A9  JZ branch_30
+1A8  F1AA  JMPA branch_30_end
+1A9  F200  JMPA DIR_NEXT
+1AA  0CED  MOVI R3, 237
+1AB  D300  LDR R0, R3
+1AC  2001  ADDI R0, 1
+1AD  0CED  MOVI R3, 237
+1AE  EC00  STR R3, R0
+1AF  0CEC  MOVI R3, 236
+1B0  D300  LDR R0, R3
+1B1  200F  ADDI R0, 15
+1B2  F1EB  JMPA CHECK_STONE
+1B3  0CED  MOVI R3, 237
+1B4  D300  LDR R0, R3
+1B5  040E  MOVI R1, 14
+1B6  6100  CMP R0, R1
+1B7  80B9  JZ branch_31
+1B8  F1BA  JMPA branch_31_end
+1B9  F200  JMPA DIR_NEXT
+1BA  0CEE  MOVI R3, 238
+1BB  D300  LDR R0, R3
+1BC  040E  MOVI R1, 14
+1BD  6100  CMP R0, R1
+1BE  80C0  JZ branch_32
+1BF  F1C1  JMPA branch_32_end
+1C0  F200  JMPA DIR_NEXT
+1C1  0CED  MOVI R3, 237
+1C2  D300  LDR R0, R3
+1C3  2001  ADDI R0, 1
+1C4  0CED  MOVI R3, 237
+1C5  EC00  STR R3, R0
+1C6  0CEE  MOVI R3, 238
+1C7  D300  LDR R0, R3
+1C8  2001  ADDI R0, 1
+1C9  0CEE  MOVI R3, 238
+1CA  EC00  STR R3, R0
+1CB  0CEC  MOVI R3, 236
+1CC  D300  LDR R0, R3
+1CD  2010  ADDI R0, 16
+1CE  F1EB  JMPA CHECK_STONE
+1CF  0CED  MOVI R3, 237
+1D0  D300  LDR R0, R3
+1D1  040E  MOVI R1, 14
+1D2  6100  CMP R0, R1
+1D3  80D5  JZ branch_33
+1D4  F1D6  JMPA branch_33_end
+1D5  F200  JMPA DIR_NEXT
+1D6  0CEE  MOVI R3, 238
+1D7  D300  LDR R0, R3
+1D8  0400  MOVI R1, 0
+1D9  6100  CMP R0, R1
+1DA  80DC  JZ branch_34
+1DB  F1DD  JMPA branch_34_end
+1DC  F200  JMPA DIR_NEXT
+1DD  0CED  MOVI R3, 237
+1DE  D300  LDR R0, R3
+1DF  2001  ADDI R0, 1
+1E0  0CED  MOVI R3, 237
+1E1  EC00  STR R3, R0
+1E2  0CEE  MOVI R3, 238
+1E3  D300  LDR R0, R3
+1E4  0401  MOVI R1, 1
+1E5  5100  SUB R0, R1
+1E6  0CEE  MOVI R3, 238
+1E7  EC00  STR R3, R0
+1E8  0CEC  MOVI R3, 236
+1E9  D300  LDR R0, R3
+1EA  200E  ADDI R0, 14
+1EB  0CEC  MOVI R3, 236
+1EC  EC00  STR R3, R0
+1ED  D400  LDR R1, R0
+1EE  0CEA  MOVI R3, 234
+1EF  DB00  LDR R2, R3
+1F0  6600  CMP R1, R2
+1F1  80F3  JZ branch_35
+1F2  F1F4  JMPA branch_35_end
+1F3  F1F5  JMPA MATCH
+1F4  F200  JMPA DIR_NEXT
+1F5  0CEF  MOVI R3, 239
+1F6  D300  LDR R0, R3
+1F7  2001  ADDI R0, 1
+1F8  0CEF  MOVI R3, 239
+1F9  EC00  STR R3, R0
+1FA  0405  MOVI R1, 5
+1FB  6100  CMP R0, R1
+1FC  80FE  JZ branch_36
+1FD  F1FF  JMPA branch_36_end
+1FE  F229  JMPA WIN
+1FF  F17D  JMPA WALK
+200  0CEB  MOVI R3, 235
+201  D300  LDR R0, R3
+202  2001  ADDI R0, 1
+203  0CEB  MOVI R3, 235
+204  EC00  STR R3, R0
+205  0404  MOVI R1, 4
+206  6100  CMP R0, R1
+207  8009  JZ branch_37
+208  F20A  JMPA branch_37_end
+209  F20B  JMPA SCAN_NEXT
+20A  F16E  JMPA DIRECTION
+20B  0CE7  MOVI R3, 231
+20C  D300  LDR R0, R3
+20D  2001  ADDI R0, 1
+20E  0CE7  MOVI R3, 231
+20F  EC00  STR R3, R0
+210  04E1  MOVI R1, 225
+211  6100  CMP R0, R1
+212  8014  JZ branch_38
+213  F215  JMPA branch_38_end
+214  F22D  JMPA SCAN_DONE
+215  0CE9  MOVI R3, 233
+216  D300  LDR R0, R3
+217  2001  ADDI R0, 1
+218  0CE9  MOVI R3, 233
+219  EC00  STR R3, R0
+21A  040F  MOVI R1, 15
+21B  6100  CMP R0, R1
+21C  801E  JZ branch_39
+21D  F21F  JMPA branch_39_end
+21E  F220  JMPA SCAN_ROW
+21F  F161  JMPA SCAN_CELL
+220  0000  MOVI R0, 0
+221  0CE9  MOVI R3, 233
+222  EC00  STR R3, R0
+223  0CE8  MOVI R3, 232
+224  D300  LDR R0, R3
+225  2001  ADDI R0, 1
+226  0CE8  MOVI R3, 232
+227  EC00  STR R3, R0
+228  F161  JMPA SCAN_CELL
+229  0CEA  MOVI R3, 234
+22A  D300  LDR R0, R3
+22B  0CE3  MOVI R3, 227
+22C  EC00  STR R3, R0
+22D  0CE6  MOVI R3, 230
+22E  D300  LDR R0, R3
+22F  0400  MOVI R1, 0
+230  6100  CMP R0, R1
+231  8033  JZ branch_40
+232  F234  JMPA branch_40_end
+233  F06C  JMPA ACTUAL_DONE
+234  F0AD  JMPA AI_RESULT
+235  0000  MOVI R0, 0
+236  0CF7  MOVI R3, 247
+237  EC00  STR R3, R0
+238  0000  MOVI R0, 0
+239  0CF8  MOVI R3, 248
+23A  EC00  STR R3, R0
+23B  00A5  MOVI R0, 165
+23C  F273  JMPA TX
+23D  0CF8  MOVI R3, 248
+23E  D300  LDR R0, R3
+23F  2001  ADDI R0, 1
+240  0CF8  MOVI R3, 248
+241  EC00  STR R3, R0
+242  0401  MOVI R1, 1
+243  6100  CMP R0, R1
+244  8046  JZ branch_41
+245  F247  JMPA branch_41_end
+246  F264  JMPA TX_MODE
+247  0402  MOVI R1, 2
+248  6100  CMP R0, R1
+249  804B  JZ branch_42
+24A  F24C  JMPA branch_42_end
+24B  F267  JMPA TX_PLAYER
+24C  0403  MOVI R1, 3
+24D  6100  CMP R0, R1
+24E  8050  JZ branch_43
+24F  F251  JMPA branch_43_end
+250  F26A  JMPA TX_STATUS
+251  0404  MOVI R1, 4
+252  6100  CMP R0, R1
+253  8055  JZ branch_44
+254  F256  JMPA branch_44_end
+255  F26D  JMPA TX_COUNT
+256  04E6  MOVI R1, 230
+257  6100  CMP R0, R1
+258  805A  JZ branch_45
+259  F25B  JMPA branch_45_end
+25A  F270  JMPA TX_SUM
+25B  04E7  MOVI R1, 231
+25C  6100  CMP R0, R1
+25D  805F  JZ branch_46
+25E  F260  JMPA branch_46_end
+25F  F018  JMPA MAIN
+260  0405  MOVI R1, 5
+261  5100  SUB R0, R1
+262  D000  LDR R0, R0
+263  F273  JMPA TX
+264  0CE1  MOVI R3, 225
+265  D300  LDR R0, R3
+266  F273  JMPA TX
+267  0CE2  MOVI R3, 226
+268  D300  LDR R0, R3
+269  F273  JMPA TX
+26A  0CE3  MOVI R3, 227
+26B  D300  LDR R0, R3
+26C  F273  JMPA TX
+26D  0CE4  MOVI R3, 228
+26E  D300  LDR R0, R3
+26F  F273  JMPA TX
+270  0CF7  MOVI R3, 247
+271  D300  LDR R0, R3
+272  F273  JMPA TX
+273  0CF7  MOVI R3, 247
+274  D700  LDR R1, R3
+275  4400  XOR R1, R0
+276  0CF7  MOVI R3, 247
+277  ED00  STR R3, R1
+278  B411  INP R1, 0x11
+279  0802  MOVI R2, 2
+27A  7600  AND R1, R2
+27B  6600  CMP R1, R2
+27C  807E  JZ branch_47
+27D  F27F  JMPA branch_47_end
+27E  F280  JMPA TX_WRITE
+27F  F278  JMPA TX_WAIT
+280  C010  OUP 0x10, R0
+281  F23D  JMPA TX_NEXT
+282  FFFF  <reserved>
+283  FFFF  <reserved>
+284  FFFF  <reserved>
+285  FFFF  <reserved>
+286  FFFF  <reserved>
+287  FFFF  <reserved>
+288  FFFF  <reserved>
+289  FFFF  <reserved>
+28A  FFFF  <reserved>
+28B  FFFF  <reserved>
+28C  FFFF  <reserved>
+28D  FFFF  <reserved>
+28E  FFFF  <reserved>
+28F  FFFF  <reserved>
+290  FFFF  <reserved>
+291  FFFF  <reserved>
+292  FFFF  <reserved>
+293  FFFF  <reserved>
+294  FFFF  <reserved>
+295  FFFF  <reserved>
+296  FFFF  <reserved>
+297  FFFF  <reserved>
+298  FFFF  <reserved>
+299  FFFF  <reserved>
+29A  FFFF  <reserved>
+29B  FFFF  <reserved>
+29C  FFFF  <reserved>
+29D  FFFF  <reserved>
+29E  FFFF  <reserved>
+29F  FFFF  <reserved>
+2A0  FFFF  <reserved>
+2A1  FFFF  <reserved>
+2A2  FFFF  <reserved>
+2A3  FFFF  <reserved>
+2A4  FFFF  <reserved>
+2A5  FFFF  <reserved>
+2A6  FFFF  <reserved>
+2A7  FFFF  <reserved>
+2A8  FFFF  <reserved>
+2A9  FFFF  <reserved>
+2AA  FFFF  <reserved>
+2AB  FFFF  <reserved>
+2AC  FFFF  <reserved>
+2AD  FFFF  <reserved>
+2AE  FFFF  <reserved>
+2AF  FFFF  <reserved>
+2B0  FFFF  <reserved>
+2B1  FFFF  <reserved>
+2B2  FFFF  <reserved>
+2B3  FFFF  <reserved>
+2B4  FFFF  <reserved>
+2B5  FFFF  <reserved>
+2B6  FFFF  <reserved>
+2B7  FFFF  <reserved>
+2B8  FFFF  <reserved>
+2B9  FFFF  <reserved>
+2BA  FFFF  <reserved>
+2BB  FFFF  <reserved>
+2BC  FFFF  <reserved>
+2BD  FFFF  <reserved>
+2BE  FFFF  <reserved>
+2BF  FFFF  <reserved>
+2C0  FFFF  <reserved>
+2C1  FFFF  <reserved>
+2C2  FFFF  <reserved>
+2C3  FFFF  <reserved>
+2C4  FFFF  <reserved>
+2C5  FFFF  <reserved>
+2C6  FFFF  <reserved>
+2C7  FFFF  <reserved>
+2C8  FFFF  <reserved>
+2C9  FFFF  <reserved>
+2CA  FFFF  <reserved>
+2CB  FFFF  <reserved>
+2CC  FFFF  <reserved>
+2CD  FFFF  <reserved>
+2CE  FFFF  <reserved>
+2CF  FFFF  <reserved>
+2D0  FFFF  <reserved>
+2D1  FFFF  <reserved>
+2D2  FFFF  <reserved>
+2D3  FFFF  <reserved>
+2D4  FFFF  <reserved>
+2D5  FFFF  <reserved>
+2D6  FFFF  <reserved>
+2D7  FFFF  <reserved>
+2D8  FFFF  <reserved>
+2D9  FFFF  <reserved>
+2DA  FFFF  <reserved>
+2DB  FFFF  <reserved>
+2DC  FFFF  <reserved>
+2DD  FFFF  <reserved>
+2DE  FFFF  <reserved>
+2DF  FFFF  <reserved>
+2E0  FFFF  <reserved>
+2E1  FFFF  <reserved>
+2E2  FFFF  <reserved>
+2E3  FFFF  <reserved>
+2E4  FFFF  <reserved>
+2E5  FFFF  <reserved>
+2E6  FFFF  <reserved>
+2E7  FFFF  <reserved>
+2E8  FFFF  <reserved>
+2E9  FFFF  <reserved>
+2EA  FFFF  <reserved>
+2EB  FFFF  <reserved>
+2EC  FFFF  <reserved>
+2ED  FFFF  <reserved>
+2EE  FFFF  <reserved>
+2EF  FFFF  <reserved>
+2F0  FFFF  <reserved>
+2F1  FFFF  <reserved>
+2F2  FFFF  <reserved>
+2F3  FFFF  <reserved>
+2F4  FFFF  <reserved>
+2F5  FFFF  <reserved>
+2F6  FFFF  <reserved>
+2F7  FFFF  <reserved>
+2F8  FFFF  <reserved>
+2F9  FFFF  <reserved>
+2FA  FFFF  <reserved>
+2FB  FFFF  <reserved>
+2FC  FFFF  <reserved>
+2FD  FFFF  <reserved>
+2FE  FFFF  <reserved>
+2FF  FFFF  <reserved>
+300  FFFF  <reserved>
+301  FFFF  <reserved>
+302  FFFF  <reserved>
+303  FFFF  <reserved>
+304  FFFF  <reserved>
+305  FFFF  <reserved>
+306  FFFF  <reserved>
+307  FFFF  <reserved>
+308  FFFF  <reserved>
+309  FFFF  <reserved>
+30A  FFFF  <reserved>
+30B  FFFF  <reserved>
+30C  FFFF  <reserved>
+30D  FFFF  <reserved>
+30E  FFFF  <reserved>
+30F  FFFF  <reserved>
+310  FFFF  <reserved>
+311  FFFF  <reserved>
+312  FFFF  <reserved>
+313  FFFF  <reserved>
+314  FFFF  <reserved>
+315  FFFF  <reserved>
+316  FFFF  <reserved>
+317  FFFF  <reserved>
+318  FFFF  <reserved>
+319  FFFF  <reserved>
+31A  FFFF  <reserved>
+31B  FFFF  <reserved>
+31C  FFFF  <reserved>
+31D  FFFF  <reserved>
+31E  FFFF  <reserved>
+31F  FFFF  <reserved>
+320  FFFF  <reserved>
+321  FFFF  <reserved>
+322  FFFF  <reserved>
+323  FFFF  <reserved>
+324  FFFF  <reserved>
+325  FFFF  <reserved>
+326  FFFF  <reserved>
+327  FFFF  <reserved>
+328  FFFF  <reserved>
+329  FFFF  <reserved>
+32A  FFFF  <reserved>
+32B  FFFF  <reserved>
+32C  FFFF  <reserved>
+32D  FFFF  <reserved>
+32E  FFFF  <reserved>
+32F  FFFF  <reserved>
+330  FFFF  <reserved>
+331  FFFF  <reserved>
+332  FFFF  <reserved>
+333  FFFF  <reserved>
+334  FFFF  <reserved>
+335  FFFF  <reserved>
+336  FFFF  <reserved>
+337  FFFF  <reserved>
+338  FFFF  <reserved>
+339  FFFF  <reserved>
+33A  FFFF  <reserved>
+33B  FFFF  <reserved>
+33C  FFFF  <reserved>
+33D  FFFF  <reserved>
+33E  FFFF  <reserved>
+33F  FFFF  <reserved>
+340  FFFF  <reserved>
+341  FFFF  <reserved>
+342  FFFF  <reserved>
+343  FFFF  <reserved>
+344  FFFF  <reserved>
+345  FFFF  <reserved>
+346  FFFF  <reserved>
+347  FFFF  <reserved>
+348  FFFF  <reserved>
+349  FFFF  <reserved>
+34A  FFFF  <reserved>
+34B  FFFF  <reserved>
+34C  FFFF  <reserved>
+34D  FFFF  <reserved>
+34E  FFFF  <reserved>
+34F  FFFF  <reserved>
+350  FFFF  <reserved>
+351  FFFF  <reserved>
+352  FFFF  <reserved>
+353  FFFF  <reserved>
+354  FFFF  <reserved>
+355  FFFF  <reserved>
+356  FFFF  <reserved>
+357  FFFF  <reserved>
+358  FFFF  <reserved>
+359  FFFF  <reserved>
+35A  FFFF  <reserved>
+35B  FFFF  <reserved>
+35C  FFFF  <reserved>
+35D  FFFF  <reserved>
+35E  FFFF  <reserved>
+35F  FFFF  <reserved>
+360  FFFF  <reserved>
+361  FFFF  <reserved>
+362  FFFF  <reserved>
+363  FFFF  <reserved>
+364  FFFF  <reserved>
+365  FFFF  <reserved>
+366  FFFF  <reserved>
+367  FFFF  <reserved>
+368  FFFF  <reserved>
+369  FFFF  <reserved>
+36A  FFFF  <reserved>
+36B  FFFF  <reserved>
+36C  FFFF  <reserved>
+36D  FFFF  <reserved>
+36E  FFFF  <reserved>
+36F  FFFF  <reserved>
+370  FFFF  <reserved>
+371  FFFF  <reserved>
+372  FFFF  <reserved>
+373  FFFF  <reserved>
+374  FFFF  <reserved>
+375  FFFF  <reserved>
+376  FFFF  <reserved>
+377  FFFF  <reserved>
+378  FFFF  <reserved>
+379  FFFF  <reserved>
+37A  FFFF  <reserved>
+37B  FFFF  <reserved>
+37C  FFFF  <reserved>
+37D  FFFF  <reserved>
+37E  FFFF  <reserved>
+37F  FFFF  <reserved>
+380  FFFF  <reserved>
+381  FFFF  <reserved>
+382  FFFF  <reserved>
+383  FFFF  <reserved>
+384  FFFF  <reserved>
+385  FFFF  <reserved>
+386  FFFF  <reserved>
+387  FFFF  <reserved>
+388  FFFF  <reserved>
+389  FFFF  <reserved>
+38A  FFFF  <reserved>
+38B  FFFF  <reserved>
+38C  FFFF  <reserved>
+38D  FFFF  <reserved>
+38E  FFFF  <reserved>
+38F  FFFF  <reserved>
+390  FFFF  <reserved>
+391  FFFF  <reserved>
+392  FFFF  <reserved>
+393  FFFF  <reserved>
+394  FFFF  <reserved>
+395  FFFF  <reserved>
+396  FFFF  <reserved>
+397  FFFF  <reserved>
+398  FFFF  <reserved>
+399  FFFF  <reserved>
+39A  FFFF  <reserved>
+39B  FFFF  <reserved>
+39C  FFFF  <reserved>
+39D  FFFF  <reserved>
+39E  FFFF  <reserved>
+39F  FFFF  <reserved>
+3A0  FFFF  <reserved>
+3A1  FFFF  <reserved>
+3A2  FFFF  <reserved>
+3A3  FFFF  <reserved>
+3A4  FFFF  <reserved>
+3A5  FFFF  <reserved>
+3A6  FFFF  <reserved>
+3A7  FFFF  <reserved>
+3A8  FFFF  <reserved>
+3A9  FFFF  <reserved>
+3AA  FFFF  <reserved>
+3AB  FFFF  <reserved>
+3AC  FFFF  <reserved>
+3AD  FFFF  <reserved>
+3AE  FFFF  <reserved>
+3AF  FFFF  <reserved>
+3B0  FFFF  <reserved>
+3B1  FFFF  <reserved>
+3B2  FFFF  <reserved>
+3B3  FFFF  <reserved>
+3B4  FFFF  <reserved>
+3B5  FFFF  <reserved>
+3B6  FFFF  <reserved>
+3B7  FFFF  <reserved>
+3B8  FFFF  <reserved>
+3B9  FFFF  <reserved>
+3BA  FFFF  <reserved>
+3BB  FFFF  <reserved>
+3BC  FFFF  <reserved>
+3BD  FFFF  <reserved>
+3BE  FFFF  <reserved>
+3BF  FFFF  <reserved>
+3C0  FFFF  <reserved>
+3C1  FFFF  <reserved>
+3C2  FFFF  <reserved>
+3C3  FFFF  <reserved>
+3C4  FFFF  <reserved>
+3C5  FFFF  <reserved>
+3C6  FFFF  <reserved>
+3C7  FFFF  <reserved>
+3C8  FFFF  <reserved>
+3C9  FFFF  <reserved>
+3CA  FFFF  <reserved>
+3CB  FFFF  <reserved>
+3CC  FFFF  <reserved>
+3CD  FFFF  <reserved>
+3CE  FFFF  <reserved>
+3CF  FFFF  <reserved>
+3D0  FFFF  <reserved>
+3D1  FFFF  <reserved>
+3D2  FFFF  <reserved>
+3D3  FFFF  <reserved>
+3D4  FFFF  <reserved>
+3D5  FFFF  <reserved>
+3D6  FFFF  <reserved>
+3D7  FFFF  <reserved>
+3D8  FFFF  <reserved>
+3D9  FFFF  <reserved>
+3DA  FFFF  <reserved>
+3DB  FFFF  <reserved>
+3DC  FFFF  <reserved>
+3DD  FFFF  <reserved>
+3DE  FFFF  <reserved>
+3DF  FFFF  <reserved>
+3E0  FFFF  <reserved>
+3E1  FFFF  <reserved>
+3E2  FFFF  <reserved>
+3E3  FFFF  <reserved>
+3E4  FFFF  <reserved>
+3E5  FFFF  <reserved>
+3E6  FFFF  <reserved>
+3E7  FFFF  <reserved>
+3E8  FFFF  <reserved>
+3E9  FFFF  <reserved>
+3EA  FFFF  <reserved>
+3EB  FFFF  <reserved>
+3EC  FFFF  <reserved>
+3ED  FFFF  <reserved>
+3EE  FFFF  <reserved>
+3EF  FFFF  <reserved>
+3F0  FFFF  <reserved>
+3F1  FFFF  <reserved>
+3F2  FFFF  <reserved>
+3F3  FFFF  <reserved>
+3F4  FFFF  <reserved>
+3F5  FFFF  <reserved>
+3F6  FFFF  <reserved>
+3F7  FFFF  <reserved>
+3F8  FFFF  <reserved>
+3F9  FFFF  <reserved>
+3FA  FFFF  <reserved>
+3FB  FFFF  <reserved>
+3FC  FFFF  <reserved>
+3FD  FFFF  <reserved>
+3FE  FFFF  <reserved>
+3FF  FFFF  <reserved>

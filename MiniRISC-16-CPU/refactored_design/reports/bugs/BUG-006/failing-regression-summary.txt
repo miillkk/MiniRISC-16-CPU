@@ -1,0 +1,20 @@
+MiniRISC-16 refactored regression
+Timestamp: 2026-10-15 10:56:32 +08:00
+Tests: 15
+Failures: 15
+
+FAIL tb_alu - xelab returned 1
+FAIL tb_controller - xelab returned 1
+FAIL tb_register_file - xelab returned 1
+FAIL tb_program_counter - xelab returned 1
+FAIL tb_next_pc_mux - xelab returned 1
+FAIL tb_status_register - xelab returned 1
+FAIL tb_zero_extender_8_to_16 - xelab returned 1
+FAIL tb_alu_operand_mux - xelab returned 1
+FAIL tb_writeback_mux - xelab returned 1
+FAIL tb_datapath - xelab returned 1
+FAIL tb_cpu_core - xelab returned 1
+FAIL tb_hex_to_7seg - xelab returned 1
+FAIL tb_io_interconnect - xelab returned 1
+FAIL tb_seven_segment8 - xelab returned 1
+FAIL tb_board_top_smoke - xelab returned 1

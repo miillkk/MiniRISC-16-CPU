@@ -1,0 +1,4 @@
+请先阅读 README_HANDOFF.md。
+
+当前最重要的实板结果：05_i2c_electrical.bit 应显示 0111/1100，实际显示 0111/1000。
+下一步：构建 unfinished_next_test 中的 SCL/SDA 反向交叉测试，判断两线短接/耦合还是 ADV7511 异常驱动。

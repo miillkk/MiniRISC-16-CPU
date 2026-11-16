@@ -1,0 +1,18 @@
+MiniRISC-16 Calculator final board build
+Date: 2026-10-16
+Part: xc7z020clg484-1
+Clock: 100 MHz
+WNS: +0.559 ns
+TNS: 0.000 ns
+WHS: +0.202 ns
+THS: 0.000 ns
+Failed/unrouted nets: 0
+Methodology checks: 0
+DRC errors: 0
+Retained warning: ZPS7-1 (pure PL/JTAG configuration)
+Slice LUTs: 444
+Slice Registers: 494
+Bonded IOB: 42
+BUFG: 1
+Bitstream: MiniRISC16_Calculator.bit
+SHA-256: E8B9984318B8A8D33639D54C4E5C425A926B63323A09F8C07640C9E2BA6CD404

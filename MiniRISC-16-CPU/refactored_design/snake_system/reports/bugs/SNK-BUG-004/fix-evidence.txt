@@ -1,0 +1,18 @@
+SNK-BUG-004 fix evidence
+
+Assembler output:
+- 249 active words
+- 7 reserved words
+- program/snake.mem contains 256 words after @00
+- rtl/memory/snake_program_rom.v contains 256 explicit address words
+- word-by-word comparison result: Equal=True
+
+The build scripts no longer pass INIT_FILE to synthesis and the Vivado project no longer registers snake.mem as a synthesis/simulation data file. snake.mem remains an independent reference-model artifact.
+
+Post-fix verification:
+- XSim regression: 4/4 PASS
+- Place and route: PASS
+- DRC: 0 errors
+- 100 MHz timing: WNS +0.192 ns, TNS 0
+- Bitgen: PASS
+- Output: reports/board/MiniRISC16_Snake.bit

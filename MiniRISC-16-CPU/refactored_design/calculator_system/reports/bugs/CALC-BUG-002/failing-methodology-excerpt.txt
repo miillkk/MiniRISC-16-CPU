@@ -1,0 +1,11 @@
+First implementation run, before asynchronous I/O exceptions were added:
+
+Report Methodology summary
+Rule: TIMING-18
+Severity: Warning
+Description: Missing input or output delay
+Checks: 41
+
+Affected ports included resetn, switches[0:7], led[0:7], seg_low[0:7],
+seg_high[0:7], and digit_enable[0:7]. No waveform applies to an XDC
+methodology warning.

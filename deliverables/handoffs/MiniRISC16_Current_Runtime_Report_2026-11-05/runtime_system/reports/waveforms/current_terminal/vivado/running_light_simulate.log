@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+RUNNING_LIGHT_LED_WRITE cycle=242 pc=009 instruction=c030 value=01
+RUNNING_LIGHT_LED_WRITE cycle=756 pc=066 instruction=c130 value=02
+tb_runtime_running_light_wave: TEST PASS
+$finish called at time : 7576 ns : File "C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/refactored_design/runtime_system/tb/tb_runtime_waveforms.v" Line 91

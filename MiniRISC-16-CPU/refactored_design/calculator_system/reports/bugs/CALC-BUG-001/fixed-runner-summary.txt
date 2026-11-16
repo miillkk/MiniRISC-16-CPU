@@ -1,0 +1,4 @@
+ASSEMBLE PASS: 240 active words, 16 reserved words
+Reference model: 15 tests, 0 failures
+RTL regression: 7 tests, 0 failures
+tb_calculator_system: TEST PASS

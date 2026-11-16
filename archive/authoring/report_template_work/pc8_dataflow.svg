@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="950" viewBox="0 0 1800 950" role="img" aria-labelledby="title desc">
+  <title id="title">MiniRISC-16 8-bit-PC Single-cycle Dataflow</title>
+  <desc id="desc">The 8-bit PC selects a 16-bit instruction, which controls the register file, ALU, writeback, stored Z flag, next-PC selection, and independent GPIO I/O path.</desc>
+  <defs>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#64748b"/></marker>
+    <style>.bg{fill:#f7f9fc}.box{fill:#fff;stroke:#64748b;stroke-width:3}.blue{fill:#eaf2ff;stroke:#2563eb;stroke-width:4}.green{fill:#ecfdf3;stroke:#16a34a;stroke-width:3}.orange{fill:#fff7ed;stroke:#ea580c;stroke-width:3}.t{font:700 30px "Segoe UI",Arial,sans-serif;fill:#172033}.h{font:700 22px "Segoe UI",Arial,sans-serif;fill:#172033}.b{font:400 18px "Segoe UI",Arial,sans-serif;fill:#475569}.l{fill:none;stroke:#64748b;stroke-width:3;marker-end:url(#a)}.c{fill:none;stroke:#2563eb;stroke-width:4;marker-end:url(#a)}.d{fill:none;stroke:#ea580c;stroke-width:3;stroke-dasharray:10 7;marker-end:url(#a)}.label{font:500 16px "Segoe UI",Arial,sans-serif;fill:#334155}</style>
+  </defs>
+  <rect class="bg" width="1800" height="950"/>
+  <text class="t" x="55" y="60">MiniRISC-16 8-bit-PC Single-cycle Dataflow</text>
+  <rect class="blue" x="60" y="155" width="210" height="120" rx="12"/><text class="h" x="115" y="200">8-bit PC</text><text class="b" x="95" y="240">Instruction address</text>
+  <rect class="green" x="340" y="155" width="270" height="120" rx="12"/><text class="h" x="382" y="200">Instruction ROM</text><text class="b" x="388" y="240">256 × 16 words</text>
+  <rect class="box" x="690" y="115" width="290" height="160" rx="12"/><text class="h" x="735" y="160">Controller</text><text class="b" x="735" y="200">Opcode, Rd, Rs, imm8</text><text class="b" x="735" y="235">Combinational controls</text>
+  <rect class="blue" x="690" y="360" width="290" height="145" rx="12"/><text class="h" x="735" y="405">Register File</text><text class="b" x="735" y="445">R0 to R3 read ports</text><text class="b" x="735" y="478">Synchronous writeback</text>
+  <rect class="box" x="1070" y="360" width="260" height="145" rx="12"/><text class="h" x="1150" y="405">ALU</text><text class="b" x="1115" y="445">PASS B · ADD · SUB</text><text class="b" x="1115" y="478">AND · OR · XOR</text>
+  <rect class="blue" x="1420" y="360" width="300" height="145" rx="12"/><text class="h" x="1470" y="405">Writeback MUX</text><text class="b" x="1475" y="445">ALU result or I/O data</text><text class="b" x="1475" y="478">Selected value to Rd</text>
+  <rect class="orange" x="1420" y="650" width="300" height="135" rx="12"/><text class="h" x="1475" y="695">GPIO I/O Path</text><text class="b" x="1465" y="735">INP / OUP · 8-bit port</text><text class="b" x="1465" y="765">OUT · IN · DIR registers</text>
+  <rect class="box" x="690" y="650" width="290" height="135" rx="12"/><text class="h" x="750" y="695">Stored Z Flag</text><text class="b" x="735" y="738">Written only by CMP</text>
+  <rect class="box" x="340" y="650" width="270" height="135" rx="12"/><text class="h" x="392" y="695">Next-PC MUX</text><text class="b" x="382" y="738">PC + 1 · JZ · JUMP</text><text class="b" x="405" y="768">8-bit wraparound</text>
+  <path class="c" d="M270 215 H330"/><path class="c" d="M610 215 H680"/><path class="l" d="M835 275 V350"/><path class="c" d="M980 432 H1060"/><path class="c" d="M1330 432 H1410"/><path class="c" d="M1570 505 V570 H835 V515"/>
+  <path class="c" d="M980 470 H1015 V718 H1410"/><path class="c" d="M1570 650 V515"/><path class="c" d="M1420 740 H1365 V505"/>
+  <path class="l" d="M1200 505 V575 H835 V640"/><path class="d" d="M835 650 V585 H475 V640"/><path class="d" d="M835 275 V320 H475 V640"/><path class="c" d="M475 650 V310 H165 V285"/>
+  <text class="label" x="285" y="202">address</text><text class="label" x="620" y="202">instruction</text><text class="label" x="995" y="418">operands</text><text class="label" x="1338" y="418">result</text><text class="label" x="1210" y="700">I/O bus</text><text class="label" x="490" y="625">pc_next</text>
+  <text class="b" x="55" y="885">Fetch, decode, execution, I/O read, and selection are combinational; enabled architectural state commits together at the next rising edge.</text>
+</svg>

@@ -1,0 +1,110 @@
+$date
+   Mon Sep 21 21:49:27 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_program_counter $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 8 # next_pc [7:0] $end
+$var wire 8 $ pc [7:0] $end
+$var wire 8 % pc_plus_one [7:0] $end
+$var integer 32 & errors [31:0] $end
+$scope module dut $end
+$var wire 1 ' clk $end
+$var wire 1 ( rst $end
+$var wire 8 ) next_pc [7:0] $end
+$var reg 8 * pc [7:0] $end
+$var wire 8 % pc_plus_one [7:0] $end
+$upscope $end
+$scope task check_state $end
+$var reg 8 + expected_pc [7:0] $end
+$var reg 8 , expected_plus_one [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+b1010101 #
+bx $
+bx %
+b0 &
+0'
+1(
+b1010101 )
+bx *
+bx +
+bx ,
+$end
+
+#5000
+1!
+b0 $
+b1 %
+1'
+b0 *
+b0 +
+b1 ,
+
+#6000
+0"
+b1000010 #
+0(
+b1000010 )
+
+#10000
+0!
+0'
+
+#15000
+1!
+b1000010 $
+b1000011 %
+1'
+b1000010 *
+b1000010 +
+b1000011 ,
+
+#16000
+b11111111 #
+b11111111 )
+
+#20000
+0!
+0'
+
+#25000
+1!
+b11111111 $
+b0 %
+1'
+b11111111 *
+b11111111 +
+b0 ,
+
+#26000
+b0 #
+b0 )
+
+#30000
+0!
+0'
+
+#35000
+1!
+b0 $
+b1 %
+1'
+b0 *
+b0 +
+b1 ,

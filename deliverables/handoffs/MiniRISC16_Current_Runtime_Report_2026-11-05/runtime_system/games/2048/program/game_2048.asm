@@ -1,0 +1,636 @@
+; MiniRISC-16 2048, 4x4 board, loaded through the Runtime UART loader.
+; Controls: W/A/S/D or arrows, R restarts.
+; Tiles are stored as exponents: 0=empty, 1=2, 2=4, ... 11=2048.
+;
+; Data memory:
+;   00..1A frame, 30 direction, 31 line, 32 position, 33 output count,
+;   34 last-merged, 35 moved, 36 score, 37 sequence, 38 state,
+;   39 spawns remaining, 3A current tile, 3B search counter,
+;   3C saved board address, 40..4F board, 50..53 line buffer.
+
+INIT:
+    MOVI R0, 0x00
+    MOVI R1, 0x00
+INIT_CLEAR:
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R2, 0x54
+    CMP  R0, R2
+    JZ   INIT_READY
+    JUMP INIT_CLEAR
+INIT_READY:
+    MOVI R0, 0x39
+    MOVI R1, 0x02
+    STR  R0, R1
+    MOVI R0, 0x20
+    OUP  0x20, R0
+    MOVI R0, 0x48
+    OUP  0x21, R0
+    MOVI R0, 0x01
+    OUP  0x22, R0
+    JMPA SPAWN_BEGIN
+
+MAIN:
+    INP  R0, 0x11
+    MOVI R1, 0x01
+    AND  R0, R1
+    CMP  R0, R1
+    JZ   READ_KEY
+    JUMP MAIN
+READ_KEY:
+    INP  R0, 0x10
+    MOVI R1, 0x52
+    CMP  R0, R1
+    JZ   INIT
+    MOVI R1, 0x72
+    CMP  R0, R1
+    JZ   INIT
+    MOVI R1, 0x41
+    CMP  R0, R1
+    JZ   MOVE_LEFT_KEY
+    MOVI R1, 0x44
+    CMP  R0, R1
+    JZ   MOVE_RIGHT_KEY
+    MOVI R1, 0x57
+    CMP  R0, R1
+    JZ   MOVE_UP_KEY
+    MOVI R1, 0x53
+    CMP  R0, R1
+    JZ   MOVE_DOWN_KEY
+    JUMP MAIN
+MOVE_LEFT_KEY:
+    MOVI R0, 0x00
+    JUMP START_MOVE
+MOVE_RIGHT_KEY:
+    MOVI R0, 0x01
+    JUMP START_MOVE
+MOVE_UP_KEY:
+    MOVI R0, 0x02
+    JUMP START_MOVE
+MOVE_DOWN_KEY:
+    MOVI R0, 0x03
+START_MOVE:
+    MOVI R3, 0x30
+    STR  R3, R0
+    MOVI R0, 0x00
+    MOVI R3, 0x31
+    STR  R3, R0
+    MOVI R3, 0x35
+    STR  R3, R0
+    JMPA MOVE_LINE_BEGIN
+
+.ORG 0x100
+
+; Transform four logical lines in the selected direction. Each nonzero tile is
+; appended to 50..53 or merged once with the previous output tile.
+MOVE_LINE_BEGIN:
+    MOVI R0, 0x00
+    MOVI R3, 0x50
+MOVE_CLEAR_TEMP:
+    STR  R3, R0
+    ADDI R3, 0x01
+    MOVI R2, 0x54
+    CMP  R3, R2
+    JZ   MOVE_SCAN_INIT
+    JUMP MOVE_CLEAR_TEMP
+MOVE_SCAN_INIT:
+    MOVI R3, 0x32
+    STR  R3, R0
+    MOVI R3, 0x33
+    STR  R3, R0
+    MOVI R3, 0x34
+    STR  R3, R0
+
+MOVE_SCAN_LOOP:
+    MOVI R3, 0x31
+    LDR  R0, R3
+    MOVI R3, 0x32
+    LDR  R1, R3
+    MOVI R3, 0x30
+    LDR  R2, R3
+    MOVI R3, 0x00
+    CMP  R2, R3
+    JZ   SCAN_ADDR_LEFT
+    MOVI R3, 0x01
+    CMP  R2, R3
+    JZ   SCAN_ADDR_RIGHT
+    MOVI R3, 0x02
+    CMP  R2, R3
+    JZ   SCAN_ADDR_UP
+    JUMP SCAN_ADDR_DOWN
+SCAN_ADDR_LEFT:
+    MOVR R2, R0
+    ADDR R2, R2
+    ADDR R2, R2
+    ADDR R2, R1
+    MOVI R3, 0x40
+    ADDR R3, R2
+    JUMP SCAN_ADDR_READY
+SCAN_ADDR_RIGHT:
+    MOVI R2, 0x03
+    SUB  R2, R1
+    ADDR R0, R0
+    ADDR R0, R0
+    ADDR R0, R2
+    MOVI R3, 0x40
+    ADDR R3, R0
+    JUMP SCAN_ADDR_READY
+SCAN_ADDR_UP:
+    MOVR R2, R1
+    ADDR R2, R2
+    ADDR R2, R2
+    ADDR R2, R0
+    MOVI R3, 0x40
+    ADDR R3, R2
+    JUMP SCAN_ADDR_READY
+SCAN_ADDR_DOWN:
+    MOVI R2, 0x03
+    SUB  R2, R1
+    ADDR R2, R2
+    ADDR R2, R2
+    ADDR R2, R0
+    MOVI R3, 0x40
+    ADDR R3, R2
+SCAN_ADDR_READY:
+    LDR  R1, R3
+    MOVI R2, 0x00
+    CMP  R1, R2
+    JZ   MOVE_SCAN_NEXT
+    MOVI R3, 0x3A
+    STR  R3, R1
+    MOVI R3, 0x33
+    LDR  R0, R3
+    MOVI R2, 0x00
+    CMP  R0, R2
+    JZ   MOVE_APPEND
+    MOVI R2, 0x01
+    SUB  R0, R2
+    MOVI R3, 0x50
+    ADDR R3, R0
+    LDR  R1, R3
+    MOVI R3, 0x3A
+    LDR  R2, R3
+    CMP  R1, R2
+    JZ   MOVE_CHECK_MERGED
+    JUMP MOVE_APPEND
+MOVE_CHECK_MERGED:
+    MOVI R3, 0x34
+    LDR  R2, R3
+    MOVI R1, 0x00
+    CMP  R2, R1
+    JZ   MOVE_MERGE
+    JUMP MOVE_APPEND
+
+MOVE_APPEND:
+    MOVI R3, 0x33
+    LDR  R0, R3
+    MOVI R2, 0x50
+    ADDR R2, R0
+    MOVI R3, 0x3A
+    LDR  R1, R3
+    STR  R2, R1
+    ADDI R0, 0x01
+    MOVI R3, 0x33
+    STR  R3, R0
+    MOVI R0, 0x00
+    MOVI R3, 0x34
+    STR  R3, R0
+    JUMP MOVE_SCAN_NEXT
+
+MOVE_MERGE:
+    MOVI R3, 0x33
+    LDR  R0, R3
+    MOVI R2, 0x01
+    SUB  R0, R2
+    MOVI R3, 0x50
+    ADDR R3, R0
+    LDR  R1, R3
+    ADDI R1, 0x01
+    STR  R3, R1
+    MOVI R3, 0x3A
+    STR  R3, R1
+    MOVI R0, 0x01
+    MOVI R3, 0x34
+    STR  R3, R0
+    MOVI R0, 0x0B
+    CMP  R1, R0
+    JZ   MOVE_SET_WIN
+    JUMP MOVE_SCORE_INIT
+MOVE_SET_WIN:
+    MOVI R0, 0x01
+    MOVI R3, 0x38
+    STR  R3, R0
+MOVE_SCORE_INIT:
+    MOVI R3, 0x3A
+    LDR  R0, R3
+    MOVI R2, 0x01
+MOVE_SCORE_POWER:
+    MOVI R1, 0x00
+    CMP  R0, R1
+    JZ   MOVE_SCORE_ADD
+    ADDR R2, R2
+    MOVI R1, 0x01
+    SUB  R0, R1
+    JUMP MOVE_SCORE_POWER
+MOVE_SCORE_ADD:
+    MOVI R3, 0x36
+    LDR  R1, R3
+    ADDR R1, R2
+    STR  R3, R1
+
+MOVE_SCAN_NEXT:
+    MOVI R3, 0x32
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x04
+    CMP  R0, R1
+    JZ   MOVE_WRITE_INIT
+    JUMP MOVE_SCAN_LOOP
+
+MOVE_WRITE_INIT:
+    MOVI R0, 0x00
+    MOVI R3, 0x32
+    STR  R3, R0
+MOVE_WRITE_LOOP:
+    MOVI R3, 0x31
+    LDR  R0, R3
+    MOVI R3, 0x32
+    LDR  R1, R3
+    MOVI R3, 0x30
+    LDR  R2, R3
+    MOVI R3, 0x00
+    CMP  R2, R3
+    JZ   WRITE_ADDR_LEFT
+    MOVI R3, 0x01
+    CMP  R2, R3
+    JZ   WRITE_ADDR_RIGHT
+    MOVI R3, 0x02
+    CMP  R2, R3
+    JZ   WRITE_ADDR_UP
+    JUMP WRITE_ADDR_DOWN
+WRITE_ADDR_LEFT:
+    MOVR R2, R0
+    ADDR R2, R2
+    ADDR R2, R2
+    ADDR R2, R1
+    MOVI R3, 0x40
+    ADDR R3, R2
+    JUMP WRITE_ADDR_READY
+WRITE_ADDR_RIGHT:
+    MOVI R2, 0x03
+    SUB  R2, R1
+    ADDR R0, R0
+    ADDR R0, R0
+    ADDR R0, R2
+    MOVI R3, 0x40
+    ADDR R3, R0
+    JUMP WRITE_ADDR_READY
+WRITE_ADDR_UP:
+    MOVR R2, R1
+    ADDR R2, R2
+    ADDR R2, R2
+    ADDR R2, R0
+    MOVI R3, 0x40
+    ADDR R3, R2
+    JUMP WRITE_ADDR_READY
+WRITE_ADDR_DOWN:
+    MOVI R2, 0x03
+    SUB  R2, R1
+    ADDR R2, R2
+    ADDR R2, R2
+    ADDR R2, R0
+    MOVI R3, 0x40
+    ADDR R3, R2
+WRITE_ADDR_READY:
+    MOVI R2, 0x3C
+    STR  R2, R3
+    MOVI R2, 0x32
+    LDR  R0, R2
+    MOVI R2, 0x50
+    ADDR R2, R0
+    LDR  R1, R2
+    MOVI R2, 0x3C
+    LDR  R3, R2
+    LDR  R2, R3
+    CMP  R1, R2
+    JZ   MOVE_WRITE_STORE
+    MOVI R0, 0x01
+    MOVI R2, 0x35
+    STR  R2, R0
+MOVE_WRITE_STORE:
+    STR  R3, R1
+    MOVI R3, 0x32
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x04
+    CMP  R0, R1
+    JZ   MOVE_LINE_NEXT
+    JUMP MOVE_WRITE_LOOP
+MOVE_LINE_NEXT:
+    MOVI R3, 0x31
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x04
+    CMP  R0, R1
+    JZ   MOVE_ALL_DONE
+    JUMP MOVE_LINE_BEGIN
+MOVE_ALL_DONE:
+    MOVI R3, 0x35
+    LDR  R0, R3
+    MOVI R1, 0x01
+    CMP  R0, R1
+    JZ   MOVE_SPAWN
+    JMPA CHECK_GAME_OVER
+MOVE_SPAWN:
+    MOVI R0, 0x39
+    MOVI R1, 0x01
+    STR  R0, R1
+    JMPA SPAWN_BEGIN
+
+.ORG 0x200
+
+; Spawn into a random empty cell. After 16 misses, scan deterministically.
+SPAWN_BEGIN:
+    MOVI R0, 0x00
+    MOVI R3, 0x3B
+    STR  R3, R0
+SPAWN_RANDOM:
+    INP  R0, 0x13
+    MOVI R1, 0x0F
+    AND  R0, R1
+    MOVI R3, 0x3C
+    STR  R3, R0
+    MOVI R2, 0x40
+    ADDR R2, R0
+    LDR  R1, R2
+    MOVI R3, 0x00
+    CMP  R1, R3
+    JZ   SPAWN_PLACE
+    MOVI R3, 0x3B
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x10
+    CMP  R0, R1
+    JZ   SPAWN_SCAN_INIT
+    JUMP SPAWN_RANDOM
+SPAWN_SCAN_INIT:
+    MOVI R0, 0x00
+    MOVI R3, 0x3C
+    STR  R3, R0
+SPAWN_SCAN:
+    MOVI R3, 0x3C
+    LDR  R0, R3
+    MOVI R2, 0x40
+    ADDR R2, R0
+    LDR  R1, R2
+    MOVI R3, 0x00
+    CMP  R1, R3
+    JZ   SPAWN_PLACE
+    ADDI R0, 0x01
+    MOVI R3, 0x3C
+    STR  R3, R0
+    MOVI R1, 0x10
+    CMP  R0, R1
+    JZ   CHECK_GAME_OVER
+    JUMP SPAWN_SCAN
+SPAWN_PLACE:
+    MOVI R3, 0x3C
+    LDR  R0, R3
+    MOVI R2, 0x40
+    ADDR R2, R0
+    INP  R0, 0x13
+    MOVI R1, 0x07
+    AND  R0, R1
+    MOVI R1, 0x00
+    CMP  R0, R1
+    JZ   SPAWN_FOUR
+    MOVI R1, 0x01
+    JUMP SPAWN_STORE
+SPAWN_FOUR:
+    MOVI R1, 0x02
+SPAWN_STORE:
+    STR  R2, R1
+    MOVI R3, 0x39
+    LDR  R0, R3
+    MOVI R1, 0x01
+    SUB  R0, R1
+    STR  R3, R0
+    MOVI R1, 0x00
+    CMP  R0, R1
+    JZ   CHECK_GAME_OVER
+    JUMP SPAWN_BEGIN
+
+; A full board is playable only if a horizontal or vertical equal pair exists.
+CHECK_GAME_OVER:
+    MOVI R0, 0x00
+CHECK_EMPTY_LOOP:
+    MOVI R3, 0x40
+    ADDR R3, R0
+    LDR  R1, R3
+    MOVI R2, 0x00
+    CMP  R1, R2
+    JZ   GAME_CAN_MOVE
+    ADDI R0, 0x01
+    MOVI R2, 0x10
+    CMP  R0, R2
+    JZ   CHECK_HORIZONTAL_INIT
+    JUMP CHECK_EMPTY_LOOP
+CHECK_HORIZONTAL_INIT:
+    MOVI R0, 0x00
+    MOVI R3, 0x31
+    STR  R3, R0
+CHECK_HORIZONTAL_ROW:
+    MOVI R0, 0x00
+    MOVI R3, 0x32
+    STR  R3, R0
+CHECK_HORIZONTAL_CELL:
+    MOVI R3, 0x31
+    LDR  R0, R3
+    ADDR R0, R0
+    ADDR R0, R0
+    MOVI R3, 0x32
+    LDR  R1, R3
+    ADDR R0, R1
+    MOVI R3, 0x40
+    ADDR R3, R0
+    LDR  R1, R3
+    ADDI R3, 0x01
+    LDR  R2, R3
+    CMP  R1, R2
+    JZ   GAME_CAN_MOVE
+    MOVI R3, 0x32
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x03
+    CMP  R0, R1
+    JZ   CHECK_HORIZONTAL_NEXT_ROW
+    JUMP CHECK_HORIZONTAL_CELL
+CHECK_HORIZONTAL_NEXT_ROW:
+    MOVI R3, 0x31
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x04
+    CMP  R0, R1
+    JZ   CHECK_VERTICAL_INIT
+    JUMP CHECK_HORIZONTAL_ROW
+CHECK_VERTICAL_INIT:
+    MOVI R0, 0x00
+    MOVI R3, 0x31
+    STR  R3, R0
+CHECK_VERTICAL_COLUMN:
+    MOVI R0, 0x00
+    MOVI R3, 0x32
+    STR  R3, R0
+CHECK_VERTICAL_CELL:
+    MOVI R3, 0x32
+    LDR  R0, R3
+    ADDR R0, R0
+    ADDR R0, R0
+    MOVI R3, 0x31
+    LDR  R1, R3
+    ADDR R0, R1
+    MOVI R3, 0x40
+    ADDR R3, R0
+    LDR  R1, R3
+    ADDI R3, 0x04
+    LDR  R2, R3
+    CMP  R1, R2
+    JZ   GAME_CAN_MOVE
+    MOVI R3, 0x32
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x03
+    CMP  R0, R1
+    JZ   CHECK_VERTICAL_NEXT_COLUMN
+    JUMP CHECK_VERTICAL_CELL
+CHECK_VERTICAL_NEXT_COLUMN:
+    MOVI R3, 0x31
+    LDR  R0, R3
+    ADDI R0, 0x01
+    STR  R3, R0
+    MOVI R1, 0x04
+    CMP  R0, R1
+    JZ   GAME_OVER_2048
+    JUMP CHECK_VERTICAL_COLUMN
+GAME_CAN_MOVE:
+    JMPA SEND_FRAME
+GAME_OVER_2048:
+    MOVI R3, 0x38
+    LDR  R0, R3
+    MOVI R1, 0x80
+    OR   R0, R1
+    STR  R3, R0
+    MOVI R0, 0x80
+    OUP  0x30, R0
+    JMPA SEND_FRAME
+
+.ORG 0x300
+
+; Arcade protocol v4, 27 bytes:
+; A5,version,length,game,state,sequence,scoreLo,scoreHi,width,height,
+; 16 exponent cells, XOR checksum.
+SEND_FRAME:
+    MOVI R0, 0x00
+    MOVI R1, 0xA5
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R1, 0x04
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R1, 0x1B
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R1, 0x02
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R2, 0x38
+    LDR  R1, R2
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R2, 0x37
+    LDR  R1, R2
+    STR  R0, R1
+    ADDI R1, 0x01
+    STR  R2, R1
+    ADDI R0, 0x01
+    MOVI R2, 0x36
+    LDR  R1, R2
+    MOVI R3, 0x00
+    MOVI R2, 0x80
+    ADDR R2, R2
+SEND_SCORE_SPLIT:
+    CMP  R1, R2
+    INP  R0, 0x32
+    MOVI R2, 0x20
+    AND  R0, R2
+    CMP  R0, R2
+    JZ   SEND_SCORE_MORE
+    JUMP SEND_SCORE_READY
+SEND_SCORE_MORE:
+    MOVI R2, 0x80
+    ADDR R2, R2
+    SUB  R1, R2
+    ADDI R3, 0x01
+    JUMP SEND_SCORE_SPLIT
+SEND_SCORE_READY:
+    MOVI R0, 0x06
+    STR  R0, R1
+    ADDI R0, 0x01
+    STR  R0, R3
+    ADDI R0, 0x01
+    MOVI R1, 0x04
+    STR  R0, R1
+    ADDI R0, 0x01
+    STR  R0, R1
+    ADDI R0, 0x01
+    MOVI R2, 0x00
+SEND_COPY_BOARD:
+    MOVI R3, 0x40
+    ADDR R3, R2
+    LDR  R1, R3
+    STR  R0, R1
+    ADDI R0, 0x01
+    ADDI R2, 0x01
+    MOVI R3, 0x10
+    CMP  R2, R3
+    JZ   SEND_CHECKSUM_INIT
+    JUMP SEND_COPY_BOARD
+SEND_CHECKSUM_INIT:
+    MOVI R0, 0x00
+    MOVI R1, 0x00
+SEND_CHECKSUM_LOOP:
+    LDR  R2, R0
+    XOR  R1, R2
+    ADDI R0, 0x01
+    MOVI R3, 0x1A
+    CMP  R0, R3
+    JZ   SEND_CHECKSUM_DONE
+    JUMP SEND_CHECKSUM_LOOP
+SEND_CHECKSUM_DONE:
+    STR  R0, R1
+    MOVI R3, 0x00
+SEND_UART_LOOP:
+    LDR  R0, R3
+SEND_UART_WAIT:
+    INP  R1, 0x11
+    MOVI R2, 0x02
+    AND  R1, R2
+    CMP  R1, R2
+    JZ   SEND_UART_BYTE
+    JUMP SEND_UART_WAIT
+SEND_UART_BYTE:
+    OUP  0x10, R0
+    ADDI R3, 0x01
+    MOVI R2, 0x1B
+    CMP  R3, R2
+    JZ   SEND_UART_DONE
+    JUMP SEND_UART_LOOP
+SEND_UART_DONE:
+    JMPA MAIN

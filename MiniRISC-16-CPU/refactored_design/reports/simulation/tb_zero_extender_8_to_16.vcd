@@ -1,0 +1,52 @@
+$date
+   Mon Sep 21 21:49:44 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_zero_extender_8_to_16 $end
+$var reg 8 ! value_in [7:0] $end
+$var wire 16 " value_out [15:0] $end
+$var integer 32 # errors [31:0] $end
+$scope module dut $end
+$var wire 8 $ value_in [7:0] $end
+$var wire 16 " value_out [15:0] $end
+$upscope $end
+$scope task check_value $end
+$var reg 8 % test_value [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b0 !
+b0 "
+b0 #
+b0 $
+b0 %
+$end
+
+#1000
+b1111111 !
+b1111111 "
+b1111111 $
+b1111111 %
+
+#2000
+b10000000 !
+b10000000 "
+b10000000 $
+b10000000 %
+
+#3000
+b11111111 !
+b11111111 "
+b11111111 $
+b11111111 %

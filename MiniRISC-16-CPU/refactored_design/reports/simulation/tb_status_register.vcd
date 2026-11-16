@@ -1,0 +1,146 @@
+$date
+   Mon Sep 21 21:49:38 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_status_register $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # write_enable $end
+$var reg 1 $ zero_in $end
+$var reg 1 % negative_in $end
+$var reg 1 & carry_in $end
+$var reg 1 ' overflow_in $end
+$var wire 1 ( z_flag $end
+$var wire 1 ) n_flag $end
+$var wire 1 * c_flag $end
+$var wire 1 + v_flag $end
+$var integer 32 , errors [31:0] $end
+$scope module dut $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+$var wire 1 / write_enable $end
+$var wire 1 0 zero_in $end
+$var wire 1 1 negative_in $end
+$var wire 1 2 carry_in $end
+$var wire 1 3 overflow_in $end
+$var reg 1 4 z_flag $end
+$var reg 1 5 n_flag $end
+$var reg 1 6 c_flag $end
+$var reg 1 7 v_flag $end
+$upscope $end
+$scope task check_flags $end
+$var reg 4 8 expected [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+1#
+1$
+1%
+1&
+1'
+x(
+x)
+x*
+x+
+b0 ,
+0-
+1.
+1/
+10
+11
+12
+13
+x4
+x5
+x6
+x7
+bx 8
+$end
+
+#5000
+1!
+0(
+0)
+0*
+0+
+1-
+04
+05
+06
+07
+b0 8
+
+#6000
+0"
+0%
+0'
+0.
+01
+03
+
+#10000
+0!
+0-
+
+#15000
+1!
+1(
+1*
+1-
+14
+16
+b1010 8
+
+#16000
+0#
+0$
+1%
+0&
+1'
+0/
+00
+11
+02
+13
+
+#20000
+0!
+0-
+
+#25000
+1!
+1-
+
+#26000
+1#
+1/
+
+#30000
+0!
+0-
+
+#35000
+1!
+0(
+1)
+0*
+1+
+1-
+04
+15
+06
+17
+b101 8

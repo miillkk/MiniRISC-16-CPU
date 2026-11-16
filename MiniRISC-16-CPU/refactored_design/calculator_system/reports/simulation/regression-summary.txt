@@ -1,0 +1,12 @@
+MiniRISC-16 calculator RTL regression
+Tests: 9
+Failures: 0
+PASS tb_switch8_debounced
+PASS tb_button_s1_controller
+PASS tb_scratchpad_ram
+PASS tb_cpu_status_port
+PASS tb_io_decoder
+PASS tb_cpu_flags_output
+PASS tb_peripheral_subsystem
+PASS tb_calculator_system
+PASS tb_calculator_board_top

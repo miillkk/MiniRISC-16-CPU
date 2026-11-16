@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/xieke/Desktop/CPU/MiniRISC-16-CPU/reports/waveforms/modules/tb_gpio8.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_gpio8" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="35" />
+   <wvobject fp_name="/tb_gpio8/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/io_addr" type="array">
+      <obj_property name="ElementShortName">io_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">io_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/io_wdata" type="array">
+      <obj_property name="ElementShortName">io_wdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">io_wdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/io_re" type="logic">
+      <obj_property name="ElementShortName">io_re</obj_property>
+      <obj_property name="ObjectShortName">io_re</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/io_we" type="logic">
+      <obj_property name="ElementShortName">io_we</obj_property>
+      <obj_property name="ObjectShortName">io_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/io_rdata" type="array">
+      <obj_property name="ElementShortName">io_rdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">io_rdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/gpio_i" type="array">
+      <obj_property name="ElementShortName">gpio_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/gpio_o" type="array">
+      <obj_property name="ElementShortName">gpio_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/gpio_oe" type="array">
+      <obj_property name="ElementShortName">gpio_oe[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_oe[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/gpio_out" type="array">
+      <obj_property name="ElementShortName">gpio_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/gpio_dir" type="array">
+      <obj_property name="ElementShortName">gpio_dir[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_dir[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/input_sync_1" type="array">
+      <obj_property name="ElementShortName">input_sync_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_sync_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/input_sync_2" type="array">
+      <obj_property name="ElementShortName">input_sync_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_sync_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/GPIO_OUT_ADDR" type="array">
+      <obj_property name="ElementShortName">GPIO_OUT_ADDR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">GPIO_OUT_ADDR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/GPIO_IN_ADDR" type="array">
+      <obj_property name="ElementShortName">GPIO_IN_ADDR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">GPIO_IN_ADDR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/dut/GPIO_DIR_ADDR" type="array">
+      <obj_property name="ElementShortName">GPIO_DIR_ADDR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIR_ADDR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/write_port/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/write_port/data" type="array">
+      <obj_property name="ElementShortName">data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/read_port/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/read_port/expected" type="array">
+      <obj_property name="ElementShortName">expected[15:0]</obj_property>
+      <obj_property name="ObjectShortName">expected[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/io_addr" type="array">
+      <obj_property name="ElementShortName">io_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">io_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/io_wdata" type="array">
+      <obj_property name="ElementShortName">io_wdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">io_wdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/io_re" type="logic">
+      <obj_property name="ElementShortName">io_re</obj_property>
+      <obj_property name="ObjectShortName">io_re</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/io_we" type="logic">
+      <obj_property name="ElementShortName">io_we</obj_property>
+      <obj_property name="ObjectShortName">io_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/io_rdata" type="array">
+      <obj_property name="ElementShortName">io_rdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">io_rdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/gpio_i" type="array">
+      <obj_property name="ElementShortName">gpio_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/gpio_o" type="array">
+      <obj_property name="ElementShortName">gpio_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/gpio_oe" type="array">
+      <obj_property name="ElementShortName">gpio_oe[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_oe[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/gpio_pins" type="array">
+      <obj_property name="ElementShortName">gpio_pins[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_pins[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/external_data" type="array">
+      <obj_property name="ElementShortName">external_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">external_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/external_enable" type="array">
+      <obj_property name="ElementShortName">external_enable[7:0]</obj_property>
+      <obj_property name="ObjectShortName">external_enable[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gpio8/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+</wave_config>

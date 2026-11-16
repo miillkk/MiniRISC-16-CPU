@@ -1,0 +1,96 @@
+$date
+   Sat Oct 17 20:16:57 2026
+$end
+
+$version
+  2026.1
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_class_io $end
+$scope module u_test $end
+$var reg 1 ! clk $end
+$var wire 8 " mem_addr [7:0] $end
+$var wire 16 # instruction [15:0] $end
+$var wire 8 ' io_addr [7:0] $end
+$var wire 16 ) io_wdata [15:0] $end
+$var wire 1 % io_re $end
+$var wire 1 & io_we $end
+$var wire 16 ( io_rdata [15:0] $end
+$var wire 16 , r0 [15:0] $end
+$scope module dut $end
+$var wire 1 + reg_write $end
+$var wire 1 * wb_sel $end
+$scope module u_controller $end
+$var wire 4 $ opcode [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+bx "
+bx #
+bx $
+0%
+0&
+bx '
+b0 (
+bx )
+x*
+x+
+bx ,
+$end
+
+#5000
+1!
+b0 "
+b1011000000110001 #
+b1011 $
+b110001 '
+b0 )
+1*
+1+
+b0 ,
+
+#10000
+0!
+
+#15000
+1!
+
+#20000
+0!
+1%
+b1011111011101111 (
+
+#25000
+1!
+b1 "
+b1100000000110000 #
+b1100 $
+0%
+1&
+b110000 '
+b0 (
+b1011111011101111 )
+0*
+0+
+b1011111011101111 ,
+
+#30000
+0!
+
+#35000
+1!
+b10 "
+b1010000000000010 #
+b1010 $
+0&
+b10 '

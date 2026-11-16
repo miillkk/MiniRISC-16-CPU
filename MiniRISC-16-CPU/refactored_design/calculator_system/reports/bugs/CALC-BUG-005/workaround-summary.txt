@@ -1,0 +1,15 @@
+CALC-BUG-005 workaround
+Date: 2026-10-16
+
+The project regeneration step could not remove MiniRISC16_Calculator.runs because
+MiniRISC16_Calculator.xpr was open in the Vivado GUI (PID 58784). The GUI was not
+terminated because it had an active Hardware Manager session and could contain
+user state.
+
+The non-project build flow was used instead. It completed synthesis, placement,
+routing, timing checks and bitstream generation successfully for the updated RTL.
+
+After the GUI is closed, run:
+  .\scripts\run.ps1 -Task CreateProject -VivadoBin "F:\vivado\2026.1\Vivado\bin"
+
+Then run scripts/check_project.tcl to verify the refreshed XPR.

@@ -1,0 +1,6 @@
+"Kind","Source","Destination","Reason"
+"Move","archive\legacy\HDMI_TEST_HANDOFF_2026-11-05","deliverables\handoffs\HDMI_TEST_HANDOFF_2026-11-05","Use verified extracted directory as handoff"
+"Delete","deliverables\handoffs\HDMI_TEST_HANDOFF_2026-11-05.zip","","All 136 files SHA-256-identical to extracted directory"
+"Delete","deliverables\handoffs\MiniRISC16_Current_Runtime_Report_2026-11-05.zip","","All 131 files SHA-256-identical to extracted directory"
+"Delete","deliverables\handoffs\MiniRISC16_Current_Runtime_Report_2026-11-05.zip.sha256","","Checksum sidecar for removed ZIP"
+"Delete","archive\legacy\MiniRISC-16-CPU-main.zip","","Eight files byte-identical to current main project; ninth text equal after line-ending normalization"

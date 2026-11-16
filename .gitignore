@@ -1,42 +1,24 @@
-# Vivado/XSim working products
-.Xil/
-xsim.dir/
-*.jou
-*.log
-*.wdb
-*.pb
-*.str
-*.xmsgs
+# Local Git history retained for the vendored Ross tool tree.
+ross-ai-assistant/.git_local_backup/
+**/node_modules/
 
-# Vivado projects, caches, generated IP and runs
-*.cache/
-*.gen/
-*.hw/
-*.ip_user_files/
-*.runs/
-*.sim/
-*.srcs/
-.ipcache/
+# Regenerable FPGA and simulation work products.
+**/.Xil/
+**/xsim.dir/
+**/sim_build/
+**/sim_build_cache_before_*/
+**/build/
+**/cycle_wave_build/
+**/*.cache/
+**/*.gen/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+**/.ipcache/
 
-# Local regression workspace and editor/OS files
-sim/build/
-build/
-tmp/
-.codex-finalizer/
-.codex-ppt-build/
-*.tmp
-*.bak
-*.swp
-.DS_Store
-Thumbs.db
-
-# Reference material already stored at the repository root
-docs/courseware/
-docs/templates/
-
-# Presentation authoring intermediates; keep only the final v4 deck
-reports/presentation/preview_*/
-reports/presentation/MiniRISC16_CPU_中文答辩PPT_v[1-3].pptx
-
-# Selected reports/simulation/*.txt and reports/waveforms/* are intentional
-# deliverables and are not ignored.
+# Editor and operating-system temporary files.
+**/*.tmp
+**/*.swp
+**/Thumbs.db
+**/.DS_Store

@@ -1,0 +1,53 @@
+MiniRISC-16 Runtime System / Snake V2 verification summary
+Date: 2026-10-16
+
+Assembler: PASS
+Active program words: 294 / 1024
+Used program pages: page 0 and page 1
+Reference model: PASS, 13964 instructions executed
+
+XSim regression: 6 / 6 PASS
+- tb_cpu_data_instructions
+- tb_program_capacity
+- tb_program_loader
+- tb_uart_port
+- tb_tick_timer
+- tb_snake_system
+
+Synthesis/implementation: PASS
+Device: xc7z020clg484-1
+Clock: 100 MHz
+Program memory inference: 1K x 16 distributed RAM
+LUT: 1204
+FF: 750
+IOB: 44
+Latch: 0
+WNS: +0.157 ns
+TNS: 0.000 ns
+WHS: +0.049 ns
+THS: 0.000 ns
+Unrouted nets: 0
+DRC errors: 0
+
+Bitstream: reports/board/MiniRISC16_Runtime.bit
+SHA-256: B0F2813099A7713DAD040DA765B50DF3B8DE8BBA3C6BAF7E2D49E1FF0DA15F71
+
+Physical board validation of this new runtime bitstream is still required.
+
+16x8 terminal-game update (2026-10-30)
+Assembler: PASS, 477 active / 547 reserved words
+Reference model: PASS, 38592 instructions executed
+Terminal preview: PASS, Unicode/color and ASCII fallback
+Protocol: v3, 140-byte frame with length, sequence and XOR checksum
+Maps: PASS, Open/Maze/Hard selected by SW4..3; each free region is fully connected
+Food search: PASS, 16 random attempts then deterministic 128-cell fallback
+Level progression: PASS, two foods per level; score 6 and above remains at level 3
+Static walls: PASS, score changes do not create dynamic walls
+Snake rendering: PASS, default Arrow head; no round-tail glyph in normal or fallback paths
+Native Vivado/XSim waveform re-verification (2026-11-04): 2 / 2 PASS
+- tb_runtime_running_light_wave: PASS, 7576 ns, LED 0x01 -> 0x02
+- tb_runtime_extended_isa_wave: PASS, 166 ns, CMP/JZ/JUMP/JMPA and LDR/STR covered
+Artifacts: non-empty WDB, VCD, WCFG and simulation logs under reports/waveforms/current_terminal/vivado
+Environment repair: launch_simulation uses the supported -gcc_install_path setting with E:/mingw64/bin
+Figures: five English Vivado-style PNG/SVG files generated from native XSim VCD
+Current use path: upload program/snake.mem through the existing SW7 UART Loader

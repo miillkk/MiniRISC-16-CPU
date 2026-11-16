@@ -1,0 +1,845 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Fri Oct 16 21:44:01 2026
+| Host         : KENT running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file ./scripts/../reports/implementation/hdmi-snake-postroute-timing.rpt
+| Design       : hdmi_snake_board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description            Violations  
+---------  --------  ---------------------  ----------  
+TIMING-16  Warning   Large setup violation  546         
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (13)
+6. checking no_output_delay (55)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (13)
+-------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 13 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (55)
+--------------------------------
+ There are 20 ports with no output delay specified. (HIGH)
+
+ There are 35 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.011        0.000                      0                10572        0.051        0.000                      0                10572        3.000        0.000                       0                  3125  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock               Waveform(ns)       Period(ns)      Frequency(MHz)
+-----               ------------       ----------      --------------
+clk_100mhz          {0.000 5.000}      10.000          100.000         
+  clk_feedback_raw  {0.000 5.000}      10.000          100.000         
+  pixel_clk_raw     {0.000 19.861}     39.722          25.175          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                   WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                   -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_100mhz                0.011        0.000                      0                 9324        0.051        0.000                      0                 9324        3.000        0.000                       0                  2496  
+  clk_feedback_raw                                                                                                                                                    7.845        0.000                       0                     3  
+  pixel_clk_raw           6.564        0.000                      0                 1228        0.233        0.000                      0                 1228       19.361        0.000                       0                   626  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  pixel_clk_raw      pixel_clk_raw           12.167        0.000                      0                   20        2.237        0.000                      0                   20  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_100mhz
+  To Clock:  clk_100mhz
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.011ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.051ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.011ns  (required time - arrival time)
+  Source:                 u_runtime_soc/u_program_memory/instruction_reg[3]_replica_2/C
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_runtime_soc/u_cpu_core/u_datapath/u_status_register/z_flag_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_100mhz
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_100mhz rise@10.000ns - clk_100mhz rise@0.000ns)
+  Data Path Delay:        9.957ns  (logic 3.146ns (31.597%)  route 6.811ns (68.403%))
+  Logic Levels:           15  (CARRY4=3 LUT2=2 LUT3=1 LUT5=2 LUT6=4 MUXF7=1 MUXF8=1 RAMD64E=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.472ns = ( 15.472 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.974ns
+    Clock Pessimism Removal (CPR):    0.477ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_100mhz rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.436     1.436 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.205     3.641    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     3.742 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.146     3.888    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     3.989 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.146     4.135    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     4.236 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        1.738     5.974    u_runtime_soc/u_program_memory/clk_100mhz_IBUF_BUFG
+    SLICE_X25Y18         FDRE                                         r  u_runtime_soc/u_program_memory/instruction_reg[3]_replica_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X25Y18         FDRE (Prop_fdre_C_Q)         0.456     6.430 r  u_runtime_soc/u_program_memory/instruction_reg[3]_replica_2/Q
+                         net (fo=29, routed)          1.180     7.610    u_runtime_soc/u_program_memory/memory_reg_384_447_9_11/ADDRA3
+    SLICE_X26Y16         RAMD64E (Prop_ramd64e_RADR3_O)
+                                                      0.124     7.734 f  u_runtime_soc/u_program_memory/memory_reg_384_447_9_11/RAMA/O
+                         net (fo=1, routed)           0.931     8.666    u_runtime_soc/u_program_memory/memory_reg_384_447_9_11_n_0
+    SLICE_X24Y18         LUT6 (Prop_lut6_I1_O)        0.124     8.790 f  u_runtime_soc/u_program_memory/instruction[9]_i_10/O
+                         net (fo=1, routed)           0.000     8.790    u_runtime_soc/u_program_memory/instruction[9]_i_10_n_0
+    SLICE_X24Y18         MUXF7 (Prop_muxf7_I1_O)      0.245     9.035 f  u_runtime_soc/u_program_memory/instruction_reg[9]_i_7/O
+                         net (fo=1, routed)           0.000     9.035    u_runtime_soc/u_program_memory/instruction_reg[9]_i_7_n_0
+    SLICE_X24Y18         MUXF8 (Prop_muxf8_I0_O)      0.104     9.139 f  u_runtime_soc/u_program_memory/instruction_reg[9]_i_2/O
+                         net (fo=22, routed)          0.678     9.817    u_runtime_soc/u_program_memory/instruction_reg[9]_i_2_n_0
+    SLICE_X29Y16         LUT2 (Prop_lut2_I1_O)        0.316    10.133 r  u_runtime_soc/u_program_memory/memory_reg_0_255_0_0_i_11_replica/O
+                         net (fo=8, routed)           0.651    10.784    u_runtime_soc/u_program_memory/memory_reg_0_255_0_0_i_11_n_0_repN
+    SLICE_X27Y16         LUT5 (Prop_lut5_I1_O)        0.124    10.908 r  u_runtime_soc/u_program_memory/memory_reg_0_255_2_2_i_1/O
+                         net (fo=95, routed)          0.508    11.416    u_runtime_soc/u_program_memory/D[2]
+    SLICE_X27Y18         LUT3 (Prop_lut3_I0_O)        0.124    11.540 r  u_runtime_soc/u_program_memory/registers[0][2]_i_6_replica/O
+                         net (fo=2, routed)           0.435    11.974    u_runtime_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[1][2]_repN_alias
+    SLICE_X25Y19         LUT2 (Prop_lut2_I1_O)        0.124    12.098 r  u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_i_65/O
+                         net (fo=1, routed)           0.000    12.098    u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_i_65_n_0
+    SLICE_X25Y19         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    12.496 r  u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_reg_i_50/CO[3]
+                         net (fo=1, routed)           0.000    12.496    u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_reg_i_50_n_0
+    SLICE_X25Y20         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.610 r  u_runtime_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[0][7]_i_15/CO[3]
+                         net (fo=1, routed)           0.000    12.610    u_runtime_soc/u_cpu_core/u_datapath/u_register_file/registers_reg[0][7]_i_15_n_0
+    SLICE_X25Y21         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.832 f  u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_reg_i_49/O[0]
+                         net (fo=1, routed)           0.822    13.654    u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_reg_i_49_n_7
+    SLICE_X23Y21         LUT6 (Prop_lut6_I0_O)        0.299    13.953 f  u_runtime_soc/u_cpu_core/u_datapath/u_register_file/z_flag_i_23/O
+                         net (fo=1, routed)           0.149    14.102    u_runtime_soc/u_program_memory/registers_reg[0][8]_0
+    SLICE_X23Y21         LUT5 (Prop_lut5_I4_O)        0.124    14.226 f  u_runtime_soc/u_program_memory/z_flag_i_8/O
+                         net (fo=2, routed)           0.872    15.098    u_runtime_soc/u_program_memory/z_flag_i_8_n_0
+    SLICE_X24Y22         LUT6 (Prop_lut6_I3_O)        0.124    15.222 r  u_runtime_soc/u_program_memory/z_flag_i_12_rewire_comp/O
+                         net (fo=1, routed)           0.585    15.807    u_runtime_soc/u_program_memory/z_flag_i_12_n_0
+    SLICE_X24Y21         LUT6 (Prop_lut6_I4_O)        0.124    15.931 r  u_runtime_soc/u_program_memory/z_flag_i_2_comp/O
+                         net (fo=1, routed)           0.000    15.931    u_runtime_soc/u_cpu_core/u_datapath/u_status_register/zero_in
+    SLICE_X24Y21         FDRE                                         r  u_runtime_soc/u_cpu_core/u_datapath/u_status_register/z_flag_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_100mhz rise edge)
+                                                     10.000    10.000 r  <hidden>
+    M19                                               0.000    10.000 r  clk_100mhz
+                         net (fo=0)                   0.000    10.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.366    11.366 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.006    13.372    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091    13.463 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.133    13.596    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    13.687 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.133    13.820    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.911 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        1.560    15.472    u_runtime_soc/u_cpu_core/u_datapath/u_status_register/clk_100mhz_IBUF_BUFG
+    SLICE_X24Y21         FDRE                                         r  u_runtime_soc/u_cpu_core/u_datapath/u_status_register/z_flag_reg/C
+                         clock pessimism              0.477    15.948    <hidden>
+                         clock uncertainty           -0.035    15.913    <hidden>
+    SLICE_X24Y21         FDRE (Setup_fdre_C_D)        0.029    15.942    u_runtime_soc/u_cpu_core/u_datapath/u_status_register/z_flag_reg
+  -------------------------------------------------------------------
+                         required time                         15.942    <hidden>
+                         arrival time                         -15.931    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.011    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.051ns  (arrival time - required time)
+  Source:                 u_runtime_soc/u_program_memory/instruction_reg[0]_rep/C
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_runtime_soc/u_program_memory/instruction_reg[1]_rep__0/D
+                            (rising edge-triggered cell FDRE clocked by clk_100mhz  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_100mhz
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_100mhz rise@0.000ns - clk_100mhz rise@0.000ns)
+  Data Path Delay:        0.533ns  (logic 0.186ns (34.870%)  route 0.347ns (65.130%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.391ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.130ns
+    Source Clock Delay      (SCD):    1.491ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_100mhz rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.205     0.205 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.674     0.879    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.026     0.905 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.587     1.491    u_runtime_soc/u_program_memory/clk_100mhz_IBUF_BUFG_repN_1_alias
+    SLICE_X23Y19         FDRE                                         r  u_runtime_soc/u_program_memory/instruction_reg[0]_rep/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y19         FDRE (Prop_fdre_C_Q)         0.141     1.632 r  u_runtime_soc/u_program_memory/instruction_reg[0]_rep/Q
+                         net (fo=6, routed)           0.347     1.980    u_runtime_soc/u_program_memory/ADDRA[0]
+    SLICE_X23Y18         LUT6 (Prop_lut6_I4_O)        0.045     2.025 r  u_runtime_soc/u_program_memory/instruction[1]_rep__0_i_1/O
+                         net (fo=6, routed)           0.000     2.025    u_runtime_soc/u_program_memory/instruction[1]_rep__0_i_1_n_0
+    SLICE_X23Y18         FDRE                                         r  u_runtime_soc/u_program_memory/instruction_reg[1]_rep__0/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_100mhz rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.392     0.392 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.731     1.123    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.029     1.152 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.033     1.185    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     1.214 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.033     1.247    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.276 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        0.854     2.130    u_runtime_soc/u_program_memory/clk_100mhz_IBUF_BUFG
+    SLICE_X23Y18         FDRE                                         r  u_runtime_soc/u_program_memory/instruction_reg[1]_rep__0/C
+                         clock pessimism             -0.247     1.883    <hidden>
+    SLICE_X23Y18         FDRE (Hold_fdre_C_D)         0.091     1.974    u_runtime_soc/u_program_memory/instruction_reg[1]_rep__0
+  -------------------------------------------------------------------
+                         required time                         -1.974    <hidden>
+                         arrival time                           2.025    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.051    <hidden>
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_100mhz
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_100mhz }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I             n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16   clk_100mhz_IBUF_BUFG_inst/I
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_feedback_raw
+  To Clock:  clk_feedback_raw
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_feedback_raw
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I              n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1    u_hdmi_video_subsystem/u_pixel_clock_generator/u_feedback_bufg/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKFBIN
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  pixel_clk_raw
+  To Clock:  pixel_clk_raw
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.564ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.233ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       19.361ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.564ns  (required time - arrival time)
+  Source:                 u_hdmi_video_subsystem/u_video_timing/pixel_x_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Destination:            u_hdmi_video_subsystem/y_pipe_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Path Group:             pixel_clk_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.722ns  (pixel_clk_raw rise@39.722ns - pixel_clk_raw rise@0.000ns)
+  Data Path Delay:        33.168ns  (logic 10.426ns (31.434%)  route 22.742ns (68.566%))
+  Logic Levels:           38  (CARRY4=19 LUT1=1 LUT2=1 LUT3=1 LUT4=1 LUT5=5 LUT6=10)
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.568ns = ( 45.290 - 39.722 ) 
+    Source Clock Delay      (SCD):    5.981ns
+    Clock Pessimism Removal (CPR):    0.440ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk_raw rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.436     1.436 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.205     3.641    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     3.742 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.146     3.888    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     3.989 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.146     4.135    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     4.236 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        1.806     6.042    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.793     2.249 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.889     4.138    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     4.239 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         1.742     5.981    u_hdmi_video_subsystem/u_video_timing/CLK
+    SLICE_X17Y31         FDRE                                         r  u_hdmi_video_subsystem/u_video_timing/pixel_x_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y31         FDRE (Prop_fdre_C_Q)         0.456     6.437 f  u_hdmi_video_subsystem/u_video_timing/pixel_x_reg[0]/Q
+                         net (fo=73, routed)          0.833     7.271    u_hdmi_video_subsystem/u_video_timing/pixel_x_reg[9]_1[0]
+    SLICE_X17Y32         LUT1 (Prop_lut1_I0_O)        0.150     7.421 r  u_hdmi_video_subsystem/u_video_timing/pixel_x[0]_i_1/O
+                         net (fo=2, routed)           0.639     8.060    u_hdmi_video_subsystem/u_video_timing/pixel_x[0]_i_1_n_0
+    SLICE_X18Y35         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.797     8.857 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_744/CO[3]
+                         net (fo=1, routed)           0.000     8.857    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_744_n_0
+    SLICE_X18Y36         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.180 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_743/O[1]
+                         net (fo=19, routed)          1.059    10.239    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_743_n_6
+    SLICE_X13Y32         LUT5 (Prop_lut5_I4_O)        0.334    10.573 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1110/O
+                         net (fo=21, routed)          0.764    11.338    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1110_n_0
+    SLICE_X20Y32         LUT6 (Prop_lut6_I3_O)        0.326    11.664 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1201/O
+                         net (fo=16, routed)          0.697    12.361    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1201_n_0
+    SLICE_X19Y32         LUT6 (Prop_lut6_I0_O)        0.124    12.485 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_2106/O
+                         net (fo=1, routed)           0.000    12.485    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_2106_n_0
+    SLICE_X19Y32         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    12.883 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1996/CO[3]
+                         net (fo=1, routed)           0.000    12.883    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1996_n_0
+    SLICE_X19Y33         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.997 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1850/CO[3]
+                         net (fo=1, routed)           0.000    12.997    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1850_n_0
+    SLICE_X19Y34         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.111 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1621/CO[3]
+                         net (fo=1, routed)           0.000    13.111    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1621_n_0
+    SLICE_X19Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.225 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1419/CO[3]
+                         net (fo=1, routed)           0.000    13.225    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1419_n_0
+    SLICE_X19Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.339 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1182/CO[3]
+                         net (fo=1, routed)           0.000    13.339    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1182_n_0
+    SLICE_X19Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.453 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1196/CO[3]
+                         net (fo=1, routed)           0.000    13.453    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1196_n_0
+    SLICE_X19Y38         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    13.787 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1111/O[1]
+                         net (fo=2, routed)           0.836    14.623    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1111_n_6
+    SLICE_X18Y34         LUT6 (Prop_lut6_I5_O)        0.303    14.926 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_871/O
+                         net (fo=2, routed)           0.799    15.725    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_871_n_0
+    SLICE_X17Y38         LUT6 (Prop_lut6_I0_O)        0.124    15.849 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_875/O
+                         net (fo=1, routed)           0.000    15.849    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_875_n_0
+    SLICE_X17Y38         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.381 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_627/CO[3]
+                         net (fo=1, routed)           0.000    16.381    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_627_n_0
+    SLICE_X17Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.495 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_621/CO[3]
+                         net (fo=1, routed)           0.000    16.495    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_621_n_0
+    SLICE_X17Y40         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    16.717 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1388/O[0]
+                         net (fo=4, routed)           0.696    17.413    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1388_n_7
+    SLICE_X16Y41         LUT3 (Prop_lut3_I2_O)        0.299    17.712 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1587/O
+                         net (fo=1, routed)           0.670    18.383    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1587_n_0
+    SLICE_X16Y41         LUT5 (Prop_lut5_I4_O)        0.124    18.507 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1380/O
+                         net (fo=2, routed)           0.845    19.352    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1380_n_0
+    SLICE_X14Y39         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520    19.872 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1128/CO[3]
+                         net (fo=1, routed)           0.000    19.872    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_1128_n_0
+    SLICE_X14Y40         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    20.195 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_911/O[1]
+                         net (fo=3, routed)           0.606    20.801    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_911_n_6
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.306    21.107 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1132/O
+                         net (fo=1, routed)           0.000    21.107    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_1132_n_0
+    SLICE_X13Y40         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    21.639 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_910/CO[3]
+                         net (fo=1, routed)           0.000    21.639    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_910_n_0
+    SLICE_X13Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    21.973 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_651/O[1]
+                         net (fo=3, routed)           0.472    22.446    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_651_n_6
+    SLICE_X10Y42         LUT5 (Prop_lut5_I0_O)        0.295    22.741 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_899/O
+                         net (fo=1, routed)           0.572    23.312    u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_899_n_0
+    SLICE_X11Y42         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.711    24.023 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_637/CO[3]
+                         net (fo=1, routed)           0.000    24.023    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_637_n_0
+    SLICE_X11Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    24.137 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_488/CO[3]
+                         net (fo=1, routed)           0.000    24.137    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_488_n_0
+    SLICE_X11Y44         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228    24.365 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_307/CO[2]
+                         net (fo=6, routed)           1.102    25.467    u_hdmi_video_subsystem/u_video_timing/cb_pipe_reg[7]_i_307_n_1
+    SLICE_X12Y32         LUT6 (Prop_lut6_I1_O)        0.313    25.780 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_314/O
+                         net (fo=151, routed)         0.876    26.656    u_hdmi_video_subsystem/u_video_timing/pixel_x_reg[9]_4
+    SLICE_X13Y31         LUT5 (Prop_lut5_I1_O)        0.150    26.806 r  u_hdmi_video_subsystem/u_video_timing/cb_pipe[7]_i_346/O
+                         net (fo=66, routed)          3.352    30.158    u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_84_1
+    SLICE_X44Y1          LUT6 (Prop_lut6_I2_O)        0.326    30.484 r  u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_161/O
+                         net (fo=1, routed)           1.013    31.497    u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_161_n_0
+    SLICE_X38Y3          LUT6 (Prop_lut6_I2_O)        0.124    31.621 r  u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_67/O
+                         net (fo=1, routed)           1.627    33.248    u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_67_n_0
+    SLICE_X25Y13         LUT6 (Prop_lut6_I0_O)        0.124    33.372 r  u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_29/O
+                         net (fo=3, routed)           1.099    34.471    u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_29_n_0
+    SLICE_X16Y13         LUT4 (Prop_lut4_I3_O)        0.124    34.595 f  u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_35/O
+                         net (fo=2, routed)           1.149    35.744    u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_35_n_0
+    SLICE_X14Y17         LUT6 (Prop_lut6_I0_O)        0.124    35.868 f  u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_18/O
+                         net (fo=1, routed)           1.034    36.902    u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_18_n_0
+    SLICE_X12Y26         LUT6 (Prop_lut6_I1_O)        0.124    37.026 r  u_hdmi_video_subsystem/u_video_frame_bridge/cb_pipe[7]_i_5/O
+                         net (fo=24, routed)          1.999    39.025    u_hdmi_video_subsystem/u_video_timing/cr_pipe_reg[7]
+    SLICE_X2Y38          LUT5 (Prop_lut5_I0_O)        0.124    39.149 r  u_hdmi_video_subsystem/u_video_timing/y_pipe[1]_i_1/O
+                         net (fo=1, routed)           0.000    39.149    u_hdmi_video_subsystem/y_value[1]
+    SLICE_X2Y38          FDRE                                         r  u_hdmi_video_subsystem/y_pipe_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk_raw rise edge)
+                                                     39.722    39.722 r  <hidden>
+    M19                                               0.000    39.722 r  clk_100mhz
+                         net (fo=0)                   0.000    39.722    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.366    41.089 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.006    43.095    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091    43.186 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.133    43.319    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    43.410 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.133    43.542    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    43.633 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        1.612    45.246    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.425    41.820 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.725    43.546    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    43.637 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         1.653    45.290    u_hdmi_video_subsystem/pixel_clk
+    SLICE_X2Y38          FDRE                                         r  u_hdmi_video_subsystem/y_pipe_reg[1]/C
+                         clock pessimism              0.440    45.730    <hidden>
+                         clock uncertainty           -0.095    45.635    <hidden>
+    SLICE_X2Y38          FDRE (Setup_fdre_C_D)        0.079    45.714    u_hdmi_video_subsystem/y_pipe_reg[1]
+  -------------------------------------------------------------------
+                         required time                         45.714    <hidden>
+                         arrival time                         -39.149    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  6.564    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.233ns  (arrival time - required time)
+  Source:                 u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Destination:            u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Path Group:             pixel_clk_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (pixel_clk_raw rise@0.000ns - pixel_clk_raw rise@0.000ns)
+  Data Path Delay:        0.386ns  (logic 0.186ns (48.200%)  route 0.200ns (51.800%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.125ns
+    Source Clock Delay      (SCD):    1.599ns
+    Clock Pessimism Removal (CPR):    0.493ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk_raw rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.205     0.205 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.674     0.879    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.026     0.905 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.030     0.935    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.961 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.030     0.991    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.017 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        0.597     1.613    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150     0.464 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.529     0.993    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.019 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         0.581     1.599    u_hdmi_video_subsystem/u_video_timing/CLK
+    SLICE_X9Y25          FDRE                                         r  u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y25          FDRE (Prop_fdre_C_Q)         0.141     1.740 r  u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[8]/Q
+                         net (fo=37, routed)          0.200     1.940    u_hdmi_video_subsystem/u_video_timing/pixel_y[8]
+    SLICE_X10Y25         LUT6 (Prop_lut6_I3_O)        0.045     1.985 r  u_hdmi_video_subsystem/u_video_timing/pixel_y[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.985    u_hdmi_video_subsystem/u_video_timing/pixel_y[0]_i_1_n_0
+    SLICE_X10Y25         FDRE                                         r  u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk_raw rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.392     0.392 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.731     1.123    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.029     1.152 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.033     1.185    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     1.214 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.033     1.247    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.276 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        0.864     2.140    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467     0.673 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.576     1.249    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.278 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         0.847     2.125    u_hdmi_video_subsystem/u_video_timing/CLK
+    SLICE_X10Y25         FDRE                                         r  u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[0]/C
+                         clock pessimism             -0.493     1.632    <hidden>
+    SLICE_X10Y25         FDRE (Hold_fdre_C_D)         0.120     1.752    u_hdmi_video_subsystem/u_video_timing/pixel_y_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.752    <hidden>
+                         arrival time                           1.985    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.233    <hidden>
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         pixel_clk_raw
+Waveform(ns):       { 0.000 19.861 }
+Period(ns):         39.722
+Sources:            { u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         39.722      37.567     BUFGCTRL_X0Y0    u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/I
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       39.722      173.638    MMCME2_ADV_X1Y0  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         19.861      19.361     SLICE_X4Y41      u_hdmi_video_subsystem/cb_pipe_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.861      19.361     SLICE_X4Y41      u_hdmi_video_subsystem/cb_pipe_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  pixel_clk_raw
+  To Clock:  pixel_clk_raw
+
+Setup :            0  Failing Endpoints,  Worst Slack       12.167ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        2.237ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             12.167ns  (required time - arrival time)
+  Source:                 u_hdmi_video_subsystem/u_pixel_clock_generator/reset_pipe_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Destination:            u_hdmi_video_subsystem/u_output_registers/hdmi_data_reg[0]/CLR
+                            (recovery check against rising-edge clock pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            19.861ns  (pixel_clk_raw fall@19.861ns - pixel_clk_raw rise@0.000ns)
+  Data Path Delay:        7.318ns  (logic 0.456ns (6.231%)  route 6.862ns (93.769%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.551ns = ( 25.412 - 19.861 ) 
+    Source Clock Delay      (SCD):    5.971ns
+    Clock Pessimism Removal (CPR):    0.440ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk_raw rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.436     1.436 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.205     3.641    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     3.742 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.146     3.888    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     3.989 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.146     4.135    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     4.236 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        1.806     6.042    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.793     2.249 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.889     4.138    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     4.239 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         1.732     5.971    u_hdmi_video_subsystem/u_pixel_clock_generator/CLK
+    SLICE_X25Y28         FDPE                                         r  u_hdmi_video_subsystem/u_pixel_clock_generator/reset_pipe_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X25Y28         FDPE (Prop_fdpe_C_Q)         0.456     6.427 f  u_hdmi_video_subsystem/u_pixel_clock_generator/reset_pipe_reg[3]/Q
+                         net (fo=611, routed)         6.862    13.290    u_hdmi_video_subsystem/u_output_registers/Q[0]
+    OLOGIC_X0Y49         FDCE                                         f  u_hdmi_video_subsystem/u_output_registers/hdmi_data_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk_raw fall edge)
+                                                     19.861    19.861 f  <hidden>
+    M19                                               0.000    19.861 f  clk_100mhz
+                         net (fo=0)                   0.000    19.861    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         1.366    21.227 f  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           2.006    23.233    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091    23.324 f  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.133    23.457    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    23.548 f  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.133    23.681    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.772 f  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        1.612    25.385    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.425    21.959 f  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.725    23.684    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    23.775 f  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         1.637    25.412    u_hdmi_video_subsystem/u_output_registers/CLK
+    OLOGIC_X0Y49         FDCE                                         r  u_hdmi_video_subsystem/u_output_registers/hdmi_data_reg[0]/C  (IS_INVERTED)
+                         clock pessimism              0.440    25.852    <hidden>
+                         clock uncertainty           -0.095    25.757    <hidden>
+    OLOGIC_X0Y49         FDCE (Recov_fdce_C_CLR)     -0.300    25.457    u_hdmi_video_subsystem/u_output_registers/hdmi_data_reg[0]
+  -------------------------------------------------------------------
+                         required time                         25.457    <hidden>
+                         arrival time                         -13.290    <hidden>
+  -------------------------------------------------------------------
+                         slack                                 12.167    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.237ns  (arrival time - required time)
+  Source:                 u_hdmi_video_subsystem/u_pixel_clock_generator/reset_pipe_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Destination:            u_hdmi_video_subsystem/u_output_registers/u_hdmi_clock_oddr/R
+                            (removal check against rising-edge clock pixel_clk_raw  {rise@0.000ns fall@19.861ns period=39.722ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (pixel_clk_raw rise@0.000ns - pixel_clk_raw rise@0.000ns)
+  Data Path Delay:        2.303ns  (logic 0.141ns (6.122%)  route 2.162ns (93.878%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.066ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.156ns
+    Source Clock Delay      (SCD):    1.597ns
+    Clock Pessimism Removal (CPR):    0.493ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk_raw rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.205     0.205 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.674     0.879    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.026     0.905 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.030     0.935    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.961 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.030     0.991    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.017 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        0.597     1.613    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150     0.464 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.529     0.993    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.019 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         0.579     1.597    u_hdmi_video_subsystem/u_pixel_clock_generator/CLK
+    SLICE_X25Y28         FDPE                                         r  u_hdmi_video_subsystem/u_pixel_clock_generator/reset_pipe_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X25Y28         FDPE (Prop_fdpe_C_Q)         0.141     1.738 r  u_hdmi_video_subsystem/u_pixel_clock_generator/reset_pipe_reg[3]/Q
+                         net (fo=611, routed)         2.162     3.901    u_hdmi_video_subsystem/u_output_registers/Q[0]
+    OLOGIC_X0Y25         ODDR                                         r  u_hdmi_video_subsystem/u_output_registers/u_hdmi_clock_oddr/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk_raw rise edge)
+                                                      0.000     0.000 r  <hidden>
+    M19                                               0.000     0.000 r  clk_100mhz
+                         net (fo=0)                   0.000     0.000    clk_100mhz
+    M19                  IBUF (Prop_ibuf_I_O)         0.392     0.392 r  clk_100mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.731     1.123    clk_100mhz_IBUF
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.029     1.152 r  clk_100mhz_IBUF_BUFG_inst_replica_1/O
+                         net (fo=19, routed)          0.033     1.185    clk_100mhz_IBUF_BUFG_repN_1
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     1.214 r  clk_100mhz_IBUF_BUFG_inst_replica/O
+                         net (fo=11, routed)          0.033     1.247    clk_100mhz_IBUF_BUFG_repN
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.276 r  clk_100mhz_IBUF_BUFG_inst/O
+                         net (fo=2465, routed)        0.864     2.140    u_hdmi_video_subsystem/u_pixel_clock_generator/clk_100mhz_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467     0.673 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.576     1.249    u_hdmi_video_subsystem/u_pixel_clock_generator/pixel_clk_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.278 r  u_hdmi_video_subsystem/u_pixel_clock_generator/u_pixel_bufg/O
+                         net (fo=624, routed)         0.878     2.156    u_hdmi_video_subsystem/u_output_registers/CLK
+    OLOGIC_X0Y25         ODDR                                         r  u_hdmi_video_subsystem/u_output_registers/u_hdmi_clock_oddr/C
+                         clock pessimism             -0.493     1.663    <hidden>
+    OLOGIC_X0Y25         ODDR (Remov_oddr_C_R)        0.000     1.663    u_hdmi_video_subsystem/u_output_registers/u_hdmi_clock_oddr
+  -------------------------------------------------------------------
+                         required time                         -1.663    <hidden>
+                         arrival time                           3.901    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.237    <hidden>
+
+
+
+
+
