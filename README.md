@@ -47,4 +47,4 @@ CPU/
 
 2026-11-16 清理了可再生的 Vivado/XSim 工作缓存、仿真构建目录和崩溃转储；保留了源码、约束、工程入口、bitstream、验证汇总及关键证据。HDMI 交接 ZIP 和 Runtime 报告 ZIP 与解压目录逐文件 SHA-256 一致，已删除 ZIP 并保留目录。最早的一份课程资料 ZIP 也已核对：八个文件与主工程完全相同，一个文本仅换行符不同，因此删除。其余三份历史工程 ZIP 含有当前目录缺失或不同版本的文件，保存在 `archive/legacy/`。
 
-2026-11-12 最终版从用户提供的 ZIP 解压到独立目录，包内 130 个清单条目逐一通过 SHA-256 校验。压缩包仍在原提供位置，工作区内只保留解压目录，避免重复存放。现在 `CPU/` 是整个项目的 Git 根，沿用原主工程配置的 GitHub 远端；Ross 工具源码作为项目内的工具副本保存。整理记录见 [maintenance](maintenance/)；历史总览见 [归档 README](archive/README_workspace_2026-10-23.md)。
+2026-11-12 最终版从用户提供的 ZIP 解压到独立目录，包内 130 个清单条目逐一通过 SHA-256 校验。校验后已按要求删除原 ZIP，只保留解压目录。现在 `CPU/` 是整个项目的 Git 根，沿用原主工程配置的 GitHub 远端；Ross 工具源码作为项目内的工具副本保存。整理记录见 [maintenance](maintenance/)；历史总览见 [归档 README](archive/README_workspace_2026-10-23.md)。
